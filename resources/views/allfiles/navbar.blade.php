@@ -59,7 +59,7 @@
         <div id="scroll-to-top"><i class="fas fa-angle-up" ></i></div>
         <div class="whatsapp-icon">
     <a href="https://wa.me/+923011114504" target="_blank">
-        <img src="{{asset('images/whatsapp.PNG')}}" alt="WhatsApp">
+        <img src="{{asset('/images/whatsapp.PNG')}}" alt="WhatsApp">
     </a>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
