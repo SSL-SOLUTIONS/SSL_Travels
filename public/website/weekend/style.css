@@ -1,0 +1,43 @@
+.body{
+    background-color:#eeeeee;
+}
+.row {
+    display: flex;
+}
+
+.image-container {
+    position: relative;
+    margin: 10px;
+}
+
+img {
+    width:100%;
+    height: auto;
+}
+
+.image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    padding: 10px;
+}
+.some button{
+    background-color: red;
+    padding: 8px;
+
+}
+.some button:hover{
+    background-color: black;
+}
+.some button a{
+    text-decoration: none;
+    color: white;
+
+}
+.h1-class{
+    font-weight: bold;
+
+}
+

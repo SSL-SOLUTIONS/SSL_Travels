@@ -1,0 +1,26 @@
+.body{
+    background-color: black;
+}
+.main-text{
+ font-weight: bold;
+}
+ul{
+    list-style: none;
+    display: flex; 
+}
+li{
+  margin-right: 10px;
+  background-color: red;
+  padding: 10px;
+  border-radius: 40%;
+  color: white;
+}
+li a{
+    color: white;
+}
+li:hover{
+    background-color: black;
+}
+li a:hover{
+    color: whitesmoke;
+}

@@ -1,0 +1,249 @@
+/* Your existing CSS here */
+
+nav {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 0 10%;
+  height: 80px;
+  background: #ffffff;
+  box-sizing: border-box;
+justify-content: center;
+}
+
+nav .logo {
+  float: left;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav .links {
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  white-space: nowrap;
+}
+
+nav .links li {
+  list-style: none;
+}
+
+nav .links .links-nav {
+  display: block;
+  padding: 1.3em;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+  position: relative;
+}
+
+nav .links .links-nav::before {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+  background-color: #000000;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav .links .links-nav:hover::before {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+#nav-toggle {
+  position: absolute;
+  top: -100px;
+}
+
+nav .icon-burger {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav .icon-burger .line {
+  width: 30px;
+  height: 5px;
+  background-color: #000000;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all .3s ease-in-out;
+}
+
+@media screen and (max-width: 1200px) {
+  nav .links .links-nav {
+    width: 100%;
+      display: block;
+      padding: 1em;
+      font-size: 16px;
+      color: #000000;
+      text-decoration: none;
+      position: relative;
+  }
+}
+@media screen and (max-width: 1000px) {
+  nav .logo {
+      float: none;
+      width: none;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+     left: 0;
+  }
+
+  nav .links .links-nav {
+      display: block;
+      padding: 1em;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffffff;
+      text-decoration: none;
+      position: relative;
+      right: 5%;
+  }
+  nav .links {
+      float: none;
+      position: fixed;
+      z-index: 9;
+      left: 5;
+      right: 5;
+      top: 100px;
+      bottom: 100%;
+      width: auto;
+      height: auto;
+      flex-direction: column;
+      justify-content: space-evenly;
+      background-color: rgba(0, 0, 0, .8);
+      overflow: hidden;
+      transition: all .5s ease-in-out;
+  }
+
+  nav .links a {
+      font-size: 20px;
+      color: #fff;
+  }
+
+  nav .icon-burger {
+      display: block;
+  }
+
+  nav :checked ~ .links {
+ width: 77%;
+      bottom: 10%;
+      
+  }
+
+  nav :checked ~ .icon-burger .line:nth-child(1) {
+      transform: translateY(10px) rotate(225deg);
+  }
+
+  nav :checked ~ .icon-burger .line:nth-child(3) {
+      transform: translateY(-10px) rotate(-225deg);
+  }
+
+  nav :checked ~ .icon-burger .line:nth-child(2) {
+      opacity: 0;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .link-nav {
+  display: block;
+  padding: 0 15px 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content .li-drop-nav {
+  padding: 0.6em;
+  text-align: center;
+  width: 80%;
+}
+
+.dropdown-content .link-nav {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .dropdown .link-nav {
+      font-size: 16px;
+      padding: 0 0 0 6px; /* Adjust padding */
+  }
+
+  .dropdown-content {
+      width: 200px;
+  }
+}
+
+.main-sec {
+  margin-top: 170px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 100%;
+}
+/* Your existing CSS for other sections */
+#scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+  background-color: red;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  display: none;
+width: 60px;
+  border-radius: 80%;
+  z-index: 1; 
+} 

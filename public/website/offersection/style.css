@@ -1,0 +1,61 @@
+/* offer section styling */
+.body{
+    background-color:#eeeeee;
+}
+
+.h4-class{
+   font-size: medium;
+}
+
+.description{
+    margin-left: 15px;
+}
+
+.description p{
+    font-size: small;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    
+}
+.description  button{
+    background-color: red;
+    border: none;
+    margin-top: 6px;
+  
+}
+.description  button:hover{
+    background-color: black;
+}
+.description button a{
+    text-decoration: none;
+    color: white;
+}
+.image-fluid{
+    max-width: 100%;
+    margin-left:-10px;
+}
+.wrapper{
+    position: relative;
+    bottom: 30%;
+    left: 6%;
+    color: white;
+}
+.wrapper button{
+    background-color: red;
+    border: none;
+    margin-top: 5px;
+}
+.wrapper button:hover{
+    background-color: black;
+}
+.wrapper button a{
+    color: white;
+    text-decoration: none;
+}
+.text-description{
+    margin-bottom: -118px;
+}
+/* offer section styling */
+
+
+

@@ -1,0 +1,33 @@
+
+.main-text{
+ font-weight: bold;
+ margin-top: 30px;
+ color: white;
+}
+.social-icons{
+    list-style: none;
+    display: flex; 
+}
+.icon{
+  margin-right: 10px;
+  background-color: red;
+  padding: 10px;
+  border-radius: 60%;
+  color: white;
+}
+.icon a{
+    color: white;
+}
+.icon:hover{
+    background: none;
+}
+.icon a:hover{
+    color: whitesmoke;
+}
+.footer{
+    padding-top: 20px;
+    margin-bottom: -20px;
+}
+.copyright{
+    margin-top: -12px;
+}

@@ -1,0 +1,41 @@
+
+.bg-img {
+    background-size: cover;
+    background-image: url(./images/cover.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.custom-img {
+    width: 100%;
+}
+
+.custom-heading {
+    font-weight: bold;
+
+    font-size: 2rem;
+}
+
+.custom-text {
+    color: black;
+    margin-top: 10px;
+
+}
+
+.custom-btn {
+    background-color: red;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.custom-btn a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.custom-btn a:hover {
+    color: whitesmoke;
+}

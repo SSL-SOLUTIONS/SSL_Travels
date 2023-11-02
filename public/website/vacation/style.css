@@ -1,0 +1,42 @@
+.imgg{
+    width: 100%;
+}
+.full-bg{
+    background: #eeeeee;
+}
+
+.vacation{
+    font-weight: bold;
+    border: 1px solid red;
+}
+
+.bg{
+    background: white;
+    padding-left: 14px; 
+    margin-bottom: 16px;
+}
+.button{
+    background-color: red;
+    text-align: center;
+    border: none;
+}
+.button:hover{
+    background-color: black;
+}
+.button a{
+    text-decoration: none;
+    color: white;
+}
+.button a:hover{
+   
+    color: whitesmoke;
+}
+span{
+    margin-top: -3px;
+    margin-left: 6px;
+    margin-right: 5px;
+}
+img{
+width: 100%;
+}
+

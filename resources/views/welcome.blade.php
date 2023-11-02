@@ -1,0 +1,7 @@
+@include('allfiles.navbar')
+@include('allfiles.offer')
+@include('allfiles.weekend')
+@include('allfiles.explore')
+@include('allfiles.packing')
+@include('allfiles.designed')
+@include('allfiles.footer')
