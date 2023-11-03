@@ -6,18 +6,27 @@
 }
 .social-icons{
     list-style: none;
-    display: flex; 
+    display: flex;
+    color: white; 
 }
-.icon{
-  margin-right: 10px;
-  background-color: red;
-  padding: 10px;
-  border-radius: 60%;
-  color: white;
-}
-.icon a{
-    color: white;
-}
+
+    .icon {
+        margin-right: 10px;
+        background-color: red;
+        border-radius: 50%; /* Add this property to make the icons round */
+        width: 30px; /* Adjust the width and height as needed */
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      };
+      .icon i{
+        color: white;
+      }
+      
+
+
+
 .icon:hover{
     background: none;
 }

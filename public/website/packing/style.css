@@ -1,5 +1,6 @@
 
 .bg-img {
+    content: "";
     background-size: cover;
     background-image: url(./images/cover.jpg);
     background-repeat: no-repeat;
@@ -38,4 +39,19 @@
 
 .custom-btn a:hover {
     color: whitesmoke;
+}
+@keyframes blink {
+    0% {
+        color: red;
+    }
+    50% {
+        color: rgb(210, 88, 88);
+    }
+    100% {
+        color: red;
+    }
+}
+
+.custom-text {
+    animation: blink 5s infinite;
 }

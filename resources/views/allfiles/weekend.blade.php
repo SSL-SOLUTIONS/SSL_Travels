@@ -14,7 +14,7 @@
 <!-- Weekend gateway section -->
 <body class="body">
     <div class="container">
-        <h1 class="text-center h1-class mb-5">Weekend GateWays</h1>
+        <h1 class="text-center h1-class">Weekend GateWays</h1>
         <div class="row">
             <div class="col-lg-4 col-sm-12">
                 <div class="image-container">

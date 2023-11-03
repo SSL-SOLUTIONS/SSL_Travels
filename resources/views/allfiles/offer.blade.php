@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,7 +54,7 @@
                     <div class="col-md-12 popular-tours bg-light">
                         <div class="d-flex">
                             <div class="image-fluid">
-                                <img src="{{asset('website/offersection/images/skardu-1-150x150.jpg')}}" alt="">
+                                <img src="{{asset('website/offersection/images/skardu-1-150x150.jpg')}}"alt="">
                             </div>
                             <div class="description">
                                 <h3>9 Days Gilgit Baltistan</h3>
@@ -88,21 +87,21 @@
             </div>
             <div class="col-lg-4 col-md-12 best-seller">
                 <div class="row">
-                    <div class="col-12 best-seller-img text-description">
+                    <div class="col-12 best-seller-img  text-description">
                         <img width="100%" src="{{('website/offersection/images/Lahore-Aerial-Joyride-150x150.jpg')}}" alt="">
                         <div class="wrapper">
                             <h3 class="j">Lahore Aerial Joyrides</h3>
                             <i class="fas fa-calendar"></i> <span>Saturdays</span><br>
                             <i class="fas fa-clock"></i>
                             <span>15 Minutes</span><br>
-                            <button><a href="#">Book Now</a></button>
+                            <button><a href="">Book Now</a></button>
                         </div>
                     </div>
-                    <div class="col-12 best-seller-img">
+                    <div class="col-12 best-seller-img mt-2">
                         <img width="100%" src="{{('website/offersection/images/Lahore-Aerial-Joyride-150x150.jpg')}}"alt="">
                         <div class="wrapper">
                             <h3>Lahore Aerial Joyrides</h3>
-                            <i class="fas fa-calendar"></i> <span>Saturdays</span><br>
+                            <i class="fas fa-calendar"></i><span>Saturdays</span><br>
                             <i class="fas fa-clock"></i>
                             <span>15 Minutes</span><br>
                             <button><a href="">Book Now</a></button>

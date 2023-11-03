@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
                     <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
 
                     <!-- <div>
@@ -32,7 +32,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
                     <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
 
                     <!-- <div>
@@ -42,7 +42,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
                     <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
 
                     <!-- <div>
@@ -52,49 +52,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
-
-                    <!-- <div>
-                        <button class="button mb-3 p-1"><a href="">Read More</a></button>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
-
-                    <!-- <div>
-                        <button class="button mb-3 p-1"><a href="">Read More</a></button>
-                    </div> -->
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
-
-                    <!-- <div>
-                        <button class="button mb-3 p-1"><a href="">Read More</a></button>
-                    </div> -->
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
-
-                    <!-- <div>
-                        <button class="button mb-3 p-1"><a href="">Read More</a></button>
-                    </div> -->
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
                     <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
 
                     <!-- <div>
@@ -106,7 +64,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
                     <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
 
                     <!-- <div>
@@ -116,7 +74,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
                     <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
 
                     <!-- <div>
@@ -126,7 +84,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
                     <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
 
                     <!-- <div>
@@ -136,49 +94,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
-
-                    <!-- <div>
-                        <button class="button mb-3 p-1"><a href="">Read More</a></button>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
-
-                    <!-- <div>
-                        <button class="button mb-3 p-1"><a href="">Read More</a></button>
-                    </div> -->
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
-
-                    <!-- <div>
-                        <button class="button mb-3 p-1"><a href="">Read More</a></button>
-                    </div> -->
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
-
-                    <!-- <div>
-                        <button class="button mb-3 p-1"><a href="">Read More</a></button>
-                    </div> -->
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
                     <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
 
                     <!-- <div>
@@ -190,7 +106,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
                     <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
 
                     <!-- <div>
@@ -200,7 +116,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
                     <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
 
                     <!-- <div>
@@ -210,7 +126,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
                     <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
 
                     <!-- <div>
@@ -220,7 +136,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
                     <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
 
                     <!-- <div>
@@ -232,7 +148,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
                     <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
 
                     <!-- <div>
@@ -242,7 +158,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
                     <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
 
                     <!-- <div>
@@ -252,7 +168,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
                     <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
 
                     <!-- <div>
@@ -262,7 +178,91 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
+
+                    <!-- <div>
+                        <button class="button mb-3 p-1"><a href="">Read More</a></button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="image container bg">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
+
+                    <!-- <div>
+                        <button class="button mb-3 p-1"><a href="">Read More</a></button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="image container bg">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
+
+                    <!-- <div>
+                        <button class="button mb-3 p-1"><a href="">Read More</a></button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="image container bg">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
+
+                    <!-- <div>
+                        <button class="button mb-3 p-1"><a href="">Read More</a></button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="image container bg">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
+
+                    <!-- <div>
+                        <button class="button mb-3 p-1"><a href="">Read More</a></button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="image container bg">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
+
+                    <!-- <div>
+                        <button class="button mb-3 p-1"><a href="">Read More</a></button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="image container bg">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
+
+                    <!-- <div>
+                        <button class="button mb-3 p-1"><a href="">Read More</a></button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="image container bg">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
+                    <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
+
+                    <!-- <div>
+                        <button class="button mb-3 p-1"><a href="">Read More</a></button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="image container bg">
+                    <img class="img ml-5 mt-3" src="{{asset('website/vacation/images/imig.jpg')}}" alt="">
                     <h5 style="font-weight: bold;" class="mt-3">Water Polo</h5> <br>
 
                     <!-- <div>

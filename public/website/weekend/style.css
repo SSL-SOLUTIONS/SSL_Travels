@@ -8,8 +8,8 @@
 .image-container {
     position: relative;
     margin: 10px;
+ 
 }
-
 img {
     width:100%;
     height: auto;
@@ -38,6 +38,6 @@ img {
 }
 .h1-class{
     font-weight: bold;
-
+margin-top: -55px;
 }
 

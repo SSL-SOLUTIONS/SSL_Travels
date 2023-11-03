@@ -22,11 +22,12 @@
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <h1 class="custom-heading">Pack Your Bags</h1>
                     <p class="custom-text">
+                        <strong>
                         Pack your bags and get ready for an adventure of a lifetime. Offering over 100 sports and
                         adventure activities at over 500 locations nationwide. Whether you are a solo traveler,
                         traveling with family, friends, or colleagues looking for a weekend getaway, or a group of
                         female friends looking for girls' exclusive getaways, or a company looking for a corporate
-                        adventure retreat, we have something for everyone.
+                        adventure retreat, we have something for everyone.</strong>
                     </p>
                 </div>
             </div>
