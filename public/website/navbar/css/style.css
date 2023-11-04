@@ -243,7 +243,7 @@ nav .icon-burger .line {
   bottom: 20px;
   right: 40px;
   display: none;
-width: 60px;
+  width: 60px;
   border-radius: 80%;
   z-index: 1; 
 } 

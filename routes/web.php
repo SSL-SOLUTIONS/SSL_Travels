@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DestinationController;
+use App\Http\Controllers\VacationController;
 use App\Http\Controllers\WebsiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,4 +26,9 @@ Route::get('transport', [WebsiteController::class, 'transport'])->name('transpor
 Route::get('about', [WebsiteController::class, 'about'])->name('about');
 Route::get('contact', [WebsiteController::class, 'contact'])->name('contact');
 Route::get('activities', [WebsiteController::class, 'activities'])->name('activities');
+
+Route::get('dashboard',[AdminController::class,'dashboard'])->name('dashboard');
+Route::resource('vacationes', VacationController::class);
+Route::resource('destinations', DestinationController::class);
+
 
