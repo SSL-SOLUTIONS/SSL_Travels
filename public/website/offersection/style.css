@@ -18,17 +18,21 @@
     
 }
 .description  button{
-    background-color: red;
+    background-color:blue ;
     border: none;
     margin-top: 6px;
   
 }
 .description  button:hover{
-    background-color: black;
+    background-color: white;
 }
 .description button a{
     text-decoration: none;
     color: white;
+}
+.description button a:hover{
+  
+    color: black;
 }
 .image-fluid{
     max-width: 100%;
@@ -41,16 +45,19 @@
     color: white;
 }
 .wrapper button{
-    background-color: red;
+    background-color: blue;
     border: none;
     margin-top: 5px;
 }
 .wrapper button:hover{
-    background-color: black;
+    background-color: white;
 }
 .wrapper button a{
     color: white;
     text-decoration: none;
+}
+.wrapper button a:hover{
+    color: black;
 }
 .text-description{
     margin-bottom: -118px;

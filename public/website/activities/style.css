@@ -16,13 +16,13 @@
     margin-bottom: 16px;
 }
 .button{
-    background-color: red;
+    background-color: blue;
     text-align: center;
     border: none;
     border-radius: 40px;
 }
 .button:hover{
-    background-color: black;
+    background-color: white;
 }
 .button a{
     text-decoration: none;
@@ -30,7 +30,7 @@
 }
 .button a:hover{
    
-    color: whitesmoke;
+    color: black;
 }
 span{
     margin-top: -3px;

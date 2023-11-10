@@ -18,14 +18,15 @@
                 </a>
             </div>
             <ul class="links">
-            <li>
-                    <a href="{{route('vacations')}}" class="links-nav">
-                      Vacations
+          
+                <li class="dropdown">
+                    <a href="{{url('international')}}" class="links-nav">
+                   International
                     </a>
                 </li>
-                <li class="dropdown">
-                    <a href="{{route('destinations')}}" class="links-nav">
-                        Destinations
+                <li>
+                    <a href="{{route('local')}}" class="links-nav">
+                  Local
                     </a>
                 </li>
                 <li>

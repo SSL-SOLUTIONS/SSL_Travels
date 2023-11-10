@@ -23,7 +23,7 @@ img {
 }
 
 .buttony {
-    background-color: black;
+    background-color: blue;
     padding-top: 2%; /* Use a percentage of the parent's width for padding */
     padding-bottom: 2%;
     padding-right: 1%; /* Use a percentage of the parent's width for padding */
@@ -44,7 +44,7 @@ img {
 
 /* icon styles */
 .icony{
-    background-color: red;
+    background-color:blue;
     color: white;
    font-size: larger;
     border-radius: 50%;

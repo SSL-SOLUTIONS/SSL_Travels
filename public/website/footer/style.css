@@ -12,7 +12,7 @@
 
     .icon {
         margin-right: 10px;
-        background-color: red;
+        background-color: blue;
         border-radius: 50%; /* Add this property to make the icons round */
         width: 30px; /* Adjust the width and height as needed */
         height: 30px;

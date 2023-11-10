@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="{{('website/navbar/css/style.css')}}"> 
+    <link rel="stylesheet" href="{{asset('website/navbar/css/style.css')}}"> 
     <title>SSL Travels & Tours</title>
 </head>
 <body>
@@ -13,18 +13,19 @@
         <input id="nav-toggle" type="checkbox">
         <div class="logo">
         <a href="{{url('/')}}" class="logo-nav">
-                <img   src="{{('website/navbar/images/logo.png')}}" style="height: 60px;" alt="">
+                <img   src="{{asset('website/navbar/images/logo.png')}}" style="height: 60px;" alt="">
             </a>
         </div>
         <ul class="links">
-            <li>
-                <a href="{{route('vacations')}}" class="links-nav">
-                  Vacations
+           
+            <li class="dropdown">
+                <a href="{{route('international')}}" class="links-nav">
+                   International
                 </a>
             </li>
-            <li class="dropdown">
-                <a href="{{route('destinations')}}" class="links-nav">
-                    Destinations
+            <li>
+                <a href="{{route('local')}}" class="links-nav">
+                 Local
                 </a>
             </li>
             <li>

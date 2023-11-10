@@ -41,13 +41,13 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                            <a class="nav-link" href="{{url('vacationes')}}">
+                            <a class="nav-link" href="{{url('locals')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                            Vacationes
+                         Local Tours
                             </a>
-                            <a class="nav-link" href="{{url('destinations')}}">
+                            <a class="nav-link" href="{{url('internationals')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Destinations
+                          International Tours
                             </a>
                         </div>
                     </div>

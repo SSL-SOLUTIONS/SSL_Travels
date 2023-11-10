@@ -7,22 +7,21 @@
     margin-bottom: 16px;
 }
 .button{
-    background-color: red;
+    background-color: blue;
     text-align: center;
     border: none;
     text-decoration: none; 
 }
-.button:hover{
-    background-color: black;
-    color: whitesmoke;
-  
-}
+
 .button a{
     text-decoration: none;
     color: white;
 }
+.button:hover{
+    background-color:rgba(0, 20, 255);
+}
 .button a:hover{
-    color: whitesmoke;
+    color: white;
 }
 span{
     margin-top: -3px;

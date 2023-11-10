@@ -26,7 +26,7 @@
             font-size: 16px;
         }
         .container form input[type="submit"] {
-            background-color: red;
+            background-color: blue;
             color: #fff;
             font-size: 18px;
             border: none;
@@ -34,10 +34,7 @@
             padding: 10px;
             cursor: pointer;
         }
-        .container form input[type="submit"]:hover {
-            background-color: black;
-            color: whitesmoke;
-        }
+       
 
         @media (max-width: 600px) {
             .container {
