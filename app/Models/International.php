@@ -1,7 +1,6 @@
 <?php
 
-namespace App\Models;  // Remove the additional "International" subnamespace
-
+namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
