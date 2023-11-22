@@ -2,9 +2,19 @@
 <html lang="en">
 
 <head>
-    <!-- Your head content here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{asset('website/local/style.css')}}">
+    <title>SSL Travels & Tours</title>
+    <style>
+    button .link-a{
+            text-decoration: none;
+            color: red;
+        }
+    </style>
 </head>
-
 @include('allfiles.nav')
 <body class="full-bg">
     <div>
@@ -15,11 +25,11 @@
     </div>
     <div class="container">
         <div class="row">
-            @foreach($internationals as $international)
+        @foreach(\App\Models\International::all() as $international)
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
                     <a class="link-a" href="{{ route('internationaldetails', ['id' => $international->id]) }}">
-                        <img style="height: 200px;" class="img-fluid img ml-5" src="{{ asset('admin/assets/images/internationals/'.$international->image) }}" alt="">
+                        <img style="height: 200px;" class="img-fluid img ml-5" src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" alt="">
                         <h5 style="font-weight: bold;" class="mt-3">
                             {{ Illuminate\Support\Str::limit($international->title, $limit = 20, $end = '...') }}
                         </h5>

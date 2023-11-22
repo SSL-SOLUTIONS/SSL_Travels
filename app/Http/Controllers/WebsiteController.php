@@ -18,8 +18,7 @@ class WebsiteController extends Controller
        }
    
     public function international(){
-        $internationals = InternationalInternational::all();
-        dd($internationals); 
+        $internationals = International::all();
         return view('allfiles.international', compact('internationals'));
     }
     
