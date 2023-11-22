@@ -21,4 +21,4 @@
     <br>
     @include('allfiles.footer')
 </body>
-</html>
+</html>    

@@ -31,7 +31,6 @@
             </div>
         </div>
     </div>
+    @include('allfiles.footer')
 </body>
-
 </html>
-@include('allfiles.footer')

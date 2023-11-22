@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('internationals', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
+
             $table->string('image');
             $table->timestamps();
         });

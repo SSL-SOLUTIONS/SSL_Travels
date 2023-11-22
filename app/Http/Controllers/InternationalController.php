@@ -39,6 +39,10 @@ class InternationalController extends Controller
         $request->validate([
              'title'=>'required|max:40',
              'image'=>'required|image',
+             'description'=>'required|max:200',
+             'price'=>'required|numeric',
+
+
              
         ]);
         $imageName = time().'.'.$request->image->extension();  
@@ -46,6 +50,10 @@ class InternationalController extends Controller
         $international = International::create([
             'title'=>$request->title,
             'image'=>$imageName,
+            'description'=>$request->description,
+            'price'=>$request->price,
+
+
           
         ]);
         return redirect()->route('internationals.index')->with('success','Record Added Successfully');
@@ -87,6 +95,9 @@ class InternationalController extends Controller
     $request->validate([
         'title' => 'required|max:100',
         'image' => 'nullable|image',
+        'description'=>'required',
+        'price'=>'required',
+
        
     ]);
            $international = International::where('id',$id)->first();
@@ -96,6 +107,10 @@ class InternationalController extends Controller
             $international->image = $imageName;
            }
            $international->title = $request->title;
+           $international->description = $request->description;
+           $international->price = $request->price;
+
+
            $international->save();
            return redirect()->route('internationals.index')->with('success','Record Updated Successfully');
     }

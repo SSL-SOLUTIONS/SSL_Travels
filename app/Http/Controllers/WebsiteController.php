@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\International;
+use App\Models\International\International as InternationalInternational;
 use App\Models\Local;
 use Illuminate\Http\Request;
 
@@ -18,13 +19,18 @@ class WebsiteController extends Controller
        }
    
     public function international(){
-        $internationals = International::all();
-        return view('allfiles.international',compact('internationals'));
+        $internationals = InternationalInternational::all();
+        dd($internationals); 
+        return view('allfiles.international', compact('internationals'));
     }
+    
    public function internationaldetails($id){
-    $international = International::find($id);
+    $international = InternationalInternational::find($id);
     return view('allfiles.tourdetails', ['international' => $international]);
    }
+   public function destination(){
+    return view('allfiles.destination');
+}
     public function transport(){
         return view('allfiles.transport');
     }
@@ -37,4 +43,5 @@ class WebsiteController extends Controller
     public function activities(){
         return view('allfiles.activities');
     }
+ 
 }
