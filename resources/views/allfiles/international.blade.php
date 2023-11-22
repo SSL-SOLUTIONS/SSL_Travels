@@ -19,7 +19,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
                     <a class="link-a" href="{{ route('internationaldetails', ['id' => $international->id]) }}">
-                        <img style="height: 200px;" class="img-fluid img ml-5" src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" alt="">
+                        <img style="height: 200px;" class="img-fluid img ml-5" src="{{ asset('admin/assets/images/internationals/'.$international->image) }}" alt="">
                         <h5 style="font-weight: bold;" class="mt-3">
                             {{ Illuminate\Support\Str::limit($international->title, $limit = 20, $end = '...') }}
                         </h5>
