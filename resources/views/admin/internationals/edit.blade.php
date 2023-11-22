@@ -17,6 +17,16 @@
     </style>
 
 @section('content')
+@if ($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -31,14 +41,12 @@
                             <label for="title"><b>Title</b></label>
                             <input type="text" name="title" class="form-control" id="title" value="{{ $international->title}}" required>
                         </div>
+                        
                         <div class="form-groupp">
                             <label for="title"><b>Description:</b></label>
-                        <textarea name="description" id="description" cols="30" rows="0" required>{{old('description')}}</textarea>                        
+                        <textarea name="description" id="description" cols="30" rows="0" required>{{ $international->description}}</textarea>                        
                         </div>
-                        <div class="form-group">
-                            <label for="price"><b>Price:</b></label>
-                            <input type="text" name="price" class="form-control" id="price" value="{{old('price')}}" required>
-                        </div>
+                      
                         <div class="form-group">
                             <label for="image"><b>Image</b></label>
                             <input type="file" name="image" class="form-control" id="image">

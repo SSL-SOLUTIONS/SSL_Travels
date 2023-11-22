@@ -1,2 +1,2 @@
 
-@include('allfiles.international')
+@include('allfiles.home')

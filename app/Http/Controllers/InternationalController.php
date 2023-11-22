@@ -39,8 +39,8 @@ class InternationalController extends Controller
         $request->validate([
              'title'=>'required|max:40',
              'image'=>'required|image',
-             'description'=>'required|max:200',
-             'price'=>'required|numeric',
+             'description'=>'required|max:2000',
+             
 
 
              
@@ -51,7 +51,7 @@ class InternationalController extends Controller
             'title'=>$request->title,
             'image'=>$imageName,
             'description'=>$request->description,
-            'price'=>$request->price,
+            
 
 
           
@@ -96,7 +96,7 @@ class InternationalController extends Controller
         'title' => 'required|max:100',
         'image' => 'nullable|image',
         'description'=>'required',
-        'price'=>'required',
+        
 
        
     ]);
@@ -108,7 +108,7 @@ class InternationalController extends Controller
            }
            $international->title = $request->title;
            $international->description = $request->description;
-           $international->price = $request->price;
+           
 
 
            $international->save();

@@ -9,6 +9,6 @@ class International extends Model
     use HasFactory;
     
     protected $fillable = [
-        'title', 'image', 'description', 'price'
+        'title', 'image', 'description'
     ];
 }

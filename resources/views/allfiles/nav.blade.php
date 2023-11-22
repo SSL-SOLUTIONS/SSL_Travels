@@ -146,11 +146,7 @@
                     About
                 </a>
             </li>
-            <li>
-                <a href="{{route('contact')}}" class="links-nav">
-                    Contact
-                </a>
-            </li>
+          
 
 
         </ul>
