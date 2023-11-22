@@ -29,9 +29,7 @@
                     <i class="fa fa-phone footer-icon"></i>
                     +92 301 111 4504
                 </div>
-                
             </div>
-
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <p class="main-text">Follow us</p>
                 <ul class="social-icons text-center">

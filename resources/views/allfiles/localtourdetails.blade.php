@@ -23,10 +23,10 @@
             <div class="col-lg-12">
                 <div style="width: 50%;"  class="image container bg">
                     <img class="img ml-5"
-                         src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" 
+                         src="{{ asset('admin/assets/images/locals/' . $local->image) }}" 
                          alt="">
                     <h5 style="font-weight: bold;" class="mt-3">
-                        {{ $international->title }}
+                        {{ $local->title }}
                     </h5>
                     <hr>
                     <div>

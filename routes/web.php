@@ -23,8 +23,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('local',[WebsiteController::class, 'local'])->name('local');
+Route::get('/localdetails/{id}',[WebsiteController::class,'localdetails'])->name('localdetails');
 Route::get('international',[WebsiteController::class, 'international'])->name('international');
 Route::get('/internationaldetails/{id}',[WebsiteController::class,'internationaldetails'])->name('internationaldetails');
+Route::get('/localdetails/{id}',[WebsiteController::class,'localdetails'])->name('localdetails');
 Route::get('transport', [WebsiteController::class, 'transport'])->name('transport');
 Route::get('about', [WebsiteController::class, 'about'])->name('about');
 Route::get('contact', [WebsiteController::class, 'contact'])->name('contact');

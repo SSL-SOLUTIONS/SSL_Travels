@@ -15,7 +15,7 @@
 <!-- Explore fleet  section starts -->
 @include('allfiles.nav')
 <body class="body">
-    <img style="width: 100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRBh-PtaxZbO3OUxks8otgqWI-YXl2LgHPaQ&usqp=CAU" alt="">
+    <img style="width:100%;" src="https://ajaycarrental.com/assets/images/blog/Corporate-Car-Rental.png" alt="">
     <div class="container">
         <h1 class="text-center h1-class mt-5 mb-3">Explore Our Fleet</h1>
         <div class="row">
@@ -63,7 +63,7 @@
                     <h3 class="mt-3">Toyota Corolla</h3>
                     <p class="">Sedans</p>
                     <hr>
-                    <P>From <span style="font-weight:bold; color:black">Rs 15000</span> </span></P>
+                    <P>From <span style="font-weight:bold; color:black">Rs 15000</span></span></P>
                     <hr>
                     <div class="d-flex">
                         <i class="mb-2 fas fa-user"></i><span>21 Adults</span><br>

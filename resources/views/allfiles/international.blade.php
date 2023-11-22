@@ -18,14 +18,12 @@
 @include('allfiles.nav')
 <body class="full-bg">
     <div>
-        <img class="img-fluid" width="100%" src="https://i.pinimg.com/564x/29/05/60/29056090ce2905dd955371e1e0478259.jpg" alt="">
+        <img class="img-fluid" width="100%" src="https://www.airocity.in/assets/images/europe_banner.jpg" alt="">
     </div>
     <div>
         <h2 style="font-weight: bold;" class="text-center mt-5 mb-4 text-bold">International Tours</h2>
     </div>
-
     <div class="container">
-
         <div class="row">
             @foreach($internationals as $international)
             <div class="col-lg-3 col-md-6 col-sm-12">
@@ -46,7 +44,10 @@
         </div>
     </div>
     @include('allfiles.footer')
-
 </body>
 
 </html>
+
+
+
+

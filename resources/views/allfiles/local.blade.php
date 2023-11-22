@@ -8,323 +8,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="{{asset('website/local/style.css')}}">
     <title>SSL Travels & Tours</title>
+    <style>
+    button .link-a{
+            text-decoration: none;
+            color: red;
+        }
+    </style>
 </head>
 @include('allfiles.nav')
 <body class="full-bg">
     <div>
-        <img class="img-fluid" width="100%" src="{{asset('website/local/images/lower-kachura-or-shangrila-lake.jpg')}}" alt="">
+        <img class="img-fluid" width="100%" src="
+        https://zufta.pk/wp-content/uploads/2022/04/Fairy-Meadows-ZUFTA-4.jpg" alt="">
     </div>
     <div>
         <h2 style="font-weight: bold;" class="text-center mt-5 mb-4 text-bold">Local Tours</h2>
     </div>
     <div class="container">
         <div class="row">
+            @foreach($locals as $local)
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <img class="img ml-5" src="{{asset('website/local/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">1 Day KhanPur Dam</h5>
-                    <p class="">KhanPur Dam,KPK</p>
-                    <hr>
-
-
-                    <div class="">
-                        <i class="mb-2 fas fa-calendar"></i><span>Jan-December</span><br>
-                        <i class="mb-2 fas fa-clock"></i><span>One Day</span>
-
-                    </div>
+                    <a class="link-a" href="{{ route('localdetails', ['id' => $local->id]) }}">
+                        <img style="height: 200px;" class="img-fluid img ml-5" src="{{ asset('admin/assets/images/locals/' . $local->image) }}" alt="">
+                        <h5 style="font-weight: bold;" class="mt-3">
+                            {{ Illuminate\Support\Str::limit($local->title, $limit = 20, $end = '...') }}
+                        </h5>
+                    </a>
                     <hr>
                     <div>
                         <button class="button mb-3 p-1"><a href="">Book Now</a></button>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img-fluid" src="{{asset('website/local/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">1 Day KhanPur Dam</h5>
-                    <p class="">KhanPur Dam,KPK</p>
-                    <hr>
-
-
-                    <div class="">
-                        <i class="mb-2 fas fa-calendar"></i><span>Jan-December</span><br>
-                        <i class="mb-2 fas fa-clock"></i><span>One Day</span>
-
-                    </div>
-                    <hr>
-                    <div>
-                        <button class="button mb-3 p-1"><a href="">Book Now</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img-fluid" src="{{asset('website/local/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">1 Day KhanPur Dam</h5>
-                    <p class="">KhanPur Dam,KPK</p>
-                    <hr>
-
-
-                    <div class="">
-                        <i class="mb-2 fas fa-calendar"></i><span>Jan-December</span><br>
-                        <i class="mb-2 fas fa-clock"></i><span>One Day</span>
-
-                    </div>
-                    <hr>
-                    <div>
-                        <button class="button mb-3 p-1"><a href="">Book Now</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img-fluid" src="{{asset('website/local/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">1 Day KhanPur Dam</h5>
-                    <p class="">KhanPur Dam,KPK</p>
-                    <hr>
-
-
-                    <div class="">
-                        <i class="mb-2 fas fa-calendar"></i><span>Jan-December</span><br>
-                        <i class="mb-2 fas fa-clock"></i><span>One Day</span>
-
-                    </div>
-                    <hr>
-                    <div>
-                        <button class="button mb-3 p-1"><a href="">Book Now</a></button>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img-fluid" src="{{asset('website/local/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">1 Day KhanPur Dam</h5>
-                    <p class="">KhanPur Dam,KPK</p>
-                    <hr>
-                    <div class="">
-                        <i class="mb-2 fas fa-calendar"></i><span>Jan-December</span><br>
-                        <i class="mb-2 fas fa-clock"></i><span>One Day</span>
-
-                    </div>
-                    <hr>
-                    <div>
-                        <button class="button mb-3 p-1"><a href="">Book Now</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img-fluid" src="{{asset('website/local/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">1 Day KhanPur Dam</h5>
-                    <p class="">KhanPur Dam,KPK</p>
-                    <hr>
-                    <div class="">
-                        <i class="mb-2 fas fa-calendar"></i><span>Jan-December</span><br>
-                        <i class="mb-2 fas fa-clock"></i><span>One Day</span>
-                    </div>
-                    <hr>
-                    <div>
-                        <button class="button mb-3 p-1"><a href="">Book Now</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img-fluid" src="{{asset('website/local/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">1 Day KhanPur Dam</h5>
-                    <p class="">KhanPur Dam,KPK</p>
-                    <hr>
-
-
-                    <div class="">
-                        <i class="mb-2 fas fa-calendar"></i><span>Jan-December</span><br>
-                        <i class="mb-2 fas fa-clock"></i><span>One Day</span>
-
-                    </div>
-                    <hr>
-                    <div>
-                        <button class="button mb-3 p-1"><a href="">Book Now</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img-fluid" src="{{asset('website/local/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">1 Day KhanPur Dam</h5>
-                    <p class="">KhanPur Dam,KPK</p>
-                    <hr>
-
-
-                    <div class="">
-                        <i class="mb-2 fas fa-calendar"></i><span>Jan-December</span><br>
-                        <i class="mb-2 fas fa-clock"></i><span>One Day</span>
-
-                    </div>
-                    <hr>
-                    <div>
-                        <button class="button mb-3 p-1"><a href="">Book Now</a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img-fluid" src="{{asset('website/local/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">1 Day KhanPur Dam</h5>
-                    <p class="">KhanPur Dam,KPK</p>
-                    <hr>
-
-
-                    <div class="">
-                        <i class="mb-2 fas fa-calendar"></i><span>Jan-December</span><br>
-                        <i class="mb-2 fas fa-clock"></i><span>One Day</span>
-
-                    </div>
-                    <hr>
-                    <div>
-                        <button class="button mb-3 p-1"><a href="">Book Now</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img-fluid" src="{{asset('website/local/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">1 Day KhanPur Dam</h5>
-                    <p class="">KhanPur Dam,KPK</p>
-                    <hr>
-
-
-                    <div class="">
-                        <i class="mb-2 fas fa-calendar"></i><span>Jan-December</span><br>
-                        <i class="mb-2 fas fa-clock"></i><span>One Day</span>
-
-                    </div>
-                    <hr>
-                    <div>
-                        <button class="button mb-3 p-1"><a href="">Book Now</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img-fluid" src="{{asset('website/local/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">1 Day KhanPur Dam</h5>
-                    <p class="">KhanPur Dam,KPK</p>
-                    <hr>
-
-
-                    <div class="">
-                        <i class="mb-2 fas fa-calendar"></i><span>Jan-December</span><br>
-                        <i class="mb-2 fas fa-clock"></i><span>One Day</span>
-
-                    </div>
-                    <hr>
-                    <div>
-                        <button class="button mb-3 p-1"><a href="">Book Now</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img-fluid" src="{{asset('website/local/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">1 Day KhanPur Dam</h5>
-                    <p class="">KhanPur Dam,KPK</p>
-                    <hr>
-
-
-                    <div class="">
-                        <i class="mb-2 fas fa-calendar"></i><span>Jan-December</span><br>
-                        <i class="mb-2 fas fa-clock"></i><span>One Day</span>
-
-                    </div>
-                    <hr>
-                    <div>
-                        <button class="button mb-3 p-1"><a href="">Book Now</a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img-fluid" src="{{asset('website/local/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">1 Day KhanPur Dam</h5>
-                    <p class="">KhanPur Dam,KPK</p>
-                    <hr>
-
-
-                    <div class="">
-                        <i class="mb-2 fas fa-calendar"></i><span>Jan-December</span><br>
-                        <i class="mb-2 fas fa-clock"></i><span>One Day</span>
-
-                    </div>
-                    <hr>
-                    <div>
-                        <button class="button mb-3 p-1"><a href="">Book Now</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img-fluid" src="{{asset('website/local/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">1 Day KhanPur Dam</h5>
-                    <p class="">KhanPur Dam,KPK</p>
-                    <hr>
-
-
-                    <div class="">
-                        <i class="mb-2 fas fa-calendar"></i><span>Jan-December</span><br>
-                        <i class="mb-2 fas fa-clock"></i><span>One Day</span>
-
-                    </div>
-                    <hr>
-                    <div>
-                        <button class="button mb-3 p-1"><a href="">Book Now</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img-fluid" src="{{asset('website/local/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">1 Day KhanPur Dam</h5>
-                    <p class="">KhanPur Dam,KPK</p>
-                    <hr>
-
-                    <div class="">
-                        <i class="mb-2 fas fa-calendar"></i><span>Jan-December</span><br>
-                        <i class="mb-2 fas fa-clock"></i><span>One Day</span>
-
-                    </div>
-                    <hr>
-                    <div>
-                        <button class="button mb-3 p-1"><a href="">Book Now</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <img class="img-fluid" src="{{asset('website/local/images/imig.jpg')}}" alt="">
-                    <h5 style="font-weight: bold;" class="mt-3">1 Day KhanPur Dam</h5>
-                    <p class="">KhanPur Dam,KPK</p>
-                    <hr>
-                    <div class="">
-                        <i class="mb-2 fas fa-calendar"></i><span>Jan-December</span><br>
-                        <i class="mb-2 fas fa-clock"></i><span>One Day</span>
-                    </div>
-                    <hr>
-                    <div>
-                        <button class="button mb-3 p-1"><a href="">Book Now</a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
     @include('allfiles.footer')
-
 </body>
 
 </html>

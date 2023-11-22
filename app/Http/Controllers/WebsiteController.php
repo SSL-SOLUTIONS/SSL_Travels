@@ -12,6 +12,11 @@ class WebsiteController extends Controller
         $locals = Local::all();
         return view('allfiles.local', compact('locals'));
     }
+    public function localdetails($id){
+        $local=Local::find($id);
+        return view('allfiles.localtourdetails', ['local' => $local]);
+       }
+   
     public function international(){
         $internationals = International::all();
         return view('allfiles.international',compact('internationals'));
