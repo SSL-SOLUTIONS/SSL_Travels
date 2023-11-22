@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +15,8 @@
         <h2 style="font-weight: bold;" class="text-center mt-5 mb-4 text-bold">International Tours</h2>
     </div>
     <div class="container">
+
+
         <div class="row">
             @foreach($internationals as $international)
             <div class="col-lg-3 col-md-6 col-sm-12">

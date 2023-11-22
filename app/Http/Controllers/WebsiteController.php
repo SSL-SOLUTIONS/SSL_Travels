@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\International;
-use App\Models\International\International as InternationalInternational;
 use App\Models\Local;
 use Illuminate\Http\Request;
 
@@ -18,11 +17,13 @@ class WebsiteController extends Controller
         return view('allfiles.localtourdetails', ['local' => $local]);
        }
    
-    public function international(){
-        $internationals = International::all();
-        dd($internationals); 
-        return view('allfiles.international', compact('internationals'));
-    }
+       public function international()
+       {
+           $internationals = \App\Models\International::all();
+           return view('allfiles.international', compact('internationals'));
+       }
+       
+    
     
    public function internationaldetails($id){
     $international = International::find($id);

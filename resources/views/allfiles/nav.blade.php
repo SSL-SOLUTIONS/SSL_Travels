@@ -87,7 +87,7 @@
                 </a>
             </li>
             <li class="dropdown">
-                <a href="{{route('destination')}}" class="links-nav">
+                <a href="" class="links-nav">
                    Destination
                 </a>
                 <ul class="dropdown-content">
