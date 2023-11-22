@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\International;
+namespace App\Models;  // Remove the additional "International" subnamespace
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class International extends Model
 {
     use HasFactory;
-    protected $fillable =[
-        'title', 'image','description','price'
+    
+    protected $fillable = [
+        'title', 'image', 'description', 'price'
     ];
 }

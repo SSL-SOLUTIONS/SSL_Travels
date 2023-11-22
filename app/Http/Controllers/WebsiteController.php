@@ -18,13 +18,13 @@ class WebsiteController extends Controller
        }
    
     public function international(){
-        $internationals= international::all();
+        $internationals = InternationalInternational::all();
         dd($internationals); 
         return view('allfiles.international', compact('internationals'));
     }
     
    public function internationaldetails($id){
-    $international = InternationalInternational::find($id);
+    $international = International::find($id);
     return view('allfiles.tourdetails', ['international' => $international]);
    }
    public function destination(){
