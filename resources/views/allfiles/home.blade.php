@@ -77,12 +77,30 @@
 
     .image {
         width: 100%;
-        height: 500px;
+   
         transition: transform 0.3s ease;
     }
 
     .image:hover {
         transform: scale(1.1);
+    }
+    .int-btn{
+      
+        background-color: white;
+        border: 1px solid blue;
+    }
+    .int-btn:hover{
+     background-color: blue;
+  text-decoration: white;
+    }
+    .int-btn a{
+        color: blue;
+    }
+    .int-btn a:hover{
+        color: whitesmoke;
+    }
+    .in-btn:hover a{
+        color: whitesmoke;
     }
 </style>
 <body>
@@ -97,32 +115,34 @@
                 <img src="{{asset('/images/slider.jpg')}}" class="d-block w-100" alt="...">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <button  class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span style="color: blue;" class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span style="color: blue;" class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-
-    <div class="container mt-4">
+    <div class="container mt-2 text-center">
         <div class="row">
             @foreach(\App\Models\International::all() as $international)
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <a class="link-a" href="{{ route('international', ['id' => $international->id]) }}">
-                        <img style="height: 200px;" class="img-fluid img ml-5" src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" alt="">
-                        <h5 style="font-weight: bold;" class="mt-3">
-                            {{ Illuminate\Support\Str::limit($international->title, $limit = 20, $end = '...') }}
-                            {{ Illuminate\Support\Str::limit($international->description, $limit = 100, $end = '...') }}
-
+                    <a style="text-decoration: none; color:black" class="link-a" href="{{ route('international', ['id' => $international->id]) }}">
+                        <img style="height: 200px;" class="img-fluid img ml-5" src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" alt=""><br>
+                       <p class="mt-2">
+                         <h3>
+                    {{$international->title}}
+                   </h3>
+                </p>
+                        <h5  style="font-size: x-small;" class="mt-3">
+                            {{ Illuminate\Support\Str::limit($international->description, $limit = 160, $end = '...') }}
                         </h5>
                     </a>
                     <hr>
                     <div>
-                        <button class="button mb-3 p-1" ><a href="">Packages</a></button>
+                        <button  class="button mb-3 p-1 int-btn"><a style="text-decoration: none;" href="">Packages</a></button>
                     </div>
                 </div>
             </div>
