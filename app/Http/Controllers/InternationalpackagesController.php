@@ -9,7 +9,7 @@ class InternationalpackagesController extends Controller
 {
     public function index()
     {
-        $internationalspackages= InternationalPackage::all();
+        $internationalspackages=InternationalPackage::all();
         return view('admin.internationalpackages.index', compact('internationalspackages'));
     }
 
@@ -21,7 +21,6 @@ class InternationalpackagesController extends Controller
     public function create()
     {
         return view('admin.internationalpackages.create');
-        
     }
 
     /**
@@ -33,32 +32,21 @@ class InternationalpackagesController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-             'title'=>'required|max:40',
-             'image'=>'required|image',
-             'price'=>'required',
-             'international_id' =>'required',
-
-             
-             
-
-
-             
+            'title' => 'required|max:40',
+            'image' => 'required|image',
+            'price' => 'required',
+            'international_id' => 'required',
         ]);
-        $imageName = time().'.'.$request->image->extension();  
+        $imageName = time() . '.' . $request->image->extension();
         $request->image->move(public_path('admin/assets/images/internationals'), $imageName);
         $internationalspackages = InternationalPackage::create([
-            'title'=>$request->title,
-            'image'=>$imageName,
-            'price'=>$request->price,
+            'title' => $request->title,
+            'image' => $imageName,
+            'price' => $request->price,
             'international_id' => $request->input('international_id'),
 
-            
-            
-
-
-          
         ]);
-        return redirect()->route('internationalspackages.index')->with('success','Record Added Successfully');
+        return redirect()->route('internationalspackages.index')->with('success', 'Record Added Successfully');
     }
 
     /**
@@ -67,6 +55,7 @@ class InternationalpackagesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
 // Inside your resource controller
 public function show($id) {
     $internationalspackages = \App\Models\International::find($id);
@@ -74,6 +63,14 @@ public function show($id) {
     return view('allfiles.internationalpackages', compact('internationalspackages'));
 }
     
+=======
+    public function show($id)
+    {
+        $internationalspackage = InternationalPackage::find($id);
+        return view('admin.internationalpackages.show', compact('internationalspackage'));
+    }
+
+>>>>>>> 5d55d640c74021ae41f6b9728f8c05a12f9d5ece
 
     /**
      * Show the form for editing the specified resource.
@@ -83,7 +80,7 @@ public function show($id) {
      */
     public function edit($id)
     {
-        $internationalspackages=InternationalPackage::find($id);
+        $internationalspackages = InternationalPackage::find($id);
         return view('admin.internationalpackages.edit', compact('internationalspackages'));
     }
 
@@ -96,30 +93,30 @@ public function show($id) {
      */
     public function update(Request $request, $id)
     {
-        
-    $request->validate([
-        'title' => 'required|max:100',
-        'image' => 'nullable|image',
-        'price'=>'required',
-        'international_id' =>'required',
 
-       
-    ]);
-           $internationalspackages = InternationalPackage::where('id',$id)->first();
-           if($request->has('image')){
-            $imageName = time().'.'.$request->image->extension();  
+        $request->validate([
+            'title' => 'required|max:100',
+            'image' => 'nullable|image',
+            'price' => 'required',
+            'international_id' => 'required',
+
+
+        ]);
+        $internationalspackages = InternationalPackage::where('id', $id)->first();
+        if ($request->has('image')) {
+            $imageName = time() . '.' . $request->image->extension();
             $request->image->move(public_path('admin/assets/images/internationals'), $imageName);
             $internationalspackages->image = $imageName;
-           }
-           $internationalspackages->title = $request->title;
-           $internationalspackages->price = $request->price;
-           $internationalspackages->international_id = $request->input('international_id'); // Corrected line
-
-           
+        }
+        $internationalspackages->title = $request->title;
+        $internationalspackages->price = $request->price;
+        $internationalspackages->international_id = $request->input('international_id'); // Corrected line
 
 
-           $internationalspackages->save();
-           return redirect()->route('internationalspackages.index')->with('success','Record Updated Successfully');
+
+
+        $internationalspackages->save();
+        return redirect()->route('internationalspackages.index')->with('success', 'Record Updated Successfully');
     }
 
 
@@ -129,9 +126,9 @@ public function show($id) {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-         public function destroy($id)
+    public function destroy($id)
     {
-       InternationalPackage::where('id', $id)->delete();
-        return redirect()->route('internationalspackages.index')->with('success','Record Removed Successfully');
+        InternationalPackage::where('id', $id)->delete();
+        return redirect()->route('internationalspackages.index')->with('success', 'Record Removed Successfully');
     }
 }

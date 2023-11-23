@@ -53,6 +53,11 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                           International Packages    
                             </a>
+
+                            <a class="nav-link" href="{{url('localpackages')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                          Local Packages    
+                            </a>
                         </div>
                     </div>
                 </nav>

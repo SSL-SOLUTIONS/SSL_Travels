@@ -6,6 +6,7 @@ use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\InternationalController;
 use App\Http\Controllers\InternationalpackagesController;
 use App\Http\Controllers\LocalController;
+use App\Http\Controllers\LocalPackageController;
 use App\Http\Controllers\VacationController;
 use App\Http\Controllers\WebsiteController;
 use Illuminate\Support\Facades\Route;
@@ -40,6 +41,8 @@ Route::get('activities', [WebsiteController::class, 'activities'])->name('activi
 Route::get('dashboard',[AdminController::class,'dashboard'])->name('dashboard');
 Route::resource('locals', LocalController::class);
 Route::resource('internationals', InternationalController::class);
+Route::resource('internationalspackages',InternationalpackagesController::class);
+Route::resource('localpackages',LocalPackageController::class);
 
 
 Route::get('australia',[CountriesController::class,'australia'])->name('australia');
