@@ -142,7 +142,13 @@
                     </a>
                     <hr>
                     <div>
-                        <button  class="button mb-3 p-1 int-btn"><a style="text-decoration: none;" href="">Packages</a></button>
+                    @foreach(\App\Models\InternationalPackage::all() as $internationalpackages)
+                        
+                        <button class="button mb-3 p-1 int-btn">
+                            <a style="text-decoration: none;" href="{{ route('internationalpackages.show', ['id' => $internationalpackages->id]) }}">Packages</a>
+                        </button>
+                        @endforeach
+
                     </div>
                 </div>
             </div>

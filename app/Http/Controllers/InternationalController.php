@@ -65,10 +65,16 @@ class InternationalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function show($id) {
+        $internationalPackage = International::find($id);
+
+        if (!$internationalPackage) {
+            abort(404); // Handle the case where the international package with the given ID is not found
+        }
+
+        return view('international.show', ['internationalPackage' => $internationalPackage]);
     }
+
 
     /**
      * Show the form for editing the specified resource.
