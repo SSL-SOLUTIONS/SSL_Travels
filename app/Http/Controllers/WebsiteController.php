@@ -22,10 +22,8 @@ class WebsiteController extends Controller
     public function international()
     {
         $internationals = International::all();
-        return view('allfiles.home', compact('internationals'));
+        return view('allfiles.international', compact('internationals'));
     }
-   
-
     public function destination()
     {
         return view('allfiles.destination');

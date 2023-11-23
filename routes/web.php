@@ -31,13 +31,9 @@ Route::get('transport', [WebsiteController::class, 'transport'])->name('transpor
 Route::get('about', [WebsiteController::class, 'about'])->name('about');
 Route::get('contact', [WebsiteController::class, 'contact'])->name('contact');
 Route::get('activities', [WebsiteController::class, 'activities'])->name('activities');
-
-
 Route::get('dashboard',[AdminController::class,'dashboard'])->name('dashboard');
 Route::resource('locals', LocalController::class);
 Route::resource('internationals', InternationalController::class);
-
-
 Route::get('australia',[CountriesController::class,'australia'])->name('australia');
 Route::get('azarbaijan',[CountriesController::class,'azarbaijan'])->name('azarbaijan');
 Route::get('cyprus',[CountriesController::class,'cyprus'])->name('cyprus');
@@ -49,9 +45,6 @@ Route::get('francedetails',[CountriesController::class,'francedetails'])->name('
 Route::get('francedetails2',[CountriesController::class,'francedetails2'])->name('francedetails2');
 Route::get('francedetails3',[CountriesController::class,'francedetails3'])->name('francedetails3');
 Route::get('francedetails4',[CountriesController::class,'francedetails4'])->name('francedetails4');
-
-
-
 Route::get('germany',[CountriesController::class,'germany'])->name('germany');
 Route::get('germanydetails',[CountriesController::class,'germanydetails'])->name('germanydetails');
 Route::get('francedetails2',[CountriesController::class,'francedetails2'])->name('francedetails2');
@@ -85,10 +78,6 @@ Route::get('malaysia',[CountriesController::class,'malaysia'])->name('malaysia')
 Route::get('malaysiadetails',[CountriesController::class,'malaysiadetails'])->name('malaysiadetails');
 Route::get('malaysiadetails2',[CountriesController::class,'malaysiadetails2'])->name('malaysiadetails2');
 Route::get('malaysiadetails3',[CountriesController::class,'malaysiadetails3'])->name('malaysiadetails3');
-
-
-
-
 Route::get('maldives',[CountriesController::class,'maldives'])->name('maldives');
 Route::get('maldivesdetails',[CountriesController::class,'maldivesdetails'])->name('maldivesdetails');
 Route::get('maldivesdetails2',[CountriesController::class,'maldivesdetails2'])->name('maldivesdetails2');
