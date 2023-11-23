@@ -49,6 +49,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                           International Tours
                             </a>
+                            <a class="nav-link" href="{{url('internationalspackages')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                          International Packages    
+                            </a>
                         </div>
                     </div>
                 </nav>

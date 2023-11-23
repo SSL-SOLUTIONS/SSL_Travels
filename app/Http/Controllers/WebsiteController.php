@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\International;
+use App\Models\InternationalPackage;
 use App\Models\Local;
 use Illuminate\Http\Request;
 

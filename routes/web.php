@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CountriesController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\InternationalController;
+use App\Http\Controllers\InternationalpackagesController;
 use App\Http\Controllers\LocalController;
 use App\Http\Controllers\VacationController;
 use App\Http\Controllers\WebsiteController;
@@ -26,7 +27,6 @@ Route::get('/', function () {
 Route::get('local',[WebsiteController::class, 'local'])->name('local');
 Route::get('/localdetails/{id}',[WebsiteController::class,'localdetails'])->name('localdetails');
 Route::get('international',[WebsiteController::class, 'international'])->name('international');
-Route::get('/localdetails/{id}',[WebsiteController::class,'localdetails'])->name('localdetails');
 Route::get('transport', [WebsiteController::class, 'transport'])->name('transport');
 Route::get('about', [WebsiteController::class, 'about'])->name('about');
 Route::get('contact', [WebsiteController::class, 'contact'])->name('contact');
@@ -36,6 +36,9 @@ Route::get('activities', [WebsiteController::class, 'activities'])->name('activi
 Route::get('dashboard',[AdminController::class,'dashboard'])->name('dashboard');
 Route::resource('locals', LocalController::class);
 Route::resource('internationals', InternationalController::class);
+
+Route::resource('internationalspackages',InternationalpackagesController::class);
+
 
 
 Route::get('australia',[CountriesController::class,'australia'])->name('australia');

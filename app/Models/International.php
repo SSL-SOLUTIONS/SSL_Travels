@@ -11,4 +11,9 @@ class International extends Model
     protected $fillable = [
         'title', 'image', 'description'
     ];
+    public function internationalPackages()
+    {
+        return $this->hasMany(InternationalPackage::class);
+    }
+
 }
