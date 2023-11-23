@@ -11,4 +11,8 @@ class Local extends Model
     protected $fillable =[
         'title', 'image'
     ];
+    public function localpackages()
+    {
+        return $this->hasMany(LocalPackage::class);
+    }
 }
