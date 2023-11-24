@@ -28,7 +28,6 @@
         height: 300px;
         width: 100%;
         object-fit: cover;
-        /* Use 'cover' for a better responsive image */
     }
 
     .carousel-caption {
@@ -150,15 +149,9 @@
                     </a>
                     <hr>
                     <div>
-<<<<<<< HEAD
-                        
-                        <button class="button mb-3 p-1 int-btn">
-                            <a style="text-decoration: none;" href="{{ route('internationalpackages.show', ['id' => $internationalpackages->id]) }}">Packages</a>
-                        </button>
 
-=======
                         <button  class="button mb-3 p-1 int-btn"><a style="text-decoration: none;" href="">Packages</a></button>
->>>>>>> eec7452c40b5374ed3f671a92e9c2a3da0739dc2
+
                     </div>
                 </div>
             </div>

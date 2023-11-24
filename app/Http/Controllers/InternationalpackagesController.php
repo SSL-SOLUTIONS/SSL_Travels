@@ -55,29 +55,24 @@ class InternationalpackagesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-<<<<<<< HEAD
+
 
 // Inside your resource controller
-public function show($id) {
-    $internationalspackages = \App\Models\International::find($id);
-=======
->>>>>>> eec7452c40b5374ed3f671a92e9c2a3da0739dc2
+
 
 // Inside your resource controller
 
     
-<<<<<<< HEAD
 
 
-=======
+
+
 
     public function show($id)
     {
         $internationalspackage = InternationalPackage::find($id);
         return view('admin.internationalpackages.show', compact('internationalspackage'));
     }
-
->>>>>>> eec7452c40b5374ed3f671a92e9c2a3da0739dc2
 
     /**
      * Show the form for editing the specified resource.

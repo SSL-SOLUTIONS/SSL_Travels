@@ -25,9 +25,7 @@ class WebsiteController extends Controller
         $internationals = International::all();
         return view('allfiles.international', compact('internationals'));
     }
-<<<<<<< HEAD
-    
-=======
+
 
     public function intpackages($id)
     {
@@ -35,7 +33,6 @@ class WebsiteController extends Controller
         $internationalspackages = $international->internationalpackages; 
         return view('international.packages', compact('international', 'internationalspackages'));
     }
->>>>>>> eec7452c40b5374ed3f671a92e9c2a3da0739dc2
     public function internationalpackages($id)
     {
         $internationalpackages = International::all($id);
