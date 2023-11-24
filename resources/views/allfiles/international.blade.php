@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +27,8 @@
     .carousel-item img {
         height: 300px;
         width: 100%;
-        object-fit: cover; /* Use 'cover' for a better responsive image */
+        object-fit: cover;
+        /* Use 'cover' for a better responsive image */
     }
 
     .carousel-caption {
@@ -39,7 +41,7 @@
     }
 
     .package-item:hover {
-        transform: scale(1.1); 
+        transform: scale(1.1);
     }
 
     .card-hover {
@@ -84,52 +86,56 @@
     .image:hover {
         transform: scale(1.1);
     }
-    .int-btn{
-      
+
+    .int-btn {
+
         background-color: white;
         border: 1px solid blue;
     }
-    .int-btn:hover{
-     background-color: blue;
-  text-decoration: white;
+
+    .int-btn:hover {
+        background-color: blue;
+        text-decoration: white;
     }
-    .int-btn a{
+
+    .int-btn a {
         color: blue;
     }
-    .int-btn a:hover{
+
+    .int-btn a:hover {
         color: whitesmoke;
     }
-    .in-btn:hover a{
+
+    .in-btn:hover a {
         color: whitesmoke;
     }
 </style>
+
 <body>
     @include('allfiles.nav')
 
     <img style="width: 100%;" src="https://i.pinimg.com/736x/65/a3/48/65a348aa04f47703f5ccc33f45934db9.jpg" alt="">
-      <h2 class="text-center mt-3 mb-3">
+    <h2 class="text-center mt-3 mb-3">
         International Tours
-      </h2>
-   
+    </h2>
+
     <div class="container mt-4 text-center">
         <div class="row">
             @foreach(\App\Models\International::all() as $international)
             <div class="col-lg-4 col-md-6 col-sm-12">
-                <div  style="margin-bottom: -90px;" class="image container bg">
+                <div style="margin-bottom: -90px;" class="image container bg">
                     <a style="text-decoration: none; color:black" class="link-a" href="{{ route('international', ['id' => $international->id]) }}">
                         <img style="height: 200px;" class="img-fluid img ml-5" src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" alt=""><br>
-                        <p class="mt-2">
-                            <h3>
-                                {{$international->title}}
-                            </h3>
-                        </p>
-                    <h5 style="font-size: medium; text-align:justify" class="mt-3">
-                            {{ Illuminate\Support\Str::limit($international->description, $limit = 100, $end = '...') }}
+                        <b>
+                    {{$international->title}}
+                    </b>
+                        <h5  style="font-size: x-small;" class="mt-3">
+                            {{ Illuminate\Support\Str::limit($international->description, $limit = 160, $end = '...') }}
                         </h5>
                     </a>
                     <hr>
                     <div>
-                        <button  class="button mb-3 p-1 int-btn"><a style="text-decoration: none;" href="{{ route('intpackages', ['id' => $international->id]) }}">Packages</a></button>
+                        <button  class="button mb-3 p-1 int-btn"><a style="text-decoration: none;" href="">Packages</a></button>
                     </div>
                 </div>
             </div>
@@ -172,4 +178,5 @@
     </script>
     @include('allfiles.footer')
 </body>
+
 </html>

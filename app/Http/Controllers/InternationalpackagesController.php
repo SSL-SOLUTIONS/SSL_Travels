@@ -55,6 +55,11 @@ class InternationalpackagesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+// Inside your resource controller
+
+    
+
     public function show($id)
     {
         $internationalspackage = InternationalPackage::find($id);

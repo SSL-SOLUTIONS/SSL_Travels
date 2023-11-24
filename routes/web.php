@@ -28,7 +28,16 @@ Route::get('/', function () {
 Route::get('local',[WebsiteController::class, 'local'])->name('local');
 Route::get('/localdetails/{id}',[WebsiteController::class,'localdetails'])->name('localdetails');
 Route::get('international',[WebsiteController::class, 'international'])->name('international');
+<<<<<<< HEAD
 Route::get('/international/{id}/packages', [WebsiteController::class, 'intpackages'])->name('intpackages');
+=======
+Route::get('/internationalpackages{id}',[WebsiteController::class, 'internationalpackages'])->name('internationalpackages');
+
+
+Route::get('/internationalpackages/{id}', [InternationalController::class, 'show'])
+    ->name('internationalpackages.show');
+
+>>>>>>> 992acaefc274e70a3b6eeed3e5b46b751088c381
 Route::get('transport', [WebsiteController::class, 'transport'])->name('transport');
 Route::get('about', [WebsiteController::class, 'about'])->name('about');
 Route::get('contact', [WebsiteController::class, 'contact'])->name('contact');
