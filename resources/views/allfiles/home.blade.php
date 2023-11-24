@@ -150,19 +150,16 @@
                     </a>
                     <hr>
                     <div>
-<<<<<<< HEAD
-                        <button  class="button mb-3 p-1 int-btn"><a style="text-decoration: none;" href="{{ route('intpackages', ['id' => $international->id]) }}">Packages</a></button>
-=======
-<<<<<<< HEAD
-                        
+
+
+
                         <button class="button mb-3 p-1 int-btn">
-                            <a style="text-decoration: none;" href="{{ route('internationalpackages.show', ['id' => $internationalpackages->id]) }}">Packages</a>
+                            <a style="text-decoration: none;" href="{{ route('intpackages', ['id' => $international->id]) }}">Packages</a>
                         </button>
 
-=======
-                        <button  class="button mb-3 p-1 int-btn"><a style="text-decoration: none;" href="">Packages</a></button>
->>>>>>> eec7452c40b5374ed3f671a92e9c2a3da0739dc2
->>>>>>> 0f9fcda5ecf2f40bc10d38c4c4db8079ef3bd804
+
+
+
                     </div>
                 </div>
             </div>
