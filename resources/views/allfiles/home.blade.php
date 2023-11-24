@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +27,8 @@
     .carousel-item img {
         height: 300px;
         width: 100%;
-        object-fit: cover; /* Use 'cover' for a better responsive image */
+        object-fit: cover;
+        /* Use 'cover' for a better responsive image */
     }
 
     .carousel-caption {
@@ -39,7 +41,7 @@
     }
 
     .package-item:hover {
-        transform: scale(1.1); 
+        transform: scale(1.1);
     }
 
     .card-hover {
@@ -77,35 +79,41 @@
 
     .image {
         width: 100%;
-   
+
         transition: transform 0.3s ease;
     }
 
     .image:hover {
         transform: scale(1.1);
     }
-    .int-btn{
-      
+
+    .int-btn {
+
         background-color: white;
         border: 1px solid blue;
     }
-    .int-btn:hover{
-     background-color: blue;
-  text-decoration: white;
+
+    .int-btn:hover {
+        background-color: blue;
+        text-decoration: white;
     }
-    .int-btn a{
+
+    .int-btn a {
         color: blue;
     }
-    .int-btn a:hover{
+
+    .int-btn a:hover {
         color: whitesmoke;
     }
-    .in-btn:hover a{
+
+    .in-btn:hover a {
         color: whitesmoke;
     }
 </style>
+
 <body>
     @include('allfiles.nav')
-    
+
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -115,7 +123,7 @@
                 <img src="{{asset('/images/slider.jpg')}}" class="d-block w-100" alt="...">
             </div>
         </div>
-        <button  class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
             <span style="color: blue;" class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
@@ -129,20 +137,20 @@
             @foreach(\App\Models\International::all() as $international)
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="image container bg">
-                    <a style="text-decoration: none; color:black" class="link-a" href="{{ route('international', ['id' => $international->id]) }}">
+                    <a style="text-decoration: none; color:black" class="link-a" href="{{ route('intpackages', ['id' => $international->id]) }}">
                         <img style="height: 200px;" class="img-fluid img ml-5" src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" alt=""><br>
-                       <p class="mt-2">
-                         <h3>
-                    {{$international->title}}
-                   </h3>
-                </p>
-                        <h5  style="font-size: x-small;" class="mt-3">
-                            {{ Illuminate\Support\Str::limit($international->description, $limit = 160, $end = '...') }}
+                        <p class="mt-2">
+                            <h3>
+                                {{$international->title}}
+                            </h3>
+                        </p>
+                        <h5 style="font-size: medium; text-align:justify" class="mt-3">
+                            {{ Illuminate\Support\Str::limit($international->description, $limit = 100, $end = '...') }}
                         </h5>
                     </a>
                     <hr>
                     <div>
-                        <button  class="button mb-3 p-1 int-btn"><a style="text-decoration: none;" href="">Packages</a></button>
+                        <button class="button mb-3 p-1 int-btn"><a style="text-decoration:none;" href="{{ route('intpackages', ['id' => $international->id]) }}">Packages</a></button>
                     </div>
                 </div>
             </div>
@@ -185,4 +193,5 @@
     </script>
     @include('allfiles.footer')
 </body>
+
 </html>
