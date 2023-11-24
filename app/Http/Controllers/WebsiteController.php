@@ -25,6 +25,7 @@ class WebsiteController extends Controller
         $internationals = International::all();
         return view('allfiles.international', compact('internationals'));
     }
+    
     public function internationalpackages($id)
     {
         $internationalpackages = International::all($id);
