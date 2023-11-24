@@ -17,6 +17,7 @@
                     <th>ID</th>
                     <th>Title</th>
                     <th>Price</th>
+                    <th>Description</th>
                     <th>Country</th>
                     <th>Image</th>
                     <th>Action</th>
@@ -28,7 +29,9 @@
                 <td> {{ $internationalpackage->id}} </td>
                     <td>{{ $internationalpackage->title }}</td>
                     <td>{{ $internationalpackage->price }}</td>
+                    <td>{{ $internationalpackage->description }}</td>
                     <td>{{ $internationalpackage->international->title }}</td>
+                    
 
                     <td>
                         <img src="{{ asset('admin/assets/images/internationals/' . $internationalpackage->image) }}" alt="local Image" class="img-thumbnail">

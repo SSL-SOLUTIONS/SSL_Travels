@@ -30,11 +30,19 @@ Route::get('/localdetails/{id}',[WebsiteController::class,'localdetails'])->name
 Route::get('international',[WebsiteController::class, 'international'])->name('international');
 Route::get('/international/{id}/packages', [WebsiteController::class, 'intpackages'])->name('intpackages');
 
+
 Route::get('/internationalpackages{id}',[WebsiteController::class, 'internationalpackages'])->name('internationalpackages');
 
 
 Route::get('/internationalpackages/{id}', [InternationalController::class, 'show'])
     ->name('internationalpackages.show');
+
+
+Route::get('/internationalpackages{id}',[WebsiteController::class, 'internationalpackages'])->name('internationalpackages');
+Route::get('/internationalpackages/{id}', [InternationalController::class, 'show']) ->name('internationalpackages.show');
+
+
+Route::get('/packagedetails{id}',[WebsiteController::class, 'packagedetails'])->name('packagedetails');
 
 Route::get('transport', [WebsiteController::class, 'transport'])->name('transport');
 Route::get('about', [WebsiteController::class, 'about'])->name('about');

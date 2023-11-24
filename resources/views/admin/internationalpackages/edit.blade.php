@@ -67,10 +67,14 @@
                             <label for="price"><b>Price:</b></label>
                             <input type="" name="price" class="form-control" id="price" required value="{{ $internationalspackages->price}}">
                         </div>
+                        <div class="form-group">
+                            <label for="description"><b>Description:</b></label>
+                            <textarea name="description" id="description" cols="67" rows="1" >{{ $internationalspackages->description}}</textarea>                        
+                        </div>
 
                         <div class="form-group">
                             <label for="image"><b>Image:</b></label>
-                            <input type="file" name="image" class="form-control" id="image" required>
+                            <input type="file" name="image" class="form-control" id="image" >
                         </div>
                         <div class="form-group">
                             <label for="currentImage"><b>Current Image</b></label>

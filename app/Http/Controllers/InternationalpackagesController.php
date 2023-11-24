@@ -35,6 +35,7 @@ class InternationalpackagesController extends Controller
             'title' => 'required|max:40',
             'image' => 'required|image',
             'price' => 'required',
+            'description' => 'required',
             'international_id' => 'required',
         ]);
         $imageName = time() . '.' . $request->image->extension();
@@ -43,6 +44,7 @@ class InternationalpackagesController extends Controller
             'title' => $request->title,
             'image' => $imageName,
             'price' => $request->price,
+            'description' => $request->description,
             'international_id' => $request->input('international_id'),
 
         ]);
@@ -100,6 +102,7 @@ class InternationalpackagesController extends Controller
             'title' => 'required|max:100',
             'image' => 'nullable|image',
             'price' => 'required',
+            'description' => 'required',
             'international_id' => 'required',
 
 
@@ -112,6 +115,7 @@ class InternationalpackagesController extends Controller
         }
         $internationalspackages->title = $request->title;
         $internationalspackages->price = $request->price;
+        $internationalspackages->description = $request->description;
         $internationalspackages->international_id = $request->input('international_id'); // Corrected line
 
 

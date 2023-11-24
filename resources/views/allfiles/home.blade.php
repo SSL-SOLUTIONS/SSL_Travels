@@ -150,7 +150,18 @@
                     <hr>
                     <div>
 
-                        <button  class="button mb-3 p-1 int-btn"><a style="text-decoration: none;" href="">Packages</a></button>
+
+
+
+
+
+                        <button class="button mb-3 p-1 int-btn">
+                            <a style="text-decoration: none;" href="{{ route('intpackages', ['id' => $international->id]) }}">Packages</a>
+                        </button>
+
+
+
+
 
                     </div>
                 </div>
@@ -158,7 +169,6 @@
             @endforeach
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
