@@ -90,45 +90,7 @@
                 <a href="" class="links-nav">
                    Destination
                 </a>
-                <ul class="dropdown-content">
-                    <li class="li-drop-nav">
-                        <a href="{{route('france')}}" class="link-nav">
-                           FRANCE
-                        </a>
-                    </li>
-                    <li class="li-drop-nav">
-                        <a href="{{route('france')}}" class="link-nav">
-                           FRANCE
-                        </a>
-                    </li>
-                    <li class="li-drop-nav">
-                        <a href="{{route('france')}}" class="link-nav">
-                           FRANCE
-                        </a>
-                    </li>
-                    <li class="li-drop-nav">
-                        <a href="{{route('france')}}" class="link-nav">
-                           FRANCE
-                        </a>
-                    </li>
-                    <li class="li-drop-nav">
-                        <a href="{{route('france')}}" class="link-nav">
-                           FRANCE
-                        </a>
-                    </li>
-                    <li class="li-drop-nav">
-                        <a href="{{route('france')}}" class="link-nav">
-                           FRANCE
-                        </a>
-                    </li>
-                    <li class="li-drop-nav">
-                        <a href="{{route('france')}}" class="link-nav">
-                           FRANCE
-                        </a>
-                    </li>
-                 
-               
-                </ul>
+                
             </li>
 
             <li>

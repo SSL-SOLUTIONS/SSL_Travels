@@ -124,18 +124,19 @@
             @foreach(\App\Models\International::all() as $international)
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div style="margin-bottom: -90px;" class="image container bg">
-                    <a style="text-decoration: none; color:black" class="link-a" href="{{ route('international', ['id' => $international->id]) }}">
+                    <a style="text-decoration: none; color:black" class="link-a" href="{{ route('intpackages', ['id' => $international->id]) }}">
                         <img style="height: 200px;" class="img-fluid img ml-5" src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" alt=""><br>
-                        <b>
-                    {{$international->title}}
-                    </b>
-                        <h5  style="font-size: x-small;" class="mt-3">
-                            {{ Illuminate\Support\Str::limit($international->description, $limit = 160, $end = '...') }}
+                        <p class="mt-2">
+                            <h3>
+                                {{$international->title}}
+                            </h3>
+                            <h5 style="font-size: medium; text-align:justify" class="mt-3">
+                            {{ Illuminate\Support\Str::limit($international->description, $limit = 100, $end = '...') }}
                         </h5>
                     </a>
                     <hr>
                     <div>
-                        <button  class="button mb-3 p-1 int-btn"><a style="text-decoration: none;" href="">Packages</a></button>
+                        <button  class="button mb-3 p-1 int-btn"><a style="text-decoration: none;" href="{{ route('intpackages', ['id' => $international->id]) }}">Packages</a></button>
                     </div>
                 </div>
             </div>
