@@ -65,7 +65,7 @@
 
                         <div class="form-group">
                             <label for="price"><b>Price:</b></label>
-                            <input type="number" name="price" class="form-control" id="price" required value="{{ $internationalspackages->price}}">
+                            <input type="" name="price" class="form-control" id="price" required value="{{ $internationalspackages->price}}">
                         </div>
 
                         <div class="form-group">

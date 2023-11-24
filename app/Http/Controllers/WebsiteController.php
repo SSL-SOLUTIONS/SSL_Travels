@@ -26,12 +26,16 @@ class WebsiteController extends Controller
         return view('allfiles.international', compact('internationals'));
     }
 
+    
+
+
     public function intpackages($id)
     {
         $international = International::with('internationalpackages')->findOrFail($id);
         $internationalspackages = $international->internationalpackages; 
         return view('international.packages', compact('international', 'internationalspackages'));
     }
+
     public function internationalpackages($id)
     {
         $internationalpackages = International::all($id);
