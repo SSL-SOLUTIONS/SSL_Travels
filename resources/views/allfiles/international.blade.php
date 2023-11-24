@@ -127,14 +127,15 @@
                     <a style="text-decoration: none; color:black" class="link-a" href="{{ route('international', ['id' => $international->id]) }}">
                         <img style="height: 200px;" class="img-fluid img ml-5" src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" alt=""><br>
                         <b>
-                            {{$international->title}}
-                        </b>
-                        <h5 style="font-size: x-small;" class="mt-3">
+                    {{$international->title}}
+                    </b>
+                        <h5  style="font-size: x-small;" class="mt-3">
                             {{ Illuminate\Support\Str::limit($international->description, $limit = 160, $end = '...') }}
                         </h5>
                     </a>
                     <hr>
                     <div>
+<<<<<<< HEAD
                     @foreach(\App\Models\InternationalPackage::all() as $internationalpackages)
                         
                         <button class="button mb-3 p-1 int-btn">
@@ -142,6 +143,9 @@
                         </button>
                         @endforeach
 
+=======
+                        <button  class="button mb-3 p-1 int-btn"><a style="text-decoration: none;" href="">Packages</a></button>
+>>>>>>> eec7452c40b5374ed3f671a92e9c2a3da0739dc2
                     </div>
                 </div>
             </div>
