@@ -138,9 +138,16 @@
                     <hr>
                     <div>
 
+<<<<<<< HEAD
+=======
+
+
+                        
+>>>>>>> d6fd1ff06a6e2f248250a66ae9efeb45f07bf90b
                         <button class="button mb-3 p-1 int-btn">
                         <a style="text-decoration: none;" href="{{ route('intpackages', ['id' => $international->id]) }}">Packages</a>
                         </button>
+
 
                     </div>
                 </div>

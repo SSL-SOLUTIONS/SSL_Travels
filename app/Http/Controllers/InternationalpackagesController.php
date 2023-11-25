@@ -35,6 +35,7 @@ class InternationalpackagesController extends Controller
             'title' => 'required|max:40',
             'image' => 'required|image',
             'price' => 'required',
+            'description' => 'required',
             'international_id' => 'required',
         ]);
         $imageName = time() . '.' . $request->image->extension();
@@ -43,6 +44,7 @@ class InternationalpackagesController extends Controller
             'title' => $request->title,
             'image' => $imageName,
             'price' => $request->price,
+            'description' => $request->description,
             'international_id' => $request->input('international_id'),
 
         ]);
@@ -55,9 +57,24 @@ class InternationalpackagesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
 
 
 
+=======
+
+
+// Inside your resource controller
+
+
+// Inside your resource controller
+
+    
+
+
+
+
+>>>>>>> d6fd1ff06a6e2f248250a66ae9efeb45f07bf90b
 
     public function show($id)
     {
@@ -65,7 +82,10 @@ class InternationalpackagesController extends Controller
         return view('admin.internationalpackages.show', compact('internationalspackage'));
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d6fd1ff06a6e2f248250a66ae9efeb45f07bf90b
     /**
      * Show the form for editing the specified resource.
      *
@@ -92,6 +112,7 @@ class InternationalpackagesController extends Controller
             'title' => 'required|max:100',
             'image' => 'nullable|image',
             'price' => 'required',
+            'description' => 'required',
             'international_id' => 'required',
 
 
@@ -104,6 +125,7 @@ class InternationalpackagesController extends Controller
         }
         $internationalspackages->title = $request->title;
         $internationalspackages->price = $request->price;
+        $internationalspackages->description = $request->description;
         $internationalspackages->international_id = $request->input('international_id'); // Corrected line
 
 

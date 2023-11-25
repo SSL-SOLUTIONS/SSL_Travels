@@ -13,6 +13,7 @@ class InternationalPackage extends Model
         'title',
         'image',
         'price',
+        'description',
         'international_id',
     ];
 

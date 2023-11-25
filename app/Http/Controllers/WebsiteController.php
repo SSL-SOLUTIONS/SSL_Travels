@@ -25,9 +25,7 @@ class WebsiteController extends Controller
         $internationals = International::all();
         return view('allfiles.international', compact('internationals'));
     }
-
     
-
 
     public function intpackages($id)
     {
@@ -42,6 +40,15 @@ class WebsiteController extends Controller
         return view('allfiles.internationalpackages', ['internationalpackages' => $internationalpackages]);
 
     }
+    public function packagedetails($id)
+    {
+        // Retrieve the details for the specified package ID
+        $packageDetails = InternationalPackage::find($id); // Replace 'InternationalPackage' with your actual model name
+    
+        // Return the package details view with the retrieved data
+        return view('international.packagedetails', ['packageDetails' => $packageDetails]);
+    }
+
     public function destination()
     {
         return view('allfiles.destination');
