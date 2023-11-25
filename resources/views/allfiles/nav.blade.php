@@ -29,11 +29,7 @@
             width: 300px; /* Set the desired width */
             justify-content: space-between;
           
-           
-            
-
         }
-
         .dropdown-content ul {
             list-style: none;
             padding: 10px;
@@ -86,16 +82,6 @@
                     Local
                 </a>
             </li>
-            <li class="dropdown">
-                <a href="" class="links-nav">
-                   Destination
-                </a>
-              
-
-                
-
-            </li>
-
             <li>
                 <a href="{{route('transport')}}" class="links-nav">
                     Transport
@@ -111,9 +97,6 @@
                     About
                 </a>
             </li>
-          
-
-
         </ul>
         <label for="nav-toggle" class="icon-burger">
             <div class="line"></div>

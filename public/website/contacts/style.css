@@ -1,0 +1,43 @@
+ html {
+    height: 100%;
+}
+
+.contain {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paragraph{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 0px;
+    margin-top:30px; 
+    margin-right: 50px;
+    text-align: center;
+    justify-content: center;
+    
+}
+.heading{
+    font-weight: 600; 
+    margin-top:50px;
+    margin-right: 50px;
+     text-align: center;
+     justify-content: center;
+}
+
+
+
+
+.btn-primary:hover {
+    background-color: white;
+    color: black;
+}
+form .form-group {
+    margin-bottom: -15px; 
+}
+.button{
+    margin-top: 25px;
+}
+
+

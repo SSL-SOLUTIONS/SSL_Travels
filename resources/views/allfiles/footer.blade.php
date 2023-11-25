@@ -18,7 +18,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12 text-center">
                 <p class="main-text">SSL Travels & Tours</p>
                 <div>
-                    <i class="fa fa-map-marker footer-icon"></i>
+                    <i class="fa-solid fa-location-dot footer-icon"></i>
                     Land Mark plaza, Jail Road, Lahore
                 </div>
                 <div>
@@ -35,27 +35,26 @@
                 <ul class="social-icons text-center">
                     <li class="facebook-icon icon">
                         <a style="color: white;" href="">
-                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-facebook fa-spin"></i>
                         </a>
                     </li>
                     <li class="twitter-icon icon">
                         <a style="color: white;" href="">
-                            <i class="fab fa-twitter"></i>
-                        </a>
+                        <i class="fa-brands fa-x-twitter fa-spin"></i>                        </a>
                     </li>
                     <li class="instagram-icon icon">
                     <a style="color: white;" href="" target="_blank">
-                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-instagram fa-spin"></i>
                         </a>
                     </li>
                     <li class="linkedin-icon icon">
                         <a style="color: white;" href="" target="_blank">
-                            <i class="fab fa-linkedin"></i>
+                            <i class="fab fa-linkedin fa-spin"></i>
                         </a>
                     </li>
                     <li class="youtube-icon icon">
                         <a style="color: white;"href="" target="_blank">
-                            <i class="fab fa-youtube"></i>
+                            <i class="fab fa-youtube fa-spin"></i>
                         </a>
                     </li>
                 </ul>

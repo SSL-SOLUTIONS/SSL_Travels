@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbs5AIBDR6Wx5lGqgEf4lTjkCE5T/J6pCp1FO8D7hFiVCISWI3nFVOpA4SBDpOHbn" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
 
-    <title>Document</title>
+    <title>SSL Travels & Tours</title>
 </head>
 <style>
     /* Your existing styles remain unchanged */
@@ -35,79 +35,61 @@
         color: white;
     }
 
-    .package-item {
-        transition: transform 0.5s ease;
-    }
+   /* public/css/styles.css */
 
-    .package-item:hover {
-        transform: scale(1.1);
-    }
+body {
+    font-family: 'Arial', sans-serif;
+}
 
-    .card-hover {
-        position: relative;
-        overflow: hidden;
-    }
+.container {
+    margin-top: 2rem;
+    text-align: center;
+}
 
-    .card-hover img {
-        transition: transform 0.5s ease;
-    }
+.image-container {
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
 
-    .card-hover:hover img {
-        transform: scale(1.1);
-    }
+.link-a {
+    text-decoration: none;
+    color: black;
+}
 
-    .card-hover:hover {
-        border: 2px solid skyblue;
-    }
+.img {
+    height: 200px;
+}
 
-    .button-feat {
-        border: 2px solid blue;
-        color: blue;
-        background-color: transparent;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        padding: 8px;
-        border-radius: 10px;
-    }
+.description {
+    font-size: medium;
+    text-align: justify;
+}
 
-    .button-feat:hover,
-    .button-feat:active {
-        background-color: blue;
-        color: white;
-        padding: 8px;
-    }
+.button {
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-    .image {
-        width: 100%;
+.int-btn {
+    padding: 0.5rem 1rem;
+}
 
-        transition: transform 0.3s ease;
-    }
+.button a {
+    text-decoration: none;
+    color: #fff;
+}
+.button a:hover{
+    color: whitesmoke;
+}
 
-    .image:hover {
-        transform: scale(1.1);
-    }
 
-    .int-btn {
 
-        background-color: white;
-        border: 1px solid blue;
-    }
 
-    .int-btn:hover {
-        background-color: blue;
-        text-decoration: white;
-    }
-
-    .int-btn a {
-        color: blue;
-    }
-
-    .int-btn a:hover {
-        color: whitesmoke;
-    }
-
-    .in-btn:hover a {
-        color: whitesmoke;
-    }
 </style>
 
 <body>
@@ -131,50 +113,45 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    <div class="text-center mt-2 mb-4">
+       <h2 style="background-color: blue; color:white" >International Tours</h2>
+    </div>
     <div class="container mt-2 text-center">
         <div class="row">
-            @foreach(\App\Models\International::all() as $international)
+            @foreach(\App\Models\International::paginate(3) as $international)
             <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <a style="text-decoration: none; color:black" class="link-a" href="{{ route('intpackages', ['id' => $international->id]) }}">
-                        <img style="height: 200px;" class="img-fluid img ml-5" src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" alt=""><br>
+                <div class="image-container bg">
+                    <a class="link-a" href="{{ route('intpackages', ['id' => $international->id]) }}">
+                        <img class="img-fluid img" src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" alt="International Image"><br>
                         <p class="mt-2">
-                            <h3>
-                                {{$international->title}}
-                            </h3>
+                            <h3>{{$international->title}}</h3>
                         </p>
-                        <h5 style="font-size: medium; text-align:justify" class="mt-3">
+                        <h5 class="description mt-3">
                             {{ Illuminate\Support\Str::limit($international->description, $limit = 100, $end = '...') }}
                         </h5>
                     </a>
                     <hr>
                     <div>
-<<<<<<< HEAD
                         <button class="button mb-3 p-1 int-btn">
-                            <a style="text-decoration: none;" href="{{ route('intpackages', ['id' => $international->id]) }}">Packages</a>
+                            <a href="{{ route('intpackages', ['id' => $international->id]) }}">Packages</a>
                         </button>
-=======
-
-
-
-
-
-
-                        <button class="button mb-3 p-1 int-btn">
-                            <a style="text-decoration: none;" href="{{ route('intpackages', ['id' => $international->id]) }}">Packages</a>
-                        </button>
-
-
-
-
-
->>>>>>> d6fd1ff06a6e2f248250a66ae9efeb45f07bf90b
                     </div>
                 </div>
             </div>
             @endforeach
         </div>
     </div>
+    <div class="text-center" >
+    <button class="p-2 m-3 " style="border: none; background:none; background-color:blue">
+        <a  style="color: white; text-align:center; text-decoration:none" href="{{route('international')}}">View All Packages</a>
+    </button>
+    </div>
+
+<div>
+    @include('allfiles.included')
+    </div>
+
+    @include('allfiles.contacts')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -192,22 +169,8 @@
             });
         });
     </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const heading = document.querySelector("h1");
-
-            // Function to apply the zoom-out effect
-            function applyZoomOutEffect() {
-                heading.style.transform = "scale(0.8)"; // You can adjust the scale value
-                heading.style.fontWeight = "bold"; // Adjust the font weight
-            }
-
-            // Reload the page after a delay
-            setTimeout(function() {
-                applyZoomOutEffect();
-            }, 500);
-        });
-    </script>
+  
     @include('allfiles.footer')
 </body>
+
 </html>

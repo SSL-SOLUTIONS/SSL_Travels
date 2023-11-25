@@ -37,28 +37,18 @@
                     <form method="POST" action="{{ route('internationalspackages.store') }}" enctype="multipart/form-data">
                         @csrf
 
-                        <!-- <div class="form-group">
-                            <label for="international_id">Select Country:</label>
-                            <div class="select-wrapper">
-                                <input type="text" name="country" class="form-control" id="country"  required placeholder="Select Country">
-                                <select name="international_id" id="international_id" onchange="updateCountry()">
+
+                        <div class="form-group">
+                            <label for="international_id" class="col-md-2 col-form-label">Country</label>
+                            <div>
+                                <select name="international_id" id="international_id" class="form-control">
+                                    <option value="">Select Country</option>
                                     @foreach(\App\Models\International::all() as $international)
                                     <option value="{{ $international->id }}">{{ $international->title }}</option>
                                     @endforeach
                                 </select>
                             </div>
-                        </div> -->
-                        <div class="form-group">
-            <label for="international_id" class="col-md-2 col-form-label">Country</label>
-            <div >
-                <select name="international_id" id="international_id" class="form-control">
-                    <option value="">Select Country</option>
-                    @foreach(\App\Models\International::all() as $international)
-                    <option value="{{ $international->id }}">{{ $international->title }}</option>
-                    @endforeach
-                </select>
-            </div>
-        </div>
+                        </div>
 
                         <div class="form-group">
                             <label for="title"><b>Title:</b></label>
@@ -70,7 +60,7 @@
                         </div>
                         <div class="form-group">
                             <label for="description"><b>Description:</b></label>
-                            <textarea name="description" id="description" cols="67" rows="1" required>{{ $internationalpackages->description}}</textarea>                        
+                            <textarea name="description" class="form-control id=" description" cols="67" rows="1" required></textarea>
                         </div>
                         <div class="form-group">
                             <label for="image"><b>Image:</b></label>

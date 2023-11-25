@@ -7,148 +7,91 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbs5AIBDR6Wx5lGqgEf4lTjkCE5T/J6pCp1FO8D7hFiVCISWI3nFVOpA4SBDpOHbn" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
 
-    <title>Document</title>
+    <title>SSL Travels & Tours</title>
 </head>
 <style>
     /* Your existing styles remain unchanged */
 
     body {
-        padding-top: 56px;
+        padding-top: 56px;}
       
-    }
+        .container {
+    margin-top: 2rem;
+    text-align: center;
+}
 
-    .carousel-inner {
-        max-height: 400px;
-    }
+.image-container {
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 
-    .carousel-item {
-        text-align: center;
-    }
+}
 
-    .carousel-item img {
-        height: 300px;
-        width: 100%;
-        object-fit: cover;
-        /* Use 'cover' for a better responsive image */
-    }
+.link-a {
+    text-decoration: none;
+    color: black;
+}
 
-    .carousel-caption {
-        padding: 10px;
-        color: white;
-    }
+.img {
+    height: 200px;
+}
 
-    .package-item {
-        transition: transform 0.5s ease;
-    }
+.description {
+    font-size: medium;
+    text-align: justify;
+}
 
-    .package-item:hover {
-        transform: scale(1.1);
-    }
+.button {
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-    .card-hover {
-        position: relative;
-        overflow: hidden;
-    }
+.int-btn {
+    padding: 0.5rem 1rem;
+}
 
-    .card-hover img {
-        transition: transform 0.5s ease;
-    }
+.button a {
+    text-decoration: none;
+    color: #fff;
+}
+.button a:hover{
+    color: whitesmoke;
+}
 
-    .card-hover:hover img {
-        transform: scale(1.1);
-    }
-
-    .card-hover:hover {
-        border: 2px solid skyblue;
-    }
-
-    .button-feat {
-        border: 2px solid blue;
-        color: blue;
-        background-color: transparent;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        padding: 8px;
-        border-radius: 10px;
-    }
-
-    .button-feat:hover,
-    .button-feat:active {
-        background-color: blue;
-        color: white;
-        padding: 8px;
-    }
-
-    .image {
-        width: 100%;
-        height: 500px;
-        transition: transform 0.3s ease;
-    }
-
-    .image:hover {
-        transform: scale(1.1);
-    }
-
-    .int-btn {
-
-        background-color: white;
-        border: 1px solid blue;
-    }
-
-    .int-btn:hover {
-        background-color: blue;
-        text-decoration: white;
-    }
-
-    .int-btn a {
-        color: blue;
-    }
-
-    .int-btn a:hover {
-        color: whitesmoke;
-    }
-
-    .in-btn:hover a {
-        color: whitesmoke;
-    }
 </style>
 
 <body>
     @include('allfiles.nav')
 
-    <img style="width: 100%;" src="https://i.pinimg.com/736x/65/a3/48/65a348aa04f47703f5ccc33f45934db9.jpg" alt="">
-    <h2 class="text-center mt-3 mb-3">
-        International Tours
-    </h2>
+    <img style="width: 100%;" src="https://www.hotelierindia.com/cloud/2022/05/16/1.jpg" alt="">
+   
 
-    <div class="container mt-4 text-center">
+    <div class="text-center mt-2 mb-4">
+       <h2 style="background-color: blue; color:white" >International Tours</h2>
+    </div>
+    <div class="container mt-2 text-center">
         <div class="row">
             @foreach(\App\Models\International::all() as $international)
             <div class="col-lg-4 col-md-6 col-sm-12">
-                <div style="margin-bottom: -90px;" class="image container bg">
-                    <a style="text-decoration: none; color:black" class="link-a" href="{{ route('intpackages', ['id' => $international->id]) }}">
-                        <img style="height: 200px;" class="img-fluid img ml-5" src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" alt=""><br>
+                <div class="image-container bg mb-4">
+                    <a class="link-a" href="{{ route('intpackages', ['id' => $international->id]) }}">
+                        <img class="img-fluid img" src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" alt="International Image"><br>
                         <p class="mt-2">
-                            <h3>
-                                {{$international->title}}
-                            </h3>
-                            <h5 style="font-size: medium; text-align:justify" class="mt-3">
+                            <h3>{{$international->title}}</h3>
+                        </p>
+                        <h5 class="description mt-3">
                             {{ Illuminate\Support\Str::limit($international->description, $limit = 100, $end = '...') }}
                         </h5>
                     </a>
                     <hr>
                     <div>
-
-<<<<<<< HEAD
-=======
-
-
-                        
->>>>>>> d6fd1ff06a6e2f248250a66ae9efeb45f07bf90b
                         <button class="button mb-3 p-1 int-btn">
-                        <a style="text-decoration: none;" href="{{ route('intpackages', ['id' => $international->id]) }}">Packages</a>
+                            <a href="{{ route('intpackages', ['id' => $international->id]) }}">Packages</a>
                         </button>
-
-
                     </div>
                 </div>
             </div>

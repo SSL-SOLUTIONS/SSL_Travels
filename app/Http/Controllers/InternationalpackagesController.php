@@ -57,24 +57,9 @@ class InternationalpackagesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-<<<<<<< HEAD
 
-
-
-=======
-
-
-// Inside your resource controller
-
-
-// Inside your resource controller
 
     
-
-
-
-
->>>>>>> d6fd1ff06a6e2f248250a66ae9efeb45f07bf90b
 
     public function show($id)
     {
@@ -82,10 +67,7 @@ class InternationalpackagesController extends Controller
         return view('admin.internationalpackages.show', compact('internationalspackage'));
     }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> d6fd1ff06a6e2f248250a66ae9efeb45f07bf90b
     /**
      * Show the form for editing the specified resource.
      *
@@ -127,10 +109,6 @@ class InternationalpackagesController extends Controller
         $internationalspackages->price = $request->price;
         $internationalspackages->description = $request->description;
         $internationalspackages->international_id = $request->input('international_id'); // Corrected line
-
-
-
-
         $internationalspackages->save();
         return redirect()->route('internationalspackages.index')->with('success', 'Record Updated Successfully');
     }

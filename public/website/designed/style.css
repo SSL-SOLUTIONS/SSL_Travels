@@ -5,25 +5,9 @@
     display: flex;
 }
 
-.image-container {
-    position: relative;
-    margin: 10px;
-}
 
-img {
-    width:100%;
-    height: auto;
-}
-.button-container {
-    position: absolute;
-    bottom: 0;
- 
-    width: 40%; /* Button container spans the entire width of the parent */
-    
-}
 
 .buttony {
-    background-color: blue;
     padding-top: 2%; /* Use a percentage of the parent's width for padding */
     padding-bottom: 2%;
     padding-right: 1%; /* Use a percentage of the parent's width for padding */
