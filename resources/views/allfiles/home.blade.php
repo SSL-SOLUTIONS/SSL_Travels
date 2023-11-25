@@ -150,16 +150,9 @@
                     </a>
                     <hr>
                     <div>
-
-
-
                         <button class="button mb-3 p-1 int-btn">
                             <a style="text-decoration: none;" href="{{ route('intpackages', ['id' => $international->id]) }}">Packages</a>
                         </button>
-
-
-
-
                     </div>
                 </div>
             </div>
@@ -201,5 +194,4 @@
     </script>
     @include('allfiles.footer')
 </body>
-
 </html>
