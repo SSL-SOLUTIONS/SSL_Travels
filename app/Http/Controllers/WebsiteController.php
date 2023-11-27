@@ -11,7 +11,7 @@ class WebsiteController extends Controller
 {
     public function local()
     {
-        $locals = Local::all();
+        $locals=Local::all();
         return view('allfiles.local', compact('locals'));
     }
     public function localdetails($id)
@@ -26,7 +26,6 @@ class WebsiteController extends Controller
         return view('allfiles.international', compact('internationals'));
     }
     
-
     public function intpackages($id)
     {
         $international = International::with('internationalpackages')->findOrFail($id);

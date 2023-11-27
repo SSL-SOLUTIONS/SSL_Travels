@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbs5AIBDR6Wx5lGqgEf4lTjkCE5T/J6pCp1FO8D7hFiVCISWI3nFVOpA4SBDpOHbn" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
 
     <title>SSL Travels & Tours</title>
 </head>
@@ -14,7 +16,10 @@
 
     body {
         padding-top: 56px;
+       
     }
+    
+  
 
     .carousel-inner {
         max-height: 400px;
@@ -37,9 +42,7 @@
 
    /* public/css/styles.css */
 
-body {
-    font-family: 'Arial', sans-serif;
-}
+
 
 .container {
     margin-top: 2rem;
@@ -143,7 +146,46 @@ body {
     </div>
     <div class="text-center" >
     <button class="p-2 m-3 " style="border: none; background:none; background-color:blue">
-        <a  style="color: white; text-align:center; text-decoration:none" href="{{route('international')}}">View All Packages</a>
+        <a  style="color: white; text-align:center; text-decoration:none" href="{{route('international')}}">View All Tours</a>
+    </button>
+    </div>
+
+
+
+
+    <!-- local -->
+
+    <div class="text-center mt-2 mb-4">
+       <h2 style="background-color: blue; color:white" >Local Tours</h2>
+    </div>
+    <div class="container mt-2 text-center">
+        <div class="row">
+            @foreach(\App\Models\Local::paginate(3) as $local)
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="image-container bg">
+                    <a class="link-a" href="">
+                        <img class="img-fluid img" src="{{ asset('admin/assets/images/locals/' . $local->image) }}" alt="Local Image"><br>
+                        <p class="mt-2">
+                            <h3>{{$international->title}}</h3>
+                        </p>
+                        <h5 class="description mt-3">
+                            {{ Illuminate\Support\Str::limit($local->description, $limit = 100, $end = '...') }}
+                        </h5>
+                    </a>
+                    <hr>
+                    <div>
+                        <button class="button mb-3 p-1 int-btn">
+                            <a href="">Packages</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+    <div class="text-center" >
+    <button class="p-2 m-3 " style="border: none; background:none; background-color:blue">
+        <a  style="color: white; text-align:center; text-decoration:none" href="{{route('local')}}">View All Toursg</a>
     </button>
     </div>
 
@@ -152,6 +194,7 @@ body {
     </div>
 
     @include('allfiles.contacts')
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

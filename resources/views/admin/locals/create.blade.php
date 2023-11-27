@@ -25,6 +25,10 @@
                             <input type="text" name="title" class="form-control" id="title" required>
                         </div>
                         <div class="form-group">
+                            <label for="description"><b>Description:</b></label>
+                            <input type="text" name="description" class="form-control" id="description" required>
+                        </div>
+                        <div class="form-group">
                             <label for="image"><b>Image:</b></label>
                             <input type="file" name="image" class="form-control" id="image" required>
                         </div>
@@ -36,7 +40,7 @@
     </div>
 </div>
 <style>
-    /* Add CSS styles to make it stylish and responsive */
+    /* / Add CSS styles to make it stylish and responsive / */
     .card {
         margin: 20px;
         padding: 20px;

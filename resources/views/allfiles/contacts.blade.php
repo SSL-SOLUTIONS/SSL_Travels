@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SSL Travels & Tours</title>
+    <style>
+        body{
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{asset('website/contacts/style.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
 
 </head>
 <body>
@@ -34,21 +41,18 @@
                         <label for="message"></label>
                         <textarea class="form-control" id="message" name="message" rows="5" placeholder="Message" required></textarea>
                     </div>
-                    <div class="boty mt-4" >
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-
+                    <div style="color: blue;" class="boty mt-4" >
+                    <button  type="submit" class="btn btn-primary">Send Message</button>
                     </div>
-
                 </form>
             </div>
         </div>
     </div>
-    
+    <br><br>
 
 <!-- Bootstrap JS and Popper.js -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
 </body>
 </html>

@@ -2,7 +2,14 @@
 <html>
 <head>
     <link rel="stylesheet" href="{{ asset('website/contact/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
  <title>SSL Travels & Tours</title>
+ <style>
+        body{
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
 </head>
 <body>
     @include('allfiles.nav')

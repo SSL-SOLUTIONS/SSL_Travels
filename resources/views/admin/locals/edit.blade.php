@@ -15,6 +15,10 @@
                             <label for="title"><b>Title</b></label>
                             <input type="text" name="title" class="form-control" id="title" value="{{ $local->title }}" required>
                         </div>
+                        <div class="form-group">
+                            <label for="description"><b>Description</b></label>
+                            <input type="text" name="description" class="form-control" id="description" value="{{ $local->description }}" required>
+                        </div>
 
                         <div class="form-group">
                             <label for="image"><b>Image</b></label>

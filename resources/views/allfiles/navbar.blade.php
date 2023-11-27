@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link rel="stylesheet" href="{{('website/navbar/css/style.css')}}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T6z4rJmTlqNc8YrQFVeJbp9BryvcrV3tbG5bCTRGU8K4NJSBxFk/z3xIYbIb77KK" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
 
 
 
@@ -17,6 +19,10 @@
             position: relative;
             right: 25px;
         }
+     
+        body{
+            font-family: 'Nunito', sans-serif; }
+     
 
         .link-nav {
             padding: 50px;

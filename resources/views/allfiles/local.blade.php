@@ -4,46 +4,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="{{asset('website/local/style.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbs5AIBDR6Wx5lGqgEf4lTjkCE5T/J6pCp1FO8D7hFiVCISWI3nFVOpA4SBDpOHbn" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+
     <title>SSL Travels & Tours</title>
-    <style>
-    button .link-a{
-            text-decoration: none;
-            color: red;
-        }
-    </style>
 </head>
-@include('allfiles.nav')
-<body class="full-bg">
-    <div>
-        <img class="img-fluid" width="100%" src="
-        https://zufta.pk/wp-content/uploads/2022/04/Fairy-Meadows-ZUFTA-4.jpg" alt="">
+<style>
+    /* Your existing styles remain unchanged */
+
+    body {
+        padding-top: 56px;}
+      
+        .container {
+    margin-top: 2rem;
+    text-align: center;
+            font-family: 'Nunito', sans-serif; 
+        
+
+}
+
+.image-container {
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+
+}
+
+.link-a {
+    text-decoration: none;
+    color: black;
+}
+
+.img {
+    height: 200px;
+}
+
+.description {
+    font-size: medium;
+    text-align: justify;
+}
+
+.button {
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.int-btn {
+    padding: 0.5rem 1rem;
+}
+
+.button a {
+    text-decoration: none;
+    color: #fff;
+}
+.button a:hover{
+    color: whitesmoke;
+}
+
+</style>
+
+<body>
+    @include('allfiles.nav')
+
+    <img style="width: 100%;" src="https://www.travelandleisure.com/thmb/p1Dh0uzZPUk8lQQq2oMhVMUQESk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/lofoten-islands-norway-MOSTBEAUTIFUL0921-cd0b88063a8b4a26871a51764db0fcae.jpg" alt="">
+   
+
+    <div class="text-center mt-2 mb-4">
+       <h2 style="background-color: blue; color:white" >Local Tours</h2>
     </div>
-    <div>
-        <h2 style="font-weight: bold;" class="text-center mt-5 mb-4 text-bold">Local Tours</h2>
-    </div>
-    <div class="container">
+    <div class="container mt-2 text-center">
         <div class="row">
-            @foreach($locals as $local)
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="image container bg">
-                    <a class="link-a" href="{{ route('localdetails', ['id' => $local->id]) }}">
-                        <img style="height: 200px;" class="img-fluid img ml-5" src="{{ asset('admin/assets/images/locals/' . $local->image) }}" alt="">
-                        <h5 style="font-weight: bold;" class="mt-3">
-                            {{ Illuminate\Support\Str::limit($local->title, $limit = 20, $end = '...') }}
+            @foreach(\App\Models\Local::all() as $local)
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="image-container bg mb-4">
+                    <a class="link-a" href="">
+                        <img class="img-fluid img" src="{{ asset('admin/assets/images/locals/' . $local->image) }}" alt="Local Image"><br>
+                        <p class="mt-2">
+                            <h3>{{$local->title}}</h3>
+                        </p>
+                        <h5 class="description mt-3">
+                            {{ Illuminate\Support\Str::limit($local->description, $limit = 100, $end = '...') }}
                         </h5>
                     </a>
                     <hr>
                     <div>
-                        <button class="button mb-3 p-1"><a href="">Book Now</a></button>
+                        <button class="button mb-3 p-1 int-btn">
+                            <a href="">Packages</a>
+                        </button>
                     </div>
                 </div>
             </div>
             @endforeach
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY1TEb6wH1X8jCkO4Hgj6AgFvoWgW8beUH1Uq6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var myCarousel = new bootstrap.Carousel(document.getElementById('myCarousel'), {
+                interval: 2000,
+                wrap: true,
+                keyboard: true
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const heading = document.querySelector("h1");
+
+            // Function to apply the zoom-out effect
+            function applyZoomOutEffect() {
+                heading.style.transform = "scale(0.8)"; // You can adjust the scale value
+                heading.style.fontWeight = "bold"; // Adjust the font weight
+            }
+
+            // Reload the page after a delay
+            setTimeout(function() {
+                applyZoomOutEffect();
+            }, 500);
+        });
+    </script>
     @include('allfiles.footer')
 </body>
 

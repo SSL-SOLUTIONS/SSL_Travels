@@ -2,6 +2,8 @@
 <style>
 .container {
     margin-top: 100px;
+            font-family: 'Nunito', sans-serif; 
+       
 }
 
 .page-title {

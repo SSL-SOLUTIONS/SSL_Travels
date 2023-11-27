@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Local extends Model
 {
     use HasFactory;
+    
     protected $fillable =[
-        'title', 'image'
+        'title','description','image',
     ];
     public function localpackages()
     {

@@ -16,6 +16,7 @@
                 <tr>
                     <th>ID</th>
                     <th>Title</th>
+                    <th>Description</th>
                     <th>Image</th>
                     <th>Action</th>
                 </tr>
@@ -25,6 +26,7 @@
                 <tr>
                 <td> {{ $local->id }} </td>
                     <td>{{ $local->title }}</td>
+                    <td>{{ $local->description }}</td>
                     <td>
                         <img src="{{ asset('admin/assets/images/locals/' . $local->image) }}" alt="local Image" class="img-thumbnail">
                     </td>
@@ -45,7 +47,7 @@
     </div>
 
     <style>
-        /* Add CSS styles to make it stylish and responsive */
+        / Add CSS styles to make it stylish and responsive /
         .container {
             max-width: 100%;
             padding: 15px;
@@ -78,7 +80,7 @@
             border: 1px solid black;
         }
 
-        /* Add additional styling as per your requirements */
+        /* / Add additional styling as per your requirements / */
     </style>
 </div>
 @endsection

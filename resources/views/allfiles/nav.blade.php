@@ -7,9 +7,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="{{asset('website/navbar/css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
     <title>SSL Travels & Tours</title>
+   
 </head>
 <style>
+ 
+        body{
+            font-family: 'Nunito', sans-serif; 
+        }
+   
     .link-nav{
         position: relative;
         right: 25px;
@@ -74,27 +81,25 @@
 
             <li class="dropdown">
                 <a href="{{route('international')}}" class="links-nav">
-                    International
+                    International Tours
                 </a>
             </li>
             <li>
                 <a href="{{route('local')}}" class="links-nav">
-                    Local
+                    Local Tours
                 </a>
             </li>
-            <li>
-                <a href="{{route('transport')}}" class="links-nav">
-                    Transport
-                </a>
-            </li>
-            <li>
-                <a href="{{route('activities')}}" class="links-nav">
-                    Activities
-                </a>
-            </li>
+        
+            
             <li>
                 <a href="{{route('about')}}" class="links-nav">
-                    About
+                    About Us
+                </a>
+            </li>
+
+            <li>
+                <a href="{{route('contact')}}" class="links-nav">
+                  Contact Us
                 </a>
             </li>
         </ul>

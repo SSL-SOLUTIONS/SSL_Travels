@@ -36,6 +36,7 @@ class LocalController extends Controller
     {
         $request->validate([
              'title'=>'required|max:40',
+             'description'=>'required|max:500',
              'image'=>'required|image',
              
         ]);
@@ -43,6 +44,7 @@ class LocalController extends Controller
         $request->image->move(public_path('admin/assets/images/locals'), $imageName);
         $local = Local::create([
             'title'=>$request->title,
+            'description'=>$request->description,
             'image'=>$imageName,
         ]);
         return redirect()->route('locals.index')->with('success','Record Added Successfully');
@@ -83,6 +85,7 @@ class LocalController extends Controller
         
     $request->validate([
         'title' => 'required|max:100',
+        'description' => 'required|max:500',
         'image' => 'nullable|image',
     ]);
            $local = Local::where('id',$id)->first();
@@ -92,6 +95,7 @@ class LocalController extends Controller
             $local->image = $imageName;
            }
            $local->title = $request->title;
+           $local->description = $request->description;
            $local->save();
            return redirect()->route('locals.index')->with('success','Record Updated Successfully');
     }
