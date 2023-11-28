@@ -166,7 +166,7 @@
                     <a class="link-a" href="">
                         <img class="img-fluid img" src="{{ asset('admin/assets/images/locals/' . $local->image) }}" alt="Local Image"><br>
                         <p class="mt-2">
-                            <h3>{{$international->title}}</h3>
+                            <h3>{{$local->title}}</h3>
                         </p>
                         <h5 class="description mt-3">
                             {{ Illuminate\Support\Str::limit($local->description, $limit = 100, $end = '...') }}
@@ -185,7 +185,7 @@
     </div>
     <div class="text-center" >
     <button class="p-2 m-3 " style="border: none; background:none; background-color:blue">
-        <a  style="color: white; text-align:center; text-decoration:none" href="{{route('local')}}">View All Toursg</a>
+        <a  style="color: white; text-align:center; text-decoration:none" href="{{route('local')}}">View All Tours</a>
     </button>
     </div>
 

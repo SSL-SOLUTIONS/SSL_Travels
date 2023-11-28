@@ -73,6 +73,10 @@
                             <label for="image"><b>Image:</b></label>
                             <input type="file" name="image" class="form-control" id="image" required>
                         </div>
+                        <div class="form-group">
+                            <label for="description"><b>Description:</b></label>
+                            <textarea name="description" class="form-control" id=" description" cols="67" rows="1" required></textarea>
+                        </div>
 
                         <button type="submit" class="btn btn-primary"><b>Save</b></button>
                     </form>

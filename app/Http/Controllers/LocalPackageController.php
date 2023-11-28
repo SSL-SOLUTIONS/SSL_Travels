@@ -38,6 +38,7 @@ class LocalPackageController extends Controller
             'title' => 'required|max:40',
             'image' => 'required|image',
             'price' => 'required',
+            'description' => 'required',
             'local_id' => 'required',
         ]);
         $imageName = time() . '.' . $request->image->extension();
@@ -46,6 +47,7 @@ class LocalPackageController extends Controller
             'title' => $request->title,
             'image' => $imageName,
             'price' => $request->price,
+            'description' => $request->description,
             'local_id' => $request->input('local_id'),
 
         ]);
@@ -92,6 +94,7 @@ class LocalPackageController extends Controller
             'image' => 'nullable|image',
             'price' => 'required',
             'local_id' => 'required',
+            'description' => 'required',
 
 
         ]);
@@ -103,8 +106,9 @@ class LocalPackageController extends Controller
         }
         $localpackages->title = $request->title;
         $localpackages->price = $request->price;
-        $localpackages->local_id = $request->input('local_id'); // Corrected line
-
+        $localpackages->local_id = $request->input('local_id');
+         // Corrected line
+         $localpackages->description = $request->description;
         $localpackages->save();
         return redirect()->route('localpackages.index')->with('success', 'Record Updated Successfully');
     }

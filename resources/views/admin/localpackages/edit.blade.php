@@ -67,6 +67,10 @@
                             <label for="price"><b>Price:</b></label>
                             <input type="number" name="price" class="form-control" id="price" required value="{{ $internationalspackages->price}}">
                         </div>
+                        <div class="form-group">
+                            <label for="description"><b>Description:</b></label>
+                            <textarea name="description" id="description" cols="67" rows="1" >{{ $localpackages->description}}</textarea>                        
+                        </div>
 
                         <div class="form-group">
                             <label for="image"><b>Image:</b></label>

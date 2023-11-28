@@ -18,6 +18,7 @@
                     <th>Title</th>
                     <th>Price</th>
                     <th>Country</th>
+                    <th>Description</th>
                     <th>Image</th>
                     <th>Action</th>
                 </tr>
@@ -29,6 +30,7 @@
                     <td>{{ $localpackage->title }}</td>
                     <td>{{ $localpackage->price }}</td>
                     <td>{{ $localpackage->local->title }}</td>
+                    <td>{{ $localpackage->description }}</td>
 
                     <td>
                         <img src="{{ asset('admin/assets/images/localpkg/' . $localpackage->image) }}" alt="local Image" class="img-thumbnail">
