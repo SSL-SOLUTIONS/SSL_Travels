@@ -2,7 +2,7 @@
 
 @section('content')
 <style>
-    /* Add CSS styles to make it stylish and responsive */
+    /* / Add CSS styles to make it stylish and responsive / */
     .card {
         margin: 20px;
         padding: 20px;
@@ -46,10 +46,10 @@
                         @method('PUT')
                         <!-- form.blade.php -->
                         <div class="form-group">
-                            <label for="local_id" class="col-md-2 col-form-label">Country</label>
+                            <label for="local_id" class="col-md-2 col-form-label">City</label>
                             <div>
                                 <select name="local_id" id="local_id" class="form-control">
-                                    <option value="">Select Country</option>
+                                    <option value="">Select City</option>
                                     @foreach(\App\Models\local::all() as $local)
                                     <option value="{{ $local->id }}">{{ $local->title }}</option>
                                     @endforeach
@@ -60,12 +60,12 @@
 
                         <div class="form-group">
                             <label for="title"><b>Title:</b></label>
-                            <input type="text" name="title" class="form-control" id="title" required value="{{ $internationalspackages->title}}">
+                            <input type="text" name="title" class="form-control" id="title" required value="{{ $localpackages->title}}">
                         </div>
 
                         <div class="form-group">
                             <label for="price"><b>Price:</b></label>
-                            <input type="number" name="price" class="form-control" id="price" required value="{{ $internationalspackages->price}}">
+                            <input type="" name="price" class="form-control" id="price" required value="{{ $localpackages->price}}">
                         </div>
                         <div class="form-group">
                             <label for="description"><b>Description:</b></label>
@@ -78,7 +78,7 @@
                         </div>
                         <div class="form-group">
                             <label for="currentImage"><b>Current Image</b></label>
-                            <img src="{{ asset('admin/assets/images/localpkg/'.$localpackages->image) }}" alt="International Image" class="img-thumbnail">
+                            <img src="{{ asset('admin/assets/images/localpkg/'.$localpackages->image) }}" alt="Local Image" class="img-thumbnail">
                         </div>
 
                         <!-- Add other fields as needed -->

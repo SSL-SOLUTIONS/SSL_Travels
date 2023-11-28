@@ -83,7 +83,7 @@
             @foreach(\App\Models\Local::all() as $local)
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="image-container bg mb-4">
-                    <a class="link-a" href="">
+                    <a class="link-a" href="{{ route('locpackages', ['id' => $local->id])}}">
                         <img class="img-fluid img" src="{{ asset('admin/assets/images/locals/' . $local->image) }}" alt="Local Image"><br>
                         <p class="mt-2">
                             <h3>{{$local->title}}</h3>
@@ -95,7 +95,7 @@
                     <hr>
                     <div>
                         <button class="button mb-3 p-1 int-btn">
-                            <a href="">Packages</a>
+                            <a href="{{ route('locpackages', ['id' => $local->id]) }}">Packages</a>
                         </button>
                     </div>
                 </div>

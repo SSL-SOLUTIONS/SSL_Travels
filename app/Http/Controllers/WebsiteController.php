@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\International;
 use App\Models\InternationalPackage;
 use App\Models\Local;
+use App\Models\LocalPackage;
 use Illuminate\Http\Request;
 
 class WebsiteController extends Controller
@@ -14,11 +15,16 @@ class WebsiteController extends Controller
         $locals=Local::all();
         return view('allfiles.local', compact('locals'));
     }
-    public function localdetails($id)
+
+
+    public function locpackages($id)
     {
-        $local = Local::find($id);
-        return view('allfiles.localtourdetails', ['local' => $local]);
+        $local = Local::with('localpackages')->findOrFail($id);
+        $localpackages = $local->localpackages; 
+        return view('local.packages', compact('local', 'localpackages'));
     }
+    
+   
 
     public function international()
     {
@@ -46,6 +52,13 @@ class WebsiteController extends Controller
     
         // Return the package details view with the retrieved data
         return view('international.packagedetails', ['packageDetails' => $packageDetails]);
+    }
+
+
+    public function localpackagedetails($id)
+    {
+        $localpackageDetails = LocalPackage::find($id); 
+        return view('local.packagedetails', ['localpackageDetails' => $localpackageDetails]);
     }
 
     public function destination()

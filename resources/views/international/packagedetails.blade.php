@@ -82,7 +82,7 @@ body {
 
             <br>
             <button class="button mb-3 p-1 int-btn">
-                <a style="text-decoration: none;" href="#">Book Now</a>
+                <a style="text-decoration: none;" href="{{route('contact')}}">Book Now</a>
             </button>
            
         </div>

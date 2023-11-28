@@ -35,27 +35,27 @@
         <div class="row icon-row">
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="icon-col mb-4">
-                    <i class="fa fa-building" style="font-size: 60px;"></i>
-                    <p><b>HOTEL Reservation</b></p>
+                    <i class="fa fa-building" style="font-size: 60px; color:blue"></i>
+                    <h6>HOTEL Reservation</h6>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="icon-col mb-4">
-                    <i class="fa fa-plane" style="font-size: 60px;"></i>
-                    <p><b>FLIGHT BOOKING</b></p>
+                    <i class="fa fa-plane" style="font-size: 60px; color:blue"></i>
+                    <h6>FLIGHT BOOKING</h6>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="icon-col mb-4">
-                    <i class="fa fa-coffee" style="font-size: 60px;"></i>
-                    <p><b>FREE FOOD & Drink</b></p>
+                    <i class="fa fa-coffee" style="font-size: 60px; color:blue"></i>
+                    <h6>FREE FOOD & Drink</h6>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="icon-col mb-4">
-                    <i class="fa fa-bus" style="font-size: 60px;"></i>
-                    <p ><b>TRAVEL &
-                        Tours</b></p>
+                    <i class="fa fa-bus" style="font-size: 60px; color:blue;"></i>
+                    <h6>TRAVEL &
+                        Tours</h6>
                 </div>
             </div>
         </div>

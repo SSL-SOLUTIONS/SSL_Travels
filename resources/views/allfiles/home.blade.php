@@ -188,7 +188,6 @@
         <a  style="color: white; text-align:center; text-decoration:none" href="{{route('local')}}">View All Tours</a>
     </button>
     </div>
-
 <div>
     @include('allfiles.included')
     </div>

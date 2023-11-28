@@ -13,6 +13,7 @@ class LocalPackage extends Model
         'image',
         'price',
         'local_id',
+        'description',
     ];
 
     public function local()

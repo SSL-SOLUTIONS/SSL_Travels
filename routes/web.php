@@ -26,16 +26,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('local',[WebsiteController::class, 'local'])->name('local');
-Route::get('/localdetails/{id}',[WebsiteController::class,'localdetails'])->name('localdetails');
+Route::get('/local/{id}/packages', [WebsiteController::class, 'locpackages'])->name('locpackages');
+Route::get('/localpackagedetails{id}',[WebsiteController::class, 'localpackagedetails'])->name('localpackagedetails');
+
 Route::get('international',[WebsiteController::class, 'international'])->name('international');
 Route::get('/international/{id}/packages', [WebsiteController::class, 'intpackages'])->name('intpackages');
 
 
-Route::get('/internationalpackages{id}',[WebsiteController::class, 'internationalpackages'])->name('internationalpackages');
 
-
-Route::get('/internationalpackages/{id}', [InternationalController::class, 'show'])
-    ->name('internationalpackages.show');
 
 
 Route::get('/internationalpackages{id}',[WebsiteController::class, 'internationalpackages'])->name('internationalpackages');
