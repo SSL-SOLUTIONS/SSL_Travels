@@ -8,9 +8,6 @@
 
 .page-title {
     color: black;
-    font-size: 2rem;
-    font-weight: 600;
-    font-family: 'Arial', Helvetica, sans-serif;
 }
 
 .animated-title {
@@ -78,9 +75,9 @@
 @include('allfiles.nav')
 
 <div class="container">
-    <h2 class="page-title">
+    <h3 class="page-title">
         Packages for <span class="animated-title">{{ $local->title }}</span>
-    </h2>
+    </h3>
     <div class="package-container row">
         @foreach($localpackages as $localpackage)
         <div class="col-lg-3">

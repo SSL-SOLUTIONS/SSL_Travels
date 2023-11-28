@@ -75,8 +75,8 @@
     <img style="width: 100%;" src="https://www.travelandleisure.com/thmb/p1Dh0uzZPUk8lQQq2oMhVMUQESk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/lofoten-islands-norway-MOSTBEAUTIFUL0921-cd0b88063a8b4a26871a51764db0fcae.jpg" alt="">
    
 
-    <div class="text-center mt-2 mb-4">
-       <h2 style="background-color: blue; color:white" >Local Tours</h2>
+    <div class="text-center mt-3 mb-2">
+       <h4 style="display: inline-block;padding:5px; background-color: blue; color:white" >Local Tours</h4>
     </div>
     <div class="container mt-2 text-center">
         <div class="row">

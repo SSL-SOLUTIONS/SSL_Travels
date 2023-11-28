@@ -76,8 +76,8 @@
     <img style="width: 100%;" src="https://www.hotelierindia.com/cloud/2022/05/16/1.jpg" alt="">
    
 
-    <div class="text-center mt-2 mb-4">
-       <h2 style="background-color: blue; color:white" >International Tours</h2>
+    <div class="text-center mt-3 mb-2">
+       <h4 style="display: inline-block;padding:5px; background-color: blue; color:white" >International Tours</h4>
     </div>
     <div class="container mt-2 text-center">
         <div class="row">
