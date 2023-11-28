@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ContactusController;
 use App\Http\Controllers\CountriesController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\InternationalController;
@@ -51,6 +52,8 @@ Route::resource('locals', LocalController::class);
 Route::resource('internationals', InternationalController::class);
 Route::resource('internationalspackages',InternationalpackagesController::class);
 Route::resource('localpackages',LocalPackageController::class);
+Route::resource('contactus',ContactusController::class);
+
 
 
 

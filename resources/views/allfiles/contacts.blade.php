@@ -34,26 +34,41 @@
 				      		<div id="form-message-success" class="mb-4">
 				            Your message was sent, thank you!
 				      		</div>
-									<form method="POST" id="contactForm" name="contactForm">
+							  @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+							  @if(session('success'))
+									<div class="alert alert-success">
+										{{ session('success') }}
+									</div>
+									@endif
+									<form action="{{route('contactus.store')}}" method="POST">
+										@csrf
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
-													<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+													<input type="text" class="form-control" name="name" id="name" placeholder="Name" value="{{old('name')}}">
 												</div>
 											</div>
-											<div class="col-md-6"> 
+											<div class="col-md-6">
 												<div class="form-group">
-													<input type="email" class="form-control" name="email" id="email" placeholder="Email">
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group">
-													<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+													<input type="email" class="form-control" name="email" id="email" placeholder="Email" value="{{old('email')}}">
 												</div>
 											</div>
 											<div class="col-md-12">
 												<div class="form-group">
-													<textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
+													<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" value="{{old('subject')}}">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message">{{old('message')}}</textarea>
 												</div>
 											</div>
 											<div class="col-md-12">

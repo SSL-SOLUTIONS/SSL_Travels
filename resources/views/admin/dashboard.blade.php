@@ -60,6 +60,10 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Local Packages
                         </a>
+                        <a class="nav-link" href="{{url('contactus')}}">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Messages
+                        </a>
                     </div>
                 </div>
             </nav>

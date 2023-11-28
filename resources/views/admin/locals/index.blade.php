@@ -47,7 +47,7 @@
     </div>
 
     <style>
-        / Add CSS styles to make it stylish and responsive /
+        /*  Add CSS styles to make it stylish and responsive  */
         .container {
             max-width: 100%;
             padding: 15px;
