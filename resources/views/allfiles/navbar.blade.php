@@ -19,14 +19,43 @@
             position: relative;
             right: 25px;
         }
-     
-        body{
-            font-family: 'Nunito', sans-serif; }
-     
+
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+
 
         .link-nav {
             padding: 50px;
         }
+        .country-list {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            width: 400px; /* Adjust the width as needed */
+            padding: 10px; /* Add padding for a cleaner look */
+        }
+
+        .country-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 390px; /* Adjust the width as needed */
+    }
+
+    .country-list a {
+        flex: 0 0 calc(33.333% - 10px);
+        margin-bottom: 10px;
+        padding: 10px;
+        text-decoration: none;
+        color: #333;
+        box-sizing: border-box;
+    }                           
     </style>
 
     <body>
@@ -43,6 +72,17 @@
                     <a href="{{url('international')}}" class="links-nav">
                         International
                     </a>
+                    <div class="country-menu">
+                     
+                        <div class="country-list">
+                            <div class="country-row">
+                                @foreach(\App\Models\International::all() as $international)
+                                <a href="{{ route('intpackages', ['id' => $international->id]) }}">{{ $international->title }}</a>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+
                 </li>
                 <li>
                     <a href="{{route('local')}}" class="links-nav">

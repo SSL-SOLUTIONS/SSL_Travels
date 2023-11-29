@@ -10,6 +10,7 @@ use App\Http\Controllers\LocalController;
 use App\Http\Controllers\LocalPackageController;
 use App\Http\Controllers\VacationController;
 use App\Http\Controllers\WebsiteController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,10 +53,8 @@ Route::get('/internationalpackages/{id}', [InternationalController::class, 'show
 
 Route::get('/packagedetails{id}',[WebsiteController::class, 'packagedetails'])->name('packagedetails');
 
-Route::get('transport', [WebsiteController::class, 'transport'])->name('transport');
 Route::get('about', [WebsiteController::class, 'about'])->name('about');
 Route::get('contact', [WebsiteController::class, 'contact'])->name('contact');
-Route::get('activities', [WebsiteController::class, 'activities'])->name('activities');
 
 
 
@@ -80,3 +79,15 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

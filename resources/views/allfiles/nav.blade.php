@@ -68,9 +68,45 @@
         }
         .active{
      background-color:blue;
-   
-    
         }
+/* Add the following styles to your existing styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown:hover .country-list {
+    display: block;
+}
+
+/* The rest of your existing styles remain unchanged */
+.country-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 400px;
+    padding: 10px;
+}
+
+.country-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 370px;
+}
+
+.country-list a {
+    flex: 0 0 calc(33.333% - 10px);
+    margin-bottom: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    box-sizing: border-box;
+}
 
 </style>
 
@@ -83,16 +119,32 @@
             </a>
         </div>
        <ul class="links">
-    <li class="dropdown">
-        <a href="{{ route('international') }}" class="links-nav {{ request()->routeIs('international') ? 'active' : '' }}">
-            International Tours
-        </a>
-    </li>
-    <li>
-        <a href="{{ route('local') }}" class="links-nav {{ request()->routeIs('local') ? 'active' : '' }}">
-            Local Tours
-        </a>
-    </li>
+       <li class="dropdown">
+    <a href="{{ route('international') }}" class="links-nav {{ request()->routeIs('international') ? 'active' : '' }}">
+        International Tours
+    </a>
+    <div class="country-list">
+        <div class="country-row">
+            @foreach(\App\Models\International::all() as $international)
+                <a href="{{ route('intpackages', ['id' => $international->id]) }}">{{ $international->title }}</a>
+            @endforeach
+        </div>
+    </div>
+</li>
+
+
+<li class="dropdown">
+    <a href="{{ route('local') }}" class="links-nav {{ request()->routeIs('local') ? 'active' : '' }}">
+        Local Tours
+    </a>
+    <div class="country-list">
+        <div class="country-row">
+        @foreach(\App\Models\local::all() as $local)
+                <a href="{{ route('locpackages', ['id' => $local->id]) }}">{{ $local->title }}</a>
+            @endforeach
+        </div>
+    </div>
+</li>
     
     <li>
         <a href="{{ route('about') }}" class="links-nav {{ request()->routeIs('about') ? 'active' : '' }}">
@@ -116,6 +168,8 @@
     <div id="scroll-to-top"><i class="fas fa-angle-up"></i></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     
     <script>
         $(document).ready(function() {
@@ -136,6 +190,21 @@
         });
         
     </script>
+    <script>
+    $(document).ready(function () {
+        $('.dropdown').hover(
+            function () {
+                // Hover in
+                $(this).find('.country-list').css('display', 'block');
+            },
+            function () {
+                // Hover out
+                $(this).find('.country-list').css('display', 'none');
+            }
+        );
+    });
+</script>
+
 </body>
 
 </html>

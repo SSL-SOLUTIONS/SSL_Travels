@@ -1,29 +1,32 @@
+
+
+
+
 @extends('allfiles.admin')
 @section('content')
- 
- <style>
-    table,th,td{
-        border: 1px solid black;
-    }
-   
-    
- </style>
-<h1 style="text-align: center; margin-bottom:50px;">All Messages</h1>
-@if (Session::has('success'))
-    <div class="alert alert-success">{{ session('success') }}
-    
+<div class="container">
+    @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
     </div>
-@endif
-<table class="table">
-    <tr>
-        <th>Name</th>
+    @endif
+
+    <h2>All Messages</h2>
+   
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                <th>Name</th>
         <th>Email</th>
         <th>Subject</th>
         <th>Message</th>
         <th>Time</th>
         <th>Status</th>
-    </tr>
-    @foreach($contactusmessages as $contactusmessage)
+                </tr>
+            </thead>
+            <tbody>
+            @foreach($contactusmessages as $contactusmessage)
     <tr>
         <td>{{$contactusmessage->name}}</td>
         <td>{{$contactusmessage->email}}</td>
@@ -40,5 +43,48 @@
         </td>
     </tr>
     @endforeach
-</table>
+            </tbody>
+        </table>
+    </div>
+
+    <style>
+        .container {
+            max-width: 100%;
+            padding: 15px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table th,
+        .table td {
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+        }
+
+        .table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .img-thumbnail {
+            max-width: 100px;
+            height: auto;
+        }
+        table, th, td{
+            border: 1px solid black;
+        }
+
+    </style>
+</div>
 @endsection
+
+
+
+
+

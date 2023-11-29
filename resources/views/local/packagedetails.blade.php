@@ -88,45 +88,42 @@ body {
     </div>
     <br>
 </div>
+<div class="container">
+        <div class="row">
+            <div class="card ">
+                <!-- Button to toggle description -->
+                <div class="card-header">
+                    <button class="btn btn-link" id="toggleDescription">Description</button>
+                </div>
 
+                <!-- Content for Description -->
+                <div class="card-body col-lg-6" id="descriptionContent" style="display: none;">
+                    <h5>Description</h5>
+                    <p>Contact: +92 301 111 4504</p>
+                    <p>Destination: Sri Lanka</p>
+                    <p>Accommodation: Double/Twin occupancy at selected hotels (7 nights)</p>
+                    <p>Travel insurance included</p>
+                    <p>Meals: Bed & breakfast basis</p>
+                    <p>Transport: A/C Vehicle with English-speaking Chauffeur</p>
+                    <p>Taxes: All government taxes included</p>
+                    <p>International Ticket: Lahore – Colombo – Lahore</p>
+                </div>
 
-        <div class="row mt-4">
-            <div class="col-lg-12">
-                <div class="card">
-                    <!-- Button to toggle description -->
-                    <div class="card-header">
-                        <button class="btn btn-link" id="toggleDescription">Description</button>
-                    </div>
+                <!-- Button for Additional Information -->
+                <div class="card-footer">
+                    <a href="#" class="btn btn-link" id="toggleAdditionalInfo" onclick="toggleAdditionalInfo()">Additional Information</a>
+                </div>
 
-                    <!-- Content for both Description and Additional Details -->
-                    <div class="card-body" id="descriptionContent" style="display: none;">
-                        <h5>Description</h5>
-                        <p>+92 301 111 4504</p>
-                        <p>Sri Lanka Visa</p>
-                        <p>Accommodation in the Double/ Twin occupancy at the above hotels or similar (07 nights)</p>
-                        <p>Travel insurance</p>
-                        <p>Meals are on bed & breakfast basis</p>
-                        <p>Transport in an A/C Vehicle with the services of an English speaking Chauffeur as per the itinerary except during free times.</p>
-                        <p>All government taxes</p>
-                        <p>International Ticket ( Lahore – Colombo – Lahore )</p>
-                    </div>
-
-                    <!-- Button for Additional Information -->
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-link" id="toggleAdditionalInfo" onclick="toggleAdditionalInfo()">Additional Information</a>
-                    </div>
-
-                    <!-- Content for Additional Information -->
-                    <div id="additionalInfoContent" style="display: none;">
-                        <p>Package Type: Leisure</p>
-                        <p>Tour Type: Group</p>
-                        <p>Accommodation Type: Double</p>
-                    </div>
+                <!-- Content for Additional Information -->
+                <div class="card-body col-lg-6" id="additionalInfoContent" style="display: none;">
+                    <p>Package Type: Leisure</p>
+                    <p>Tour Type: Group</p>
+                    <p>Accommodation Type: Double</p>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 
 <script>
     // JavaScript to toggle the visibility of the description content

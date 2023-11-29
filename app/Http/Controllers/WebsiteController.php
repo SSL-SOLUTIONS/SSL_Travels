@@ -60,15 +60,6 @@ class WebsiteController extends Controller
         $localpackageDetails = LocalPackage::find($id); 
         return view('local.packagedetails', ['localpackageDetails' => $localpackageDetails]);
     }
-
-    public function destination()
-    {
-        return view('allfiles.destination');
-    }
-    public function transport()
-    {
-        return view('allfiles.transport');
-    }
     public function about()
     {
         return view('allfiles.about');
@@ -77,8 +68,5 @@ class WebsiteController extends Controller
     {
         return view('allfiles.contact');
     }
-    public function activities()
-    {
-        return view('allfiles.activities');
-    }
+   
 }
