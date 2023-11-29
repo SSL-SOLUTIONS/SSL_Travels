@@ -28,8 +28,15 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="">Logout</a></li>
-                </ul>
+                <form method="POST" action="{{ route('logout') }}">
+    @csrf
+    <li>
+        <a class="dropdown-item" href="" onclick="event.preventDefault(); this.closest('form').submit();">
+            Logout
+        </a>
+    </li>
+</form>
+                </ul>a
             </li>
         </ul>
     </nav>

@@ -26,6 +26,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('dashboard',[AdminController::class,'dashboard'])->name('dashboard');
+    Route::resource('locals', LocalController::class);
+    Route::resource('internationals', InternationalController::class);
+    Route::resource('internationalspackages',InternationalpackagesController::class);
+    Route::resource('localpackages',LocalPackageController::class);
+    Route::resource('contactus',ContactusController::class);
+});
 Route::get('local',[WebsiteController::class, 'local'])->name('local');
 Route::get('/local/{id}/packages', [WebsiteController::class, 'locpackages'])->name('locpackages');
 Route::get('/localpackagedetails{id}',[WebsiteController::class, 'localpackagedetails'])->name('localpackagedetails');
@@ -47,12 +56,6 @@ Route::get('transport', [WebsiteController::class, 'transport'])->name('transpor
 Route::get('about', [WebsiteController::class, 'about'])->name('about');
 Route::get('contact', [WebsiteController::class, 'contact'])->name('contact');
 Route::get('activities', [WebsiteController::class, 'activities'])->name('activities');
-Route::get('dashboard',[AdminController::class,'dashboard'])->name('dashboard');
-Route::resource('locals', LocalController::class);
-Route::resource('internationals', InternationalController::class);
-Route::resource('internationalspackages',InternationalpackagesController::class);
-Route::resource('localpackages',LocalPackageController::class);
-Route::resource('contactus',ContactusController::class);
 
 
 
@@ -68,5 +71,12 @@ Route::resource('contactus',ContactusController::class);
 
 
 
+
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
