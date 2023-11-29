@@ -66,6 +66,11 @@
             display: block;
             flex-wrap: wrap; /* Enable wrapping for multiple rows */
         }
+        .active{
+     background-color:blue;
+   
+    
+        }
 
 </style>
 
@@ -77,32 +82,31 @@
                 <img src="{{asset('website/navbar/images/logo.png')}}" style="height: 60px;" alt="">
             </a>
         </div>
-        <ul class="links">
+       <ul class="links">
+    <li class="dropdown">
+        <a href="{{ route('international') }}" class="links-nav {{ request()->routeIs('international') ? 'active' : '' }}">
+            International Tours
+        </a>
+    </li>
+    <li>
+        <a href="{{ route('local') }}" class="links-nav {{ request()->routeIs('local') ? 'active' : '' }}">
+            Local Tours
+        </a>
+    </li>
+    
+    <li>
+        <a href="{{ route('about') }}" class="links-nav {{ request()->routeIs('about') ? 'active' : '' }}">
+            About Us
+        </a>
+    </li>
 
-            <li class="dropdown">
-                <a href="{{route('international')}}" class="links-nav">
-                    International Tours
-                </a>
-            </li>
-            <li>
-                <a href="{{route('local')}}" class="links-nav">
-                    Local Tours
-                </a>
-            </li>
-        
-            
-            <li>
-                <a href="{{route('about')}}" class="links-nav">
-                    About Us
-                </a>
-            </li>
+    <li>
+        <a href="{{ route('contact') }}" class="links-nav {{ request()->routeIs('contact') ? 'active' : '' }}">
+            Contact Us
+        </a>
+    </li>
+</ul>
 
-            <li>
-                <a href="{{route('contact')}}" class="links-nav">
-                  Contact Us
-                </a>
-            </li>
-        </ul>
         <label for="nav-toggle" class="icon-burger">
             <div class="line"></div>
             <div class="line"></div>
@@ -131,8 +135,6 @@
             });
         });
         
-    </script>
-
     </script>
 </body>
 
