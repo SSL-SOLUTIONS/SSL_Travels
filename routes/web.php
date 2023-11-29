@@ -33,7 +33,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('internationals', InternationalController::class);
     Route::resource('internationalspackages',InternationalpackagesController::class);
     Route::resource('localpackages',LocalPackageController::class);
-    Route::resource('contactus',ContactusController::class);
+  
 });
 Route::get('local',[WebsiteController::class, 'local'])->name('local');
 Route::get('/local/{id}/packages', [WebsiteController::class, 'locpackages'])->name('locpackages');
@@ -42,7 +42,7 @@ Route::get('/localpackagedetails{id}',[WebsiteController::class, 'localpackagede
 Route::get('international',[WebsiteController::class, 'international'])->name('international');
 Route::get('/international/{id}/packages', [WebsiteController::class, 'intpackages'])->name('intpackages');
 
-
+Route::resource('contactus',ContactusController::class);
 
 
 
