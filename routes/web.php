@@ -24,9 +24,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+ Route::get('/', function () {
+     return view('welcome');
+ });
+
 
 Route::middleware(['auth'])->group(function () {
     Route::get('dashboard',[AdminController::class,'dashboard'])->name('dashboard');
@@ -55,21 +56,6 @@ Route::get('/packagedetails{id}',[WebsiteController::class, 'packagedetails'])->
 
 Route::get('about', [WebsiteController::class, 'about'])->name('about');
 Route::get('contact', [WebsiteController::class, 'contact'])->name('contact');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

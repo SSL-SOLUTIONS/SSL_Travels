@@ -14,6 +14,58 @@
             body {
             font-family: 'Heebo', sans-serif;
         } 
+
+        /* Define the keyframes for the animation */
+       /* Define the keyframes for the animation */
+       @keyframes zoomOut {
+            from {
+                transform: scale(0.5);
+            }
+            to {
+                transform: scale(1.5);
+            }
+        }
+
+        .packages {
+            animation: zoomIn 3s ease-in-out forwards;
+            display: inline-block;
+        }
+        .icon-col {
+    transition: transform 0.3s ease-out;
+}
+
+.icon-col:hover {
+    transform: translateY(-10px);
+    z-index: 1;
+}
+
+/* Additional styling for better visibility */
+.icon-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.col-lg-3 {
+    flex: 0 0 30%;
+    max-width: 30%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+h6 {
+    margin-top: 10px;
+}
+
+/* Style for the travel item */
+#travel:hover {
+    transform: translateY(-10px);
+    z-index: 1;
+}
+
+
+
+
        
     </style>
 </head>
@@ -32,33 +84,36 @@
                 <br><br>
             </div>
         </div>
-        <div class="row icon-row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="icon-col mb-4">
-                    <i class="fa fa-building" style="font-size: 60px; color:blue"></i>
-                    <h6>HOTEL Reservation</h6>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="icon-col mb-4">
-                    <i class="fa fa-plane" style="font-size: 60px; color:blue"></i>
-                    <h6>FLIGHT BOOKING</h6>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="icon-col mb-4">
-                    <i class="fa fa-coffee" style="font-size: 60px; color:blue"></i>
-                    <h6>FREE FOOD & Drink</h6>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="icon-col mb-4">
-                    <i class="fa fa-bus" style="font-size: 60px; color:blue;"></i>
-                    <h6>TRAVEL &
-                        Tours</h6>
-                </div>
-            </div>
+   
+<div class="row icon-row">
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="icon-col mb-4" id="hotel">
+            <i class="fa fa-building" style="font-size: 60px; color:blue;"></i>
+            <h6>HOTEL Reservation</h6>
         </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="icon-col mb-4" id="flight">
+            <i class="fa fa-plane" style="font-size: 60px; color:blue;"></i>
+            <h6>FLIGHT BOOKING</h6>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="icon-col mb-4" id="food">
+            <i class="fa fa-coffee" style="font-size: 60px; color:blue;"></i>
+            <h6>FREE FOOD </h6>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6" id="travel">
+        <div class="icon-col mb-4">
+            <i class="fa fa-bus" style="font-size: 60px; color:blue;"></i>
+            <h6>TRAVEL & Tours</h6>
+        </div>
+    </div>
+</div>
+
+
+
     </div>
 </div>
     <br>

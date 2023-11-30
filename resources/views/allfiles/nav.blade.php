@@ -84,7 +84,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #fff;
+    background-color: white;
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1;

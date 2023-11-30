@@ -7,6 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbs5AIBDR6Wx5lGqgEf4lTjkCE5T/J6pCp1FO8D7hFiVCISWI3nFVOpA4SBDpOHbn" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<!-- Add these lines to the <head> section of your HTML -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
 
     <title>SSL Travels & Tours</title>
@@ -18,9 +21,6 @@
         padding-top: 56px;
        
     }
-    
-  
-
         .carousel-inner {
             max-height: 400px;
         }
@@ -39,10 +39,6 @@
             padding: 10px;
             color: white;
         }
-
-   /* public/css/styles.css */
-
-
 
 .container {
     margin-top: 2rem;
@@ -89,10 +85,6 @@
 .button a:hover{
     color: whitesmoke;
 }
-
-
-
-
 </style>
 
 <body>
@@ -155,7 +147,7 @@
 
     <!-- local -->
 
-    <div class="text-center mt-3 mb-2">
+    <div class="text-center mt-3 mb-2 ">
     <h4 style="display: inline-block; padding: 5px; background-color: blue; color: white;">Local Tours</h4>
 </div>
     <div class="container mt-2 text-center">
@@ -174,7 +166,7 @@
                     </a>
                     <hr>
                     <div>
-                        <button class="button mb-3 p-1 int-btn">
+                        <button class="button mb-3 p-1 int-btn ">
                             <a href="{{ route('locpackages', ['id' => $local->id])}}">Packages</a>
                         </button>
                     </div>
@@ -213,6 +205,7 @@
     </script>
   
     @include('allfiles.footer')
+    
 </body>
 
 </html>
