@@ -66,7 +66,7 @@
                           Local Packages    
                             </a>
                             <a class="nav-link" href="{{url('contactus')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
                           Messages    
                             </a>
                         </div>

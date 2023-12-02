@@ -30,6 +30,8 @@
 
     <!-- Template Stylesheet -->
     <link href="{{('website/about/css/style.css')}}" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{ asset('website/favicon.png') }}">
+
 </head>
 
 <body>
