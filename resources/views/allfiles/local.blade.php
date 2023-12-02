@@ -46,26 +46,47 @@
     font-size: medium;
     text-align: justify;
 }
-
 .button {
-    background-color: blue;
-    color: #fff;
-    border: none;
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
     border-radius: 5px;
     cursor: pointer;
+    padding: 0.5rem 1rem;
+    text-decoration: none; /* Remove default underline on anchor tag inside the button */
 }
 
-.int-btn {
-    padding: 0.5rem 1rem;
+.button:hover {
+    background-color: blue;
+    color: white;
 }
 
 .button a {
     text-decoration: none;
-    color: #fff;
 }
-.button a:hover{
-    color: whitesmoke;
+
+.button a:hover {
+    color: white;
 }
+.custom-button {
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            font-size: x-large;
+            color: black;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect */
+        .custom-button:hover {
+            border: 2px solid blue;
+            transform: scale(1.1); /* Zoom out on hover */
+        }
+
+
 
 </style>
 
@@ -74,8 +95,8 @@
 
     <img style="width: 100%;" src="https://www.travelandleisure.com/thmb/p1Dh0uzZPUk8lQQq2oMhVMUQESk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/lofoten-islands-norway-MOSTBEAUTIFUL0921-cd0b88063a8b4a26871a51764db0fcae.jpg" alt="">
     <div class="text-center mt-3 mb-2">
-       <h4 style="display: inline-block;padding:5px; background-color: blue; color:white" >Local Tours</h4>
-    </div>
+        <h4 style="display: inline-block;padding:8px; color:black; font-size:xx-large" >Local Tours</h4>
+        </div>
     <div class="container mt-2 text-center">
         <div class="row">
             @foreach(\App\Models\Local::all() as $local)
@@ -92,8 +113,8 @@
                     </a>
                     <hr>
                     <div>
-                        <button class="button mb-3 p-1 int-btn">
-                            <a href="{{ route('locpackages', ['id' => $local->id]) }}">Packages</a>
+                        <button class="button mb-3 p-1 int-btn ">
+                            <a href="{{ route('locpackages', ['id' => $local->id])}}">Packages</a>
                         </button>
                     </div>
                 </div>

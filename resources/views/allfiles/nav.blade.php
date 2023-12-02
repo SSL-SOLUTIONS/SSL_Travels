@@ -67,7 +67,7 @@
             flex-wrap: wrap; /* Enable wrapping for multiple rows */
         }
         .active{
-     background-color:blue;
+            color: wheat;
         }
 /* Add the following styles to your existing styles */
 .dropdown {
@@ -106,6 +106,13 @@
     text-decoration: none;
     color: #333;
     box-sizing: border-box;
+}
+ul.links li a.links-nav {
+    color: black;
+}
+
+ul.links li a.links-nav.active {
+    color: blue !important;
 }
 
 </style>

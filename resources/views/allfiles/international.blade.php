@@ -49,23 +49,26 @@
 }
 
 .button {
-    background-color: blue;
-    color: #fff;
-    border: none;
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
     border-radius: 5px;
     cursor: pointer;
+    padding: 0.5rem 1rem;
+    text-decoration: none; /* Remove default underline on anchor tag inside the button */
 }
 
-.int-btn {
-    padding: 0.5rem 1rem;
+.button:hover {
+    background-color: blue;
+    color: white;
 }
 
 .button a {
     text-decoration: none;
-    color: #fff;
 }
-.button a:hover{
-    color: whitesmoke;
+
+.button a:hover {
+    color: white;
 }
 
 </style>
@@ -77,8 +80,8 @@
    
 
     <div class="text-center mt-3 mb-2">
-       <h4 style="display: inline-block;padding:5px; background-color: blue; color:white" >International Tours</h4>
-    </div>
+        <h4 style="display: inline-block;padding:8px; color:black; font-size:xx-large" >International Tours</h4>
+        </div>
     <div class="container mt-2 text-center">
         <div class="row">
             @foreach(\App\Models\International::all() as $international)

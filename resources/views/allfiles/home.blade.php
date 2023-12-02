@@ -10,6 +10,7 @@
 <!-- Add these lines to the <head> section of your HTML -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
 
     <title>SSL Travels & Tours</title>
@@ -67,24 +68,46 @@
 }
 
 .button {
-    background-color: blue;
-    color: #fff;
-    border: none;
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
     border-radius: 5px;
     cursor: pointer;
+    padding: 0.5rem 1rem;
+    text-decoration: none; /* Remove default underline on anchor tag inside the button */
 }
 
-.int-btn {
-    padding: 0.5rem 1rem;
+.button:hover {
+    background-color: blue;
+    color: white;
 }
 
 .button a {
     text-decoration: none;
-    color: #fff;
 }
-.button a:hover{
-    color: whitesmoke;
+
+.button a:hover {
+    color: white;
 }
+.custom-button {
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            font-size: x-large;
+            color: black;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect */
+        .custom-button:hover {
+            border: 2px solid blue;
+            transform: scale(1.1); /* Zoom out on hover */
+        }
+
+
 </style>
 
 <body>
@@ -108,9 +131,9 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="text-center mt-3 mb-2">
-       <h4 style="display: inline-block;padding:5px; background-color: blue; color:white" >International Tours</h4>
-    </div>
+        <div class="text-center mt-3 mb-2">
+        <h4 style="display: inline-block;padding:8px; color:black; font-size:xx-large" >International Tours</h4>
+        </div>
     <div class="container mt-2 text-center">
         <div class="row">
             @foreach(\App\Models\International::paginate(3) as $international)
@@ -136,20 +159,19 @@
             @endforeach
         </div>
     </div>
-    <div class="text-center" >
-    <button class="p-2 m-3 " style="border: none; background:none; background-color:blue">
-        <a  style="color: white; text-align:center; text-decoration:none" href="{{route('international')}}">View All Tours</a>
-    </button>
-    </div>
+    <div class="text-center">
+    <!-- Apply the custom-button class to the button -->
+    <a class="custom-button" href="{{route('international')}}" style="font-family: sans-serif;">View All Tours</a>
+</div>
 
 
 
 
     <!-- local -->
 
-    <div class="text-center mt-3 mb-2 ">
-    <h4 style="display: inline-block; padding: 5px; background-color: blue; color: white;">Local Tours</h4>
-</div>
+    <div class="text-center mt-3 mb-2">
+        <h4 style="display: inline-block;padding:8px; color:black; font-size:xx-large" >Local Tours</h4>
+        </div>
     <div class="container mt-2 text-center">
         <div class="row">
             @foreach(\App\Models\Local::paginate(3) as $local)
@@ -175,11 +197,10 @@
             @endforeach
         </div>
     </div>
-    <div class="text-center" >
-    <button class="p-2 m-3 " style="border: none; background:none; background-color:blue">
-        <a  style="color: white; text-align:center; text-decoration:none" href="{{route('local')}}">View All Tours</a>
-    </button>
-    </div>
+    <div class="text-center">
+    <!-- Apply the custom-button class to the button -->
+    <a class="custom-button" href="{{route('local')}}">View All Tours</a>
+</div>
 <div>
     @include('allfiles.included')
     </div>
