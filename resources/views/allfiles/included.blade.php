@@ -31,7 +31,7 @@
             display: inline-block;
         }
         .icon-col {
-    transition: transform 0.3s ease-out;
+    transition: transform 0.9s ease-out;
 }
 
 .icon-col:hover {
@@ -63,10 +63,6 @@ h6 {
     z-index: 1;
 }
 
-
-
-
-       
     </style>
 </head>
 <!-- design  section -->
