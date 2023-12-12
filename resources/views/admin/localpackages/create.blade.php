@@ -98,7 +98,6 @@
         margin-bottom: 20px;
     }
 </style>
-</style>
 
 
 @endsection

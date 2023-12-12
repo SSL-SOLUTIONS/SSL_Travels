@@ -157,7 +157,7 @@
             }, 500);
         });
     </script>
-    @include('allfiles.footer')
+    @include('allfiles.homefooter')
 </body>
 
 </html>

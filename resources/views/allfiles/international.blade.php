@@ -23,7 +23,7 @@
     text-align: center;
 
             font-family: 'Nunito', sans-serif; 
-        
+
 
 }
 
@@ -142,7 +142,7 @@
             }, 500);
         });
     </script>
-    @include('allfiles.footer')
+    @include('allfiles.homefooter')
 </body>
 
 </html>
