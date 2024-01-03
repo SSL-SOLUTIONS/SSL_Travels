@@ -23,7 +23,7 @@
     text-align: center;
 
             font-family: 'Nunito', sans-serif; 
-        
+
 
 }
 
@@ -99,7 +99,7 @@
                     </a>
                     <hr>
                     <div>
-                        <button class="button mb-3 p-1 int-btn">
+                        <button class="button mb-3 p-2 int-btn">
                             <a href="{{ route('intpackages', ['id' => $international->id]) }}">Packages</a>
                         </button>
                     </div>
@@ -142,7 +142,7 @@
             }, 500);
         });
     </script>
-    @include('allfiles.footer')
+    @include('allfiles.homefooter')
 </body>
 
 </html>

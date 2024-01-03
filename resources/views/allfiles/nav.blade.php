@@ -21,7 +21,7 @@
     .link-nav{
         position: relative;
         right: 25px;
-        
+        color: black;
     }
     .link-nav{
         padding: 10px;
@@ -30,11 +30,11 @@
     .dropdown-content {
             
             position: fixed;
-            background-color: aliceblue; /* Set your desired background color */
+            background-color: aliceblue; 
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
-            padding: 10px; /* Adjust padding as needed */
-            width: 300px; /* Set the desired width */
+            padding: 10px;
+            width: 300px; 
             justify-content: space-between;
           
         }
@@ -46,8 +46,8 @@
         }
 
         .dropdown-content li {
-            width: calc(66.66%  80px); /* Adjust the width and spacing between list items */
-            margin-bottom: 10px; /* Adjust the spacing between rows */
+            width: calc(66.66%  80px); 
+            margin-bottom: 10px; 
             
           
         }
@@ -59,18 +59,16 @@
 
         .link-nav {
             text-decoration: none;
-            color: #333; /* Set your desired text color */
-            
+            color: #333; 
         }
 
         .li-drop-nav:hover .dropdown-content {
             display: block;
-            flex-wrap: wrap; /* Enable wrapping for multiple rows */
+            flex-wrap: wrap; 
         }
         .active{
             color: wheat;
         }
-/* Add the following styles to your existing styles */
 .dropdown {
     position: relative;
 }
@@ -79,7 +77,6 @@
     display: block;
 }
 
-/* The rest of your existing styles remain unchanged */
 .country-list {
     display: none;
     position: absolute;
@@ -181,7 +178,7 @@ ul.links li a.links-nav.active {
     
     <script>
         $(document).ready(function() {
-            // Show the scroll-to-top circle when the user scrolls down
+        
             $(window).scroll(function() {
                 if ($(this).scrollTop() > 100) {
                     $('#scroll-to-top').fadeIn();

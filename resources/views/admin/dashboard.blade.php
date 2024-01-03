@@ -1,4 +1,3 @@
-<link rel="icon" type="image/png" href="{{ asset('website/favicon.png') }}">
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link href="{{asset('admin/css/styles.css')}}" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="{{ asset('website/favicon.png') }}">
+
 </head>
 
 <body class="sb-nav-fixed">
@@ -38,7 +39,7 @@
         </a>
     </li>
 </form>
-                </ul>a
+                </ul>
             </li>
         </ul>
     </nav>
@@ -53,15 +54,15 @@
                             Dashboard
                         </a>
                         <a class="nav-link" href="{{url('locals')}}">
-                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Local Tours
                         </a>
                         <a class="nav-link" href="{{url('internationals')}}">
-                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             International Tours
                         </a>
                         <a class="nav-link" href="{{url('internationalspackages')}}">
-                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             International Packages
                         </a>
 

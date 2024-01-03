@@ -7,109 +7,102 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbs5AIBDR6Wx5lGqgEf4lTjkCE5T/J6pCp1FO8D7hFiVCISWI3nFVOpA4SBDpOHbn" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
-<!-- Add these lines to the <head> section of your HTML -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<link rel="icon" type="image/png" href="{{ asset('website/favicon.png') }}">
-
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="icon" type="image/png" href="{{ asset('website/favicon.png') }}">
 
     <title>SSL Travels & Tours</title>
 </head>
 <style>
-    /* Your existing styles remain unchanged */
-
     body {
         padding-top: 56px;
-       
+
     }
-        .carousel-inner {
-            max-height: 400px;
-        }
 
-        .carousel-item {
-            text-align: center;
-        }
+    .carousel-inner {
+        max-height: 400px;
+    }
 
-        .carousel-item img {
-            height: 300px;
-            width: 100%;
-            object-fit: cover;
-        }
+    .carousel-item {
+        text-align: center;
+    }
 
-        .carousel-caption {
-            padding: 10px;
-            color: white;
-        }
+    .carousel-item img {
+        height: 500px;
+        width: 100%;
+    }
 
-.container {
-    margin-top: 2rem;
-    text-align: center;
-}
+    .carousel-caption {
+        padding: 10px;
+        color: white;
+    }
 
-.image-container {
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-}
+    .container {
+        margin-top: 2rem;
+        text-align: center;
+    }
 
-.link-a {
-    text-decoration: none;
-    color: black;
-}
+    .image-container {
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
 
-.img {
-    height: 200px;
-}
+    .link-a {
+        text-decoration: none;
+        color: black;
+    }
 
-.description {
-    font-size: medium;
-    text-align: justify;
-}
+    .img {
+        height: 200px;
+    }
 
-.button {
-    background-color: white;
-    color: blue;
-    border: 1px solid blue;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    text-decoration: none; /* Remove default underline on anchor tag inside the button */
-}
+    .description {
+        font-size: medium;
+        text-align: justify;
+    }
 
-.button:hover {
-    background-color: blue;
-    color: white;
-}
+    .button {
+        background-color: white;
+        color: blue;
+        border: 1px solid blue;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+    }
 
-.button a {
-    text-decoration: none;
-}
+    .button:hover {
+        background-color: blue;
+        color: white;
+    }
 
-.button a:hover {
-    color: white;
-}
-.custom-button {
-            display: inline-block;
-            padding: 10px;
-            margin: 10px;
-            border: none;
-            text-align: center;
-            text-decoration: none;
-            font-size: x-large;
-            color: black;
-            transition: all 0.3s ease;
-        }
+    .button a {
+        text-decoration: none;
+    }
 
-        /* Hover effect */
-        .custom-button:hover {
-            border: 2px solid blue;
-            transform: scale(1.1); /* Zoom out on hover */
-        }
+    .button a:hover {
+        color: white;
+    }
 
+    .custom-button {
+        display: inline-block;
+        padding: 10px;
+        margin: 10px;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        font-size: x-large;
+        color: black;
+        transition: all 0.3s ease;
+    }
 
+    .custom-button:hover {
+        border: 2px solid blue;
+        transform: scale(1.1);
+    }
 </style>
 
 <body>
@@ -118,10 +111,10 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{asset('/images/slide.jpg')}}" class="d-block w-100" alt="...">
+                <img src="{{asset('/images/text.png')}}" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item">
-                <img src="{{asset('/images/slider.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-item">  
+                <img src="{{asset('/images/textt.png')}}" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -133,9 +126,9 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-        <div class="text-center mt-3 mb-2">
-        <h4 style="display: inline-block;padding:8px; color:black; font-size:xx-large" >International Tours</h4>
-        </div>
+    <div class="text-center mt-3 mb-2">
+        <h4 style="display: inline-block;padding:8px; color:black; font-size:xx-large">International Tours</h4>
+    </div>
     <div class="container mt-2 text-center">
         <div class="row">
             @foreach(\App\Models\International::paginate(3) as $international)
@@ -152,7 +145,7 @@
                     </a>
                     <hr>
                     <div>
-                        <button class="button mb-3 p-1 int-btn">
+                        <button class="button mb-3 p-2 int-btn">
                             <a href="{{ route('intpackages', ['id' => $international->id]) }}">Packages</a>
                         </button>
                     </div>
@@ -162,18 +155,16 @@
         </div>
     </div>
     <div class="text-center">
-    <!-- Apply the custom-button class to the button -->
-    <a class="custom-button" href="{{route('international')}}" style="font-family: sans-serif;">View All Tours</a>
-</div>
+        <a class="custom-button" href="{{route('international')}}" style="font-family: sans-serif;">View All Tours</a>
+    </div>
 
 
 
 
-    <!-- local -->
 
     <div class="text-center mt-3 mb-2">
-        <h4 style="display: inline-block;padding:8px; color:black; font-size:xx-large" >Local Tours</h4>
-        </div>
+        <h4 style="display: inline-block;padding:8px; color:black; font-size : xx-large">Local Tours</h4>
+    </div>
     <div class="container mt-2 text-center">
         <div class="row">
             @foreach(\App\Models\Local::paginate(3) as $local)
@@ -190,7 +181,7 @@
                     </a>
                     <hr>
                     <div>
-                        <button class="button mb-3 p-1 int-btn ">
+                        <button class="button mb-3 p-2 int-btn ">
                             <a href="{{ route('locpackages', ['id' => $local->id])}}">Packages</a>
                         </button>
                     </div>
@@ -200,15 +191,14 @@
         </div>
     </div>
     <div class="text-center">
-    <!-- Apply the custom-button class to the button -->
-    <a class="custom-button" href="{{route('local')}}">View All Tours</a>
-</div>
-<div>
-    @include('allfiles.included')
+        <a class="custom-button" href="{{route('local')}}">View All Tours</a>
+    </div>
+    <div>
+        @include('allfiles.included')
     </div>
 
     @include('allfiles.contacts')
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -226,9 +216,10 @@
             });
         });
     </script>
-  
-    @include('allfiles.footer')
-    
+
+@include('allfiles.homefooter')
+
+
 </body>
 
 </html>
