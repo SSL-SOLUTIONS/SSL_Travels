@@ -144,7 +144,7 @@ ul.links li a.links-nav.active {
     </a>
     <div class="country-list">
         <div class="country-row">
-        @foreach(\App\Models\local::all() as $local)
+        @foreach(\App\Models\Local::all() as $local)
                 <a href="{{ route('locpackages', ['id' => $local->id]) }}">{{ $local->title }}</a>
             @endforeach
         </div>
