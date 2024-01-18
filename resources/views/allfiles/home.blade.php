@@ -40,7 +40,7 @@
 
     .container {
         margin-top: 2rem;
-        text-align: center;
+        text-align: start;
     }
 
     .image-container {
@@ -113,7 +113,7 @@
             <div class="carousel-item active">
                 <img src="{{asset('/images/text.png')}}" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item">  
+            <div class="carousel-item">
                 <img src="{{asset('/images/textt.png')}}" class="d-block w-100" alt="...">
             </div>
         </div>
@@ -126,13 +126,13 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="text-center mt-3 mb-2">
-        <h4 style="display: inline-block;padding:8px; color:black; font-size:xx-large">International Tours</h4>
+    <div class="text-center mt-5">
+        <h4 style="display: inline-block;padding:8px; color:black; font-size : xx-large">International Tours</h4>
     </div>
-    <div class="container mt-2 text-center">
+    <div class="container mt-1">
         <div class="row">
-            @foreach(\App\Models\International::paginate(3) as $international)
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            @foreach(\App\Models\International::paginate(4) as $international)
+            <div class="col-lg-3 col-md-6 col-12 mt-5">
                 <div class="image-container bg">
                     <a class="link-a" href="{{ route('intpackages', ['id' => $international->id]) }}">
                         <img class="img-fluid img" src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" alt="International Image"><br>
@@ -145,18 +145,18 @@
                     </a>
                     <hr>
                     <div>
-                        <button class="button mb-3 p-2 int-btn">
-                            <a href="{{ route('intpackages', ['id' => $international->id]) }}">Packages</a>
-                        </button>
+                        <a href="{{ route('intpackages', ['id' => $international->id]) }}" class="btn btn-outline-primary">Packages</a>
                     </div>
+
                 </div>
             </div>
             @endforeach
         </div>
     </div>
     <div class="text-center">
-        <a class="custom-button" href="{{route('international')}}" style="font-family: sans-serif;">View All Tours</a>
+        <a class="custom-button" href="{{route('local')}}">View All Tours</a>
     </div>
+
 
 
 
@@ -165,10 +165,10 @@
     <div class="text-center mt-3 mb-2">
         <h4 style="display: inline-block;padding:8px; color:black; font-size : xx-large">Local Tours</h4>
     </div>
-    <div class="container mt-2 text-center">
+    <div class="container mt-2">
         <div class="row">
-            @foreach(\App\Models\Local::paginate(3) as $local)
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            @foreach(\App\Models\Local::paginate(4) as $local)
+            <div class="col-lg-3 col-md-6 col-12 mt-5">
                 <div class="image-container bg">
                     <a class="link-a" href="{{ route('locpackages', ['id' => $local->id])}}">
                         <img class="img-fluid img" src="{{ asset('admin/assets/images/locals/' . $local->image) }}" alt="Local Image"><br>
@@ -176,14 +176,12 @@
                             <h3>{{$local->title}}</h3>
                         </p>
                         <h5 class="description mt-3">
-                            {{ Illuminate\Support\Str::limit($local->description, $limit = 100, $end = '...') }}
+                            {{ Illuminate\Support\Str::limit($local->description, $limit = 90, $end = '...') }}
                         </h5>
                     </a>
                     <hr>
                     <div>
-                        <button class="button mb-3 p-2 int-btn ">
-                            <a href="{{ route('locpackages', ['id' => $local->id])}}">Packages</a>
-                        </button>
+                        <a href="{{ route('locpackages', ['id' => $local->id])}}" class="btn btn-outline-primary">Packages</a>
                     </div>
                 </div>
             </div>
@@ -217,7 +215,7 @@
         });
     </script>
 
-@include('allfiles.homefooter')
+    @include('allfiles.homefooter')
 
 
 </body>

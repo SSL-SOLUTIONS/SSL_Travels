@@ -99,9 +99,7 @@
                     </a>
                     <hr>
                     <div>
-                        <button class="button mb-3 p-2 int-btn">
-                            <a href="{{ route('intpackages', ['id' => $international->id]) }}">Packages</a>
-                        </button>
+                        <a href="{{ route('intpackages', ['id' => $international->id]) }}" class="btn btn-outline-primary">Packages</a>
                     </div>
                 </div>
             </div>

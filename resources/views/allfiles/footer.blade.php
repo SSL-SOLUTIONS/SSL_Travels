@@ -31,7 +31,12 @@
     <!-- Template Stylesheet -->
     <link href="{{asset('website/footer/css/style.css')}}" rel="stylesheet">
     <style>
-     
+       @media (min-width: 768px) and (max-width: 991px) {
+            .center-on-medium-tablet {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     </style>
 </head>
 
@@ -42,6 +47,8 @@
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">SSL Travels & Tours</h4>
+                    <a class="btn btn-link" href="{{route('international')}}">International Tours</a>
+                    <a class="btn btn-link" href="{{route('locals')}}">Local Tours</a>
                     <a class="btn btn-link" href="{{route('about')}}">About Us</a>
                     <a class="btn btn-link" href="{{route('contact')}}">Contact Us</a>
                    
@@ -58,7 +65,7 @@
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 center-on-medium-tablet">
                     <h4 class="text-white mb-3">Gallery</h4>
                     <div class="row g-2 pt-2">
                         <div class="col-4">

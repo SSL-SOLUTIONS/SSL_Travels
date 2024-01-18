@@ -107,6 +107,7 @@
 }
 ul.links li a.links-nav {
     color: black;
+    background-color: white;
 }
 
 ul.links li a.links-nav.active {

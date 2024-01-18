@@ -31,7 +31,12 @@
     <!-- Template Stylesheet -->
     <link href="{{asset('website/footer/css/style.css')}}" rel="stylesheet">
     <style>
-     
+        @media (min-width: 768px) and (max-width: 991px) {
+            .center-on-medium-tablet {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     </style>
 </head>
 
@@ -40,8 +45,10 @@
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn footery" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">SSL Travels & Tours</h4>
+                    <a class="btn btn-link" href="{{route('international')}}">International Tours</a>
+                    <a class="btn btn-link" href="{{route('local')}}">Local Tours</a>
                     <a class="btn btn-link" href="{{route('about')}}">About Us</a>
                     <a class="btn btn-link" href="{{route('contact')}}">Contact Us</a>
                    
@@ -51,19 +58,20 @@
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Land Mark plaza, Jail Road, Lahore</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+92 301 111 4504</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@ssltravel.com</p>
-                    <div style="text-align:center;justify-content:center;"  class="d-flex pt-2">
+                    <div style="text-align:center;justify-content:center;" class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 center-on-medium-tablet">
                     <h4 class="text-white mb-3">Gallery</h4>
                     <div class="row g-2 pt-2">
                         <div class="col-4">
                             <img class="img-fluid bg-light p-1" src="{{asset('website/footer/img/package-1.jpg')}}" alt="">
                         </div>
+
                         <div class="col-4">
                             <img class="img-fluid bg-light p-1" src="{{asset('website/footer/img/package-2.jpg')}}" alt="">
                         </div>
@@ -81,7 +89,7 @@
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
         <div class="container">
@@ -90,7 +98,7 @@
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <a class="border-bottom" href="{{url('/')}}">SSL Travels & Tours</a>, All Right Reserved.
                     </div>
-                   
+
                 </div>
             </div>
         </div>
@@ -99,7 +107,7 @@
 
 
     <!-- Back to Top -->
-    
+
 
 
     <!-- JavaScript Libraries -->
