@@ -62,6 +62,27 @@ h6 {
     transform: translateY(-10px);
     z-index: 1;
 }
+/* Define the keyframes for the animation */
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Apply the animation to the icon-col class */
+.icon-col {
+    animation: moveUpDown 3s infinite ease-in-out;
+    transition: transform 0.9s ease-out;
+}
+
+.icon-col:hover {
+    transform: translateY(-10px);
+    z-index: 1;
+}
+
 
     </style>
 </head>
@@ -80,33 +101,37 @@ h6 {
                 <br><br>
             </div>
         </div>
-   
-<div class="row icon-row">
+        <div class="row icon-row">
     <div class="col-lg-3 col-md-6 col-sm-6">
-        <div class="icon-col mb-4" id="hotel">
+        <div class="icon-col mb-4 text-center">
             <i class="fa fa-building" style="font-size: 60px; color:blue;"></i>
-            <h6>HOTEL Reservation</h6>
+            <div style="margin-top: 10px;"></div>
+            <h6 class="mt-2">HOTEL Reservation</h6>
         </div>
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6">
-        <div class="icon-col mb-4" id="flight">
+        <div class="icon-col mb-4 text-center">
             <i class="fa fa-plane" style="font-size: 60px; color:blue;"></i>
-            <h6>FLIGHT BOOKING</h6>
+            <div style="margin-top: 10px;"></div>
+            <h6 class="mt-2">FLIGHT BOOKING</h6>
         </div>
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6">
-        <div class="icon-col mb-4" id="food">
+        <div class="icon-col mb-4 text-center">
             <i class="fa fa-coffee" style="font-size: 60px; color:blue;"></i>
-            <h6>FREE FOOD </h6>
+            <div style="margin-top: 10px;"></div>
+            <h6 class="mt-2">FREE FOOD</h6>
         </div>
     </div>
-    <div class="col-lg-3 col-md-6 col-sm-6" id="travel">
-        <div class="icon-col mb-4">
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="icon-col mb-4 text-center">
             <i class="fa fa-bus" style="font-size: 60px; color:blue;"></i>
-            <h6>TRAVEL & Tours</h6>
+            <div style="margin-top: 10px;"></div>
+            <h6 class="mt-2">TRAVEL & Tours</h6>
         </div>
     </div>
 </div>
+
 
 
 

@@ -24,7 +24,7 @@
         color: black;
     }
     .link-nav{
-        padding: 10px;
+        padding: -5px;
         
     }
     .dropdown-content {
@@ -113,6 +113,11 @@ ul.links li a.links-nav {
 ul.links li a.links-nav.active {
     color: blue !important;
 }
+@media only screen and (max-width: 1024px) {
+        .country-list {
+            display: none !important;
+        }
+    }
 
 </style>
 
@@ -210,6 +215,42 @@ ul.links li a.links-nav.active {
         );
     });
 </script>
+<script>
+        $(document).ready(function () {
+            $('.dropdown').hover(
+                function () {
+                    // Hover in
+                    if ($(window).width() > 1024) {
+                        $(this).find('.country-list').css('display', 'block');
+                    }
+                },
+                function () {
+                    // Hover out
+                    if ($(window).width() > 1024) {
+                        $(this).find('.country-list').css('display', 'none');
+                    }
+                }
+            );
+
+            // Handle click on International Tours and Local Tours for small and medium screens
+            $('.dropdown a.links-nav').click(function () {
+                if ($(window).width() <= 1024) {
+                    // Toggle the display of country-list for small and medium screens
+                    $(this).siblings('.country-list').toggle();
+                }
+            });
+
+            // Close the mega menu when clicking outside
+            $(document).on('click', function (e) {
+                if ($(window).width() <= 1024) {
+                    if (!$(e.target).closest('.dropdown').length) {
+                        $('.country-list').hide();
+                    }
+                }
+            });
+        });
+    </script>
+
 
 </body>
 

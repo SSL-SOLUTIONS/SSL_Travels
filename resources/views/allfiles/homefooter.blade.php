@@ -37,6 +37,11 @@
                 margin-right: auto;
             }
         }
+        .mb-2:hover .fa-map-marker-alt,
+    .mb-2:hover .fa-phone-alt,
+    .mb-2:hover .fa-envelope {
+      color: blue;
+    }
     </style>
 </head>
 

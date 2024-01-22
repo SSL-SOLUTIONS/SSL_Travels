@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="stylesheet" href="{{asset('website/contact/css/style.css')}}">
+    <link href="img/favicon.ico" rel="icon">
+
 
 </head>
 @include('allfiles.nav')
@@ -124,7 +126,11 @@
 			</div>
 		</div>
 	</section>
-
+	<br>
+	<iframe width="100%" height="450" frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13602.428231413262!2d74.3469248!3d31.5349506!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391905d3e3ae6b77%3A0x157a2f53f97b67c6!2sSSL%20SOLUTIONS!5e0!3m2!1sen!2s!4v1701933478588!5m2!1sen!2s"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
 	<script src="{{asset('website/contact/js/jquery.min.js')}}"></script>
 	<script src="{{asset('website/contact/js/popper.js')}}"></script>
 	<script src="{{asset('website/contact/js/bootstrap.min.js')}}"></script>

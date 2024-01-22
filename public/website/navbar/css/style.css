@@ -1,5 +1,6 @@
 /* Your existing CSS here */
 
+/* Default styles for all screen sizes */
 nav {
   position: fixed;
   z-index: 10;
@@ -7,11 +8,26 @@ nav {
   top: 0;
   right: 0;
   padding: 0 10%;
-  height: 80px;
+  height: 82px; /* Default height for large and medium screens */
   background: #ffffff;
   box-sizing: border-box;
-justify-content: center;
+  justify-content: center;
 }
+
+/* Media query for medium-sized screens */
+@media screen and (max-width: 768px) {
+  nav {
+    height: 80px; /* Adjust the height for medium screens if needed */
+  }
+}
+
+/* Media query for small-sized screens */
+@media screen and (max-width: 480px) {
+  nav {
+    height: 40px; /* Adjust the height for small screens */
+  }
+}
+
 
 nav .logo {
   float: left;

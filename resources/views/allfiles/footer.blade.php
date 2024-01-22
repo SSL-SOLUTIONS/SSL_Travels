@@ -37,6 +37,13 @@
                 margin-right: auto;
             }
         }
+        .mb-2:hover .fa-map-marker-alt,
+    .mb-2:hover .fa-phone-alt,
+    .mb-2:hover .fa-envelope {
+      color: blue;
+    }
+
+
     </style>
 </head>
 
@@ -48,7 +55,7 @@
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">SSL Travels & Tours</h4>
                     <a class="btn btn-link" href="{{route('international')}}">International Tours</a>
-                    <a class="btn btn-link" href="{{route('locals')}}">Local Tours</a>
+                    <a class="btn btn-link" href="{{route('local')}}">Local Tours</a>
                     <a class="btn btn-link" href="{{route('about')}}">About Us</a>
                     <a class="btn btn-link" href="{{route('contact')}}">Contact Us</a>
                    

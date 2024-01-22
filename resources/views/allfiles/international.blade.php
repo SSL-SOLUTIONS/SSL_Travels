@@ -83,11 +83,11 @@
     <div class="text-center mt-3 mb-2">
         <h4 style="display: inline-block;padding:8px; color:black; font-size:xx-large" >International Tours</h4>
         </div>
-    <div class="container mt-2 text-center">
+        <div class="container-fluid bg-light">
         <div class="row">
             @foreach(\App\Models\International::all() as $international)
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="image-container bg mb-4">
+            <div class="col-lg-3 col-md-6 col-12 mt-5">
+                <div class="image-container bg">
                     <a class="link-a" href="{{ route('intpackages', ['id' => $international->id]) }}">
                         <img class="img-fluid img" src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" alt="International Image"><br>
                         <p class="mt-2">
@@ -99,8 +99,9 @@
                     </a>
                     <hr>
                     <div>
-                        <a href="{{ route('intpackages', ['id' => $international->id]) }}" class="btn btn-outline-primary">Packages</a>
+                        <a href="{{ route('intpackages', ['id' => $international->id]) }}" class="btn btn-outline-success">Packages</a>
                     </div>
+
                 </div>
             </div>
             @endforeach
@@ -140,7 +141,8 @@
             }, 500);
         });
     </script>
-    @include('allfiles.homefooter')
+
+       @include('allfiles.homefooter')
 </body>
 
 </html>

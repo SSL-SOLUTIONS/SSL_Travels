@@ -114,7 +114,7 @@
                     </a>
                     <hr>
                     <div>
-                        <a href="{{ route('locpackages', ['id' => $local->id])}}" class="btn btn-outline-primary">Packages</a>
+                    <a href="{{ route('locpackages', ['id' => $local->id])}}" class="btn btn-outline-success">Packages</a>
                     </div>
                 </div>
             </div>

@@ -32,7 +32,7 @@
                     </h5>
                     <hr>
                     <div>
-                        <button class="button mb-3 p-1"><a href="">Book Now</a></button>
+                    <a href="{{ route('contact') }}" class="btn btn-outline-success">Book Now</a>
                     </div>
                 </div>
             </div>

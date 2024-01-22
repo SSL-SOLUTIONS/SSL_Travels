@@ -13,110 +13,44 @@
     <link rel="icon" type="image/png" href="{{ asset('website/favicon.png') }}">
 
     <title>SSL Travels & Tours</title>
-</head>
-<style>
-    body {
-        padding-top: 56px;
-
+    <style>
+    .zoom-out-image {
+        transition: transform 0.3s ease-in-out;
     }
 
-    .carousel-inner {
-        max-height: 400px;
-    }
-
-    .carousel-item {
-        text-align: center;
-    }
-
-    .carousel-item img {
-        height: 500px;
-        width: 100%;
-    }
-
-    .carousel-caption {
-        padding: 10px;
-        color: white;
-    }
-
-    .container {
-        margin-top: 2rem;
-        text-align: start;
-    }
-
-    .image-container {
-        padding: 1rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: #fff;
-    }
-
-    .link-a {
-        text-decoration: none;
-        color: black;
-    }
-
-    .img {
-        height: 200px;
-    }
-
-    .description {
-        font-size: medium;
-        text-align: justify;
-    }
-
-    .button {
-        background-color: white;
-        color: blue;
-        border: 1px solid blue;
-        border-radius: 5px;
-        cursor: pointer;
-        padding: 0.5rem 1rem;
-        text-decoration: none;
-    }
-
-    .button:hover {
-        background-color: blue;
-        color: white;
-    }
-
-    .button a {
-        text-decoration: none;
-    }
-
-    .button a:hover {
-        color: white;
-    }
-
-    .custom-button {
-        display: inline-block;
-        padding: 10px;
-        margin: 10px;
-        border: none;
-        text-align: center;
-        text-decoration: none;
-        font-size: x-large;
-        color: black;
-        transition: all 0.3s ease;
-    }
-
-    .custom-button:hover {
-        border: 2px solid blue;
+    .zoom-out-image:hover {
         transform: scale(1.1);
     }
 </style>
 
-<body>
+</head>
+
+<body class="bg-light">
     @include('allfiles.nav')
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{asset('/images/text.png')}}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="{{asset('/images/textt.png')}}" class="d-block w-100" alt="...">
-            </div>
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+    <div class="carousel-item active position-relative">
+    <img src="{{asset('/images/slide.jpg')}}" class="d-block w-100 h-100 img-fluid" style="object-fit: cover;" alt="Responsive Image">
+
+        <!-- Button inside the first image -->
+        <div class="carousel-button-container position-absolute top-50 start-50 translate-middle">
+            <a href="{{ route('contact') }}" class="btn btn-outline-primary" style="padding: 10px; width:auto;">Book Now</a>
         </div>
+    </div>
+
+    <div class="carousel-item  position-relative">
+    <img src="{{asset('/images/slider.jpg')}}" class="d-block w-100 h-100 img-fluid" style="object-fit: cover;" alt="Responsive Image">
+
+        <!-- Button inside the second image -->
+        <div class="carousel-button-container position-absolute top-50 start-50 translate-middle">
+            <a href="{{ route('contact') }}" class="btn btn-outline-primary" style="padding: 10px; width:auto;">Book Now</a>
+        </div>
+    </div>
+</div>
+
+
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
             <span style="color: blue;" class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -126,76 +60,67 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="text-center mt-5">
-        <h4 style="display: inline-block;padding:8px; color:black; font-size : xx-large">International Tours</h4>
-    </div>
-    <div class="container mt-1">
-        <div class="row">
-            @foreach(\App\Models\International::paginate(4) as $international)
-            <div class="col-lg-3 col-md-6 col-12 mt-5">
-                <div class="image-container bg">
-                    <a class="link-a" href="{{ route('intpackages', ['id' => $international->id]) }}">
-                        <img class="img-fluid img" src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" alt="International Image"><br>
-                        <p class="mt-2">
-                            <h3>{{$international->title}}</h3>
-                        </p>
-                        <h5 class="description mt-3">
-                            {{ Illuminate\Support\Str::limit($international->description, $limit = 100, $end = '...') }}
-                        </h5>
-                    </a>
-                    <hr>
-                    <div>
-                        <a href="{{ route('intpackages', ['id' => $international->id]) }}" class="btn btn-outline-primary">Packages</a>
-                    </div>
 
+    <div class="text-center mt-3">
+        <h4 class="text-marquee" style="font-size: xx-large;">International Tours</h4>
+    </div>
+
+    <div class="container-fluid bg-light">
+    <div class="row">
+        @foreach(\App\Models\International::paginate(4) as $international)
+            <div class="col-lg-3 col-md-6 col-12 mt-5">
+                <div class="card" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
+                    <img class="card-img-top img-fluid zoom-out-image" src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" alt="International Image">
+                    <div class="card-body">
+                        <h3 class="card-title">{{$international->title}}</h3>
+                        <p class="card-text">
+                            {{ Illuminate\Support\Str::limit($international->description, $limit = 90, $end = '...') }}
+                        </p>
+                        <a href="{{ route('intpackages', ['id' => $international->id]) }}" class="btn btn-outline-success">Packages</a>
+                    </div>
                 </div>
             </div>
-            @endforeach
-        </div>
+        @endforeach
     </div>
+</div>
+
+
     <div class="text-center">
-        <a class="custom-button" href="{{route('local')}}">View All Tours</a>
+        <a class="btn btn-outline-dark mt-3" href="{{route('international')}}" style="font-size: x-large;">View All Tours</a>
     </div>
 
-
-
-
-
-
-    <div class="text-center mt-3 mb-2">
-        <h4 style="display: inline-block;padding:8px; color:black; font-size : xx-large">Local Tours</h4>
+    <div class="text-center mt-3">
+        <h4 class="text-marquee" style="font-size: xx-large;">Local Tours</h4>
     </div>
-    <div class="container mt-2">
-        <div class="row">
-            @foreach(\App\Models\Local::paginate(4) as $local)
+
+    <div class="container-fluid bg-light">
+    <div class="row">
+        @foreach(\App\Models\Local::paginate(4) as $local)
             <div class="col-lg-3 col-md-6 col-12 mt-5">
-                <div class="image-container bg">
-                    <a class="link-a" href="{{ route('locpackages', ['id' => $local->id])}}">
-                        <img class="img-fluid img" src="{{ asset('admin/assets/images/locals/' . $local->image) }}" alt="Local Image"><br>
-                        <p class="mt-2">
-                            <h3>{{$local->title}}</h3>
-                        </p>
-                        <h5 class="description mt-3">
+                <div class="card" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
+                    <img class="card-img-top img-fluid zoom-out-image" src="{{ asset('admin/assets/images/locals/' . $local->image) }}" alt="Local Image">
+                    <div class="card-body">
+                        <h3 class="card-title">{{$local->title}}</h3>
+                        <p class="card-text">
                             {{ Illuminate\Support\Str::limit($local->description, $limit = 90, $end = '...') }}
-                        </h5>
-                    </a>
-                    <hr>
-                    <div>
-                        <a href="{{ route('locpackages', ['id' => $local->id])}}" class="btn btn-outline-primary">Packages</a>
+                        </p>
+                        <a href="{{ route('locpackages', ['id' => $local->id]) }}" class="btn btn-outline-success">Packages</a>
                     </div>
                 </div>
             </div>
-            @endforeach
-        </div>
+        @endforeach
     </div>
+</div>
+
+
     <div class="text-center">
-        <a class="custom-button" href="{{route('local')}}">View All Tours</a>
+        <a class="btn btn-outline-dark mt-3" href="{{route('local')}}" style="font-size: x-large;">View All Tours</a>
     </div>
+
     <div>
         @include('allfiles.included')
     </div>
 
-    @include('allfiles.contacts')
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -207,17 +132,15 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var myCarousel = new bootstrap.Carousel(document.getElementById('myCarousel'), {
-                interval: 2000,
+            var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExampleControls'), {
+                interval: 3000,
                 wrap: true,
                 keyboard: true
             });
         });
     </script>
 
-    @include('allfiles.homefooter')
-
-
+    @include('allfiles.footer')
 </body>
 
 </html>
