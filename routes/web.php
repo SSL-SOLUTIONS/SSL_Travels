@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ApartmentController;
+use App\Http\Controllers\CarController;
 use App\Http\Controllers\ContactusController;
 use App\Http\Controllers\CountriesController;
 use App\Http\Controllers\DestinationController;
@@ -35,6 +37,10 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('internationals', InternationalController::class);
     Route::resource('internationalspackages',InternationalpackagesController::class);
     Route::resource('localpackages',LocalPackageController::class);
+    Route::resource('cars',CarController::class);
+    Route::resource('apartments',ApartmentController::class);
+
+
   
 });
 Route::get('local',[WebsiteController::class, 'local'])->name('local');
@@ -45,6 +51,8 @@ Route::get('international',[WebsiteController::class, 'international'])->name('i
 Route::get('/international/{id}/packages', [WebsiteController::class, 'intpackages'])->name('intpackages');
 
 Route::resource('contactus',ContactusController::class);
+Route::get('car',[WebsiteController::class, 'car'])->name('car');
+Route::get('apartment', [WebsiteController::class, 'apartment'])->name('apartment');
 
 
 
@@ -56,6 +64,7 @@ Route::get('/packagedetails{id}',[WebsiteController::class, 'packagedetails'])->
 
 Route::get('about', [WebsiteController::class, 'about'])->name('about');
 Route::get('contact', [WebsiteController::class, 'contact'])->name('contact');
+
 
 
 

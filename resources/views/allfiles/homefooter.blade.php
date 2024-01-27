@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Tourist - Travel Agency HTML Template</title>
+    <title>SSl Tours and Travels</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -37,11 +37,12 @@
                 margin-right: auto;
             }
         }
+
         .mb-2:hover .fa-map-marker-alt,
-    .mb-2:hover .fa-phone-alt,
-    .mb-2:hover .fa-envelope {
-      color: blue;
-    }
+        .mb-2:hover .fa-phone-alt,
+        .mb-2:hover .fa-envelope {
+            color: blue;
+        }
     </style>
 </head>
 
@@ -50,24 +51,26 @@
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn footery" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-            <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">SSL Travels & Tours</h4>
                     <a class="btn btn-link" href="{{route('international')}}">International Tours</a>
                     <a class="btn btn-link" href="{{route('local')}}">Local Tours</a>
+                    <a class="btn btn-link" href="{{route('car')}}">Rent a car</a>
+                    <a class="btn btn-link" href="{{route('apartment')}}">Book Apartment</a>
                     <a class="btn btn-link" href="{{route('about')}}">About Us</a>
                     <a class="btn btn-link" href="{{route('contact')}}">Contact Us</a>
-                   
+
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 text-start">
                     <h4 class="text-white mb-3">Contact</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Land Mark plaza, Jail Road, Lahore</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+92 301 111 4504</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@ssltravel.com</p>
-                    <div style="text-align:center;justify-content:center;" class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <div class="d-flex justify-content-start align-items-start flex-wrap pt-2">
+                    <a class="btn btn-outline-light btn-social" href="https://github.com/SSL-SOLUTIONS/SSL_Travels"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-light btn-social me-2 mb-2" href="https://www.facebook.com/sslsolution.net"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social me-2 mb-2" href="https://www.youtube.com/@SSLSolutions"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social me-2 mb-2" href="https://www.instagram.com/sslsolutions22/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 center-on-medium-tablet">

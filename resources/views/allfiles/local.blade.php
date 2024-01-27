@@ -87,7 +87,13 @@
             transform: scale(1.1); /* Zoom out on hover */
         }
 
+        .zoom-out-image {
+        transition: transform 0.3s ease-in-out;
+    }
 
+    .zoom-out-image:hover {
+        transform: scale(1.1);
+    }
 
 </style>
 
@@ -98,29 +104,24 @@
     <div class="text-center mt-3 mb-2">
         <h4 style="display: inline-block;padding:8px; color:black; font-size:xx-large" >Local Tours</h4>
         </div>
-    <div class="container mt-2 text-center">
-        <div class="row">
-            @foreach(\App\Models\Local::all() as $local)
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="image-container bg mb-4">
-                    <a class="link-a" href="{{ route('locpackages', ['id' => $local->id])}}">
-                        <img class="img-fluid img" src="{{ asset('admin/assets/images/locals/' . $local->image) }}" alt="Local Image"><br>
-                        <p class="mt-2">
-                            <h3>{{$local->title}}</h3>
+        <div class="container-fluid bg-light">
+    <div class="row">
+        @foreach(\App\Models\Local::all() as $local)
+            <div class="col-lg-3 col-md-6 col-12 mt-5">
+                <div class="card" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
+                    <img class="card-img-top img-fluid zoom-out-image" src="{{ asset('admin/assets/images/locals/' . $local->image) }}" alt="Local Image">
+                    <div class="card-body">
+                        <h3 class="card-title">{{$local->title}}</h3>
+                        <p class="card-text">
+                            {{ Illuminate\Support\Str::limit($local->description, $limit = 90, $end = '...') }}
                         </p>
-                        <h5 class="description mt-3">
-                            {{ Illuminate\Support\Str::limit($local->description, $limit = 100, $end = '...') }}
-                        </h5>
-                    </a>
-                    <hr>
-                    <div>
-                    <a href="{{ route('locpackages', ['id' => $local->id])}}" class="btn btn-outline-success">Packages</a>
+                        <a href="{{ route('locpackages', ['id' => $local->id]) }}" class="btn btn-outline-success">Packages</a>
                     </div>
                 </div>
             </div>
-            @endforeach
-        </div>
+        @endforeach
     </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

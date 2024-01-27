@@ -21,6 +21,7 @@
     .zoom-out-image:hover {
         transform: scale(1.1);
     }
+    
 </style>
 
 </head>
@@ -61,11 +62,11 @@
         </button>
     </div>
 
-    <div class="text-center mt-3">
+    <div class="text-center mt-5">
         <h4 class="text-marquee" style="font-size: xx-large;">International Tours</h4>
     </div>
 
-    <div class="container-fluid bg-light">
+<div class="container-fluid bg-light">
     <div class="row">
         @foreach(\App\Models\International::paginate(4) as $international)
             <div class="col-lg-3 col-md-6 col-12 mt-5">
@@ -93,7 +94,7 @@
         <h4 class="text-marquee" style="font-size: xx-large;">Local Tours</h4>
     </div>
 
-    <div class="container-fluid bg-light">
+ <div class="container-fluid bg-light">
     <div class="row">
         @foreach(\App\Models\Local::paginate(4) as $local)
             <div class="col-lg-3 col-md-6 col-12 mt-5">
@@ -116,12 +117,6 @@
     <div class="text-center">
         <a class="btn btn-outline-dark mt-3" href="{{route('local')}}" style="font-size: x-large;">View All Tours</a>
     </div>
-
-    <div>
-        @include('allfiles.included')
-    </div>
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -139,8 +134,8 @@
             });
         });
     </script>
-
-    @include('allfiles.footer')
+    @include('allfiles.included')
+    @include('allfiles.contact')
 </body>
 
 </html>

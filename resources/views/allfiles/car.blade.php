@@ -84,25 +84,26 @@
 <body>
     @include('allfiles.nav')
 
-    <img style="width: 100%;" src="https://www.hotelierindia.com/cloud/2022/05/16/1.jpg" alt="">
+    <img style="width: 100%;" src="{{asset('/images/busus.webp')}}" alt="">
    
 
     <div class="text-center mt-3 mb-2">
-        <h4 style="display: inline-block;padding:8px; color:black; font-size:xx-large" >International Tours</h4>
+        <h4 style="display: inline-block;padding:8px; color:black; font-size:xx-large" >Cars</h4>
         </div>
     
 <div class="container-fluid bg-light">
     <div class="row">
-        @foreach(\App\Models\International::all() as $international)
+        @foreach(\App\Models\Car::all() as $car)
             <div class="col-lg-3 col-md-6 col-12 mt-5">
                 <div class="card" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden;">
-                    <img class="card-img-top img-fluid zoom-out-image" src="{{ asset('admin/assets/images/internationals/' . $international->image) }}" alt="International Image">
+                    <img class="card-img-top img-fluid zoom-out-image" src="{{ asset('admin/assets/images/cars/' . $car->image) }}" alt="car Image">
                     <div class="card-body">
-                        <h3 class="card-title">{{$international->title}}</h3>
+                        <h3 class="card-title">{{$car->name}}</h3>
                         <p class="card-text">
-                            {{ Illuminate\Support\Str::limit($international->description, $limit = 90, $end = '...') }}
+                            {{ Illuminate\Support\Str::limit($car->model, $limit = 90, $end = '...') }}
                         </p>
-                        <a href="{{ route('intpackages', ['id' => $international->id]) }}" class="btn btn-outline-success">Packages</a>
+                        <h5 class="card-title">Rs:{{$car->rent}}/per day</h5>
+                        <a href="{{ route('contact')}}" class="btn btn-outline-dark">Book Now</a>
                     </div>
                 </div>
             </div>

@@ -17,23 +17,6 @@
             margin-top: 100px;
         }
 
-        .int-btn {
-            background-color: blue;
-            border: 1px solid blue;
-        }
-
-        .int-btn:hover {
-            color: white;
-        }
-
-        .int-btn a {
-            color: white;
-        }
-
-        .int-btn a:hover {
-            color: whitesmoke;
-        }
-
         .card {
             margin-top: 20px;
             border: 1px solid #ddd;
@@ -59,6 +42,10 @@
             text-decoration: none;
             margin-right: 15px;
         }
+        button {
+    border: none;
+    outline: none;
+}
     </style>
 </head>
 
@@ -82,9 +69,9 @@
                         <h4 style="font-weight:bold">Details:</h4>
                         <h6>{{ $localpackageDetails->description }}.</h6>
                         <br>
-                        <button class="button mb-3 p-1 int-btn">
-                            <a style="text-decoration: none;" href="{{ route('contact') }}">Book Now</a>
-                        </button>
+                        <button>
+                    <a href="{{ route('contact') }}" class="btn btn-outline-success">Book Now</a>
+                    </button>
                     </div>
                 </div>
                 <br>
@@ -103,15 +90,15 @@
                 <div class="card-body col-lg-6" id="descriptionContent">
                     <h5>Description</h5>
                     <p>+92 301 111 4504</p>
-                   <p> Azerbaijan E-visa</p>
-                   <p> Accommodation in Hotel 6 nights including breakfast</p>
-                    <p>Sightseeing In districts (Panoramic Tour, City tour, Old</p>
-                    <p>City Tour, Absheron tour, Gobustan Tour, Gabala day</p>
-                    <p>tour,Shopping tour)</p>
-                    <p>Entrance for Gobustan museum, Fire Mountain, Fire</p>
-                   <p>temple,Gabala cable car</p>
-                   <p>Meals Full board</p>
-                   <p>Professional English-speaking guide</p>
+                   <p>Exploring the Northern Areas </p>
+                   <p>of Pakistan offers a mesmerizing journey through a landscape</p>
+                    <p>of breathtaking beauty, rugged terrains, and rich cultural heritage. Nestled</p>
+                    <p>amidst the towering peaks of the Himalayas,</p>
+                    <p>Karakoram, and Hindu Kush mountain</p>
+                    <p>The Northern Areas of Pakistan encompass several awe-inspiring</p>
+                   <p>Murree, Skardu, Gilgit, Naltar Valley, and Fairy Meadows.</p>
+                   <p>Murree, with its iconic </p>
+                   <p>vistas of snow-capped peaks, crystal-clear lakes</p>
                    <p>2 Bottle Water per person per day</p>
                    <p>All transfers according to the program including airport transfers</p>
                     <p>Return International Ticket (Lahore-Baku Return)</p>

@@ -68,5 +68,13 @@ class WebsiteController extends Controller
     {
         return view('allfiles.contact');
     }
+    public function car()
+    {
+        return view('allfiles.car');
+    }
+    public function apartment()
+    {
+        return view('allfiles.apartment');
+    }
    
 }

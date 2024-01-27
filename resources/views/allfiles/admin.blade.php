@@ -10,6 +10,7 @@
     <title>Dashboard - SSL Travels & Tours</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link href="{{asset('admin/css/styles.css')}}" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="{{ asset('website/favicon.png') }}">
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
@@ -70,6 +71,14 @@
                         <a class="nav-link" href="{{url('contactus')}}">
                             <div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
                             Messages
+                        </a>
+                        <a class="nav-link" href="{{url('cars')}}">
+                            <div class="sb-nav-link-icon"><i class="fas fa-car"></i></div>
+                            rent a Car
+                        </a>
+                        <a class="nav-link" href="{{url('apartments')}}">
+                            <div class="sb-nav-link-icon"><i class="fas fa-house"></i></div>
+                            Apartments
                         </a>
                     </div>
                 </div>

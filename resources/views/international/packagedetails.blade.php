@@ -7,28 +7,11 @@
         margin-top: 100px;
     }
 
-    .int-btn {
-        background-color: blue;
-        border: 1px solid blue;
-    }
-
-    .int-btn:hover {
-        color: white;
-    }
-
-    .int-btn a {
-        color: white;
-    }
-
-    .int-btn a:hover {
-        color: whitesmoke;
-    }
+    
 
     .card {
         margin-top: 20px;
-        border: 1px solid #ddd;
         border-radius: 5px;
-        background-color: #fff;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
@@ -46,9 +29,14 @@
     #toggleDescription,
     #toggleAdditionalInfo {
         color: black !important;
-        text-decoration: none;
-        margin-right: 15px;
+       
     }
+    button {
+    border: none;
+    outline: none;
+}
+
+
 </style>
 
 @include('allfiles.nav')
@@ -72,8 +60,8 @@
 
 
                     <br>
-                    <button class="button mb-3 p-1 int-btn">
-                        <a style="text-decoration: none;" href="{{route('contact')}}">Book Now</a>
+                    <button>
+                    <a href="{{ route('contact') }}" class="btn btn-outline-success">Book Now</a>
                     </button>
 
                 </div>
@@ -90,11 +78,11 @@
                 </div>
 
                 
-                <div class="card-body col-lg-6" id="descriptionContent">
+                <div class="card-body col-12 col-lg-6" id="descriptionContent">
                     <h5>Description</h5>
                     <p>+92 301 111 4504</p>
-                    <p> Azerbaijan E-visa</p>
-                    <p> Accommodation in Hotel 6 nights including breakfast</p>
+                    <p>E-visa</p>
+                    <p> Accommodation in Hotel many nights including breakfast</p>
                     <p>Sightseeing In districts (Panoramic Tour, City tour, Old</p>
                     <p>City Tour, Absheron tour, Gobustan Tour, Gabala day</p>
                     <p>tour,Shopping tour)</p>
@@ -104,14 +92,14 @@
                     <p>Professional English-speaking guide</p>
                     <p>2 Bottle Water per person per day</p>
                     <p>All transfers according to the program including airport transfers</p>
-                    <p>Return International Ticket (Lahore-Baku Return)</p>
+                    <p>Return International Ticket (Lahore-city Return)</p>
                     <p>Booking Date: First Come First Served</p>
 
                     
                 </div>
 
                 
-                <div class="card-body col-lg-6" id="additionalInfoContent" style="display: none;">
+                <div class="card-body col-12 col-lg-6" id="additionalInfoContent">
                     <h5>Additional Information</h5>
                     <p>Package Type: Leisure</p>
                     <p>Tour Type: Group</p>

@@ -156,7 +156,16 @@ ul.links li a.links-nav.active {
         </div>
     </div>
 </li>
-    
+<li>
+        <a href="{{ route('car') }}" class="links-nav {{ request()->routeIs('car') ? 'active' : '' }}">
+            Rent a car
+        </a>
+    </li>
+    <li>
+        <a href="{{ route('apartment') }}" class="links-nav {{ request()->routeIs('apartment') ? 'active' : '' }}">
+            Apartments
+        </a>
+    </li>
     <li>
         <a href="{{ route('about') }}" class="links-nav {{ request()->routeIs('about') ? 'active' : '' }}">
             About Us

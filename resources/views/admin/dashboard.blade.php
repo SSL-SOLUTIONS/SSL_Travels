@@ -74,6 +74,14 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
                             Messages
                         </a>
+                        <a class="nav-link" href="{{url('cars')}}">
+                            <div class="sb-nav-link-icon"><i class="fas fa-car"></i></div>
+                            rent a Car
+                        </a>
+                        <a class="nav-link" href="{{url('apartments')}}">
+                            <div class="sb-nav-link-icon"><i class="fas fa-house"></i></div>
+                            Apartments
+                        </a>
                     </div>
                 </div>
             </nav>

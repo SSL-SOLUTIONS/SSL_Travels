@@ -56,6 +56,8 @@
                     <h4 class="text-white mb-3">SSL Travels & Tours</h4>
                     <a class="btn btn-link" href="{{route('international')}}">International Tours</a>
                     <a class="btn btn-link" href="{{route('local')}}">Local Tours</a>
+                    <a class="btn btn-link" href="{{route('car')}}">Rent a car</a>
+                    <a class="btn btn-link" href="{{route('apartment')}}">Book Apartment</a>
                     <a class="btn btn-link" href="{{route('about')}}">About Us</a>
                     <a class="btn btn-link" href="{{route('contact')}}">Contact Us</a>
                    
@@ -66,10 +68,10 @@
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+92 301 111 4504</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@ssltravel.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="https://github.com/SSL-SOLUTIONS/SSL_Travels"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="https://www.facebook.com/sslsolution.net"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="https://www.youtube.com/@SSLSolutions"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" target="_blank" href="https://www.instagram.com/sslsolutions22/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 center-on-medium-tablet">
