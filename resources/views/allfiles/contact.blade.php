@@ -11,8 +11,22 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="stylesheet" href="{{asset('website/contact/css/style.css')}}">
-    <link href="img/favicon.ico" rel="icon">
+	<link href="img/favicon.ico" rel="icon">
+	<style>
+		.custom-box {
+			background-color: transparent;
+			border: 2px solid blue;
+			border-radius: 10px;
+			padding: 10px;
+			/* Add padding for better visual appearance */
+			transition: background-color 0.3s ease;
+			/* Add a smooth transition effect */
+		}
 
+		.custom-box:hover {
+			background-color: blue;
+		}
+	</style>
 
 </head>
 @include('allfiles.nav')
@@ -20,8 +34,8 @@
 <body>
 	<section style="margin-bottom:-120px;" class="ftco-section">
 		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-6 text-center mb-5">
+			<div class="row justify-content-center" style="margin-top: 6px;">
+				<div class="col-md-6 text-center mb-5 custom-box">
 					<h2 class="heading-section">Contact Us Freely</h2>
 				</div>
 			</div>
@@ -127,11 +141,9 @@
 		</div>
 	</section>
 	<br>
-	<iframe width="100%" height="450" frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13602.428231413262!2d74.3469248!3d31.5349506!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391905d3e3ae6b77%3A0x157a2f53f97b67c6!2sSSL%20SOLUTIONS!5e0!3m2!1sen!2s!4v1701933478588!5m2!1sen!2s"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-@include('allfiles.footer')
+	<iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13602.428231413262!2d74.3469248!3d31.5349506!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391905d3e3ae6b77%3A0x157a2f53f97b67c6!2sSSL%20SOLUTIONS!5e0!3m2!1sen!2s!4v1701933478588!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+	</iframe>
+	@include('allfiles.footer')
 
 	<script src="{{asset('website/contact/js/jquery.min.js')}}"></script>
 	<script src="{{asset('website/contact/js/popper.js')}}"></script>

@@ -104,8 +104,13 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="{{url('/')}}">SSL Travels & Tours</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="{{url('/')}}">SSL Travels & Tours</a>, All Rights Reserved by
+                        <a href="https://sslsolution.net/" class="logo-nav" target="_blank">
+                            <img src="{{asset('website/footer/img/new logo png.png')}}" style="height: 30px;" alt="SSL Solutions" href="https://sslsolution.net/">
+                        </a>
+                        <a href="https://sslsolution.net/" target="_blank">SSL Solutions</a>.
                     </div>
+
 
                 </div>
             </div>

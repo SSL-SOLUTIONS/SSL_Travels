@@ -36,7 +36,7 @@
 
         <!-- Button inside the first image -->
         <div class="carousel-button-container position-absolute top-50 start-50 translate-middle">
-            <a href="{{ route('contact') }}" class="btn btn-outline-primary" style="padding: 10px; width:auto;">Book Now</a>
+            <a href="{{ route('contact') }}" class="btn btn-primary" style="padding: 10px; width:auto;">Book Now</a>
         </div>
     </div>
 
@@ -45,9 +45,10 @@
 
         <!-- Button inside the second image -->
         <div class="carousel-button-container position-absolute top-50 start-50 translate-middle">
-            <a href="{{ route('contact') }}" class="btn btn-outline-primary" style="padding: 10px; width:auto;">Book Now</a>
+            <a href="{{ route('contact') }}" class="btn btn-primary" style="padding: 10px; width:auto;">Book Now</a>
         </div>
     </div>
+    
 </div>
 
 

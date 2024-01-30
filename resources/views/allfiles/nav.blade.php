@@ -118,6 +118,28 @@ ul.links li a.links-nav.active {
             display: none !important;
         }
     }
+        .logo img {
+        height: 60px; /* default height for larger screens */
+    }
+
+    @media screen and (max-width: 767px) {
+        /* Adjust the height for small screens */
+        .logo img {
+            height: 40px;
+        }
+    }
+    @media (min-width: 768px) {
+    .links {
+        display: flex;
+        justify-content: space-between; /* Align items to the right */
+        margin-right: -10px; /* Adjust the margin as needed */
+    }
+
+    .links > li {
+        margin-right: -10px; /* Adjust the margin between items as needed */
+    }
+}
+
 
 </style>
 
@@ -126,7 +148,7 @@ ul.links li a.links-nav.active {
         <input id="nav-toggle" type="checkbox">
         <div class="logo">
             <a href="{{url('/')}}" class="logo-nav">
-                <img src="{{asset('website/navbar/images/logo.png')}}" style="height: 60px;" alt="">
+                <img src="{{asset('website/navbar/images/logo.png')}}"  alt="">
             </a>
         </div>
        <ul class="links">
@@ -204,7 +226,7 @@ ul.links li a.links-nav.active {
             $('#scroll-to-top').click(function() {
                 $('html, body').animate({
                     scrollTop: 0
-                }, 800);
+                }, 10);
                 return false;
             });
         });

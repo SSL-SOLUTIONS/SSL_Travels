@@ -31,19 +31,17 @@
     <!-- Template Stylesheet -->
     <link href="{{asset('website/footer/css/style.css')}}" rel="stylesheet">
     <style>
-       @media (min-width: 768px) and (max-width: 991px) {
+        @media (min-width: 768px) and (max-width: 991px) {
             .center-on-medium-tablet {
                 margin-left: auto;
                 margin-right: auto;
             }
         }
         .mb-2:hover .fa-map-marker-alt,
-    .mb-2:hover .fa-phone-alt,
-    .mb-2:hover .fa-envelope {
-      color: blue;
-    }
-
-
+        .mb-2:hover .fa-phone-alt,
+        .mb-2:hover .fa-envelope {
+            color: blue;
+        }
     </style>
 </head>
 
@@ -60,7 +58,6 @@
                     <a class="btn btn-link" href="{{route('apartment')}}">Book Apartment</a>
                     <a class="btn btn-link" href="{{route('about')}}">About Us</a>
                     <a class="btn btn-link" href="{{route('contact')}}">Contact Us</a>
-                   
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
@@ -97,16 +94,20 @@
                         </div>
                     </div>
                 </div>
-               
             </div>
         </div>
         <div class="container">
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="{{url('/')}}">SSL Travels & Tours</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="{{url('/')}}">SSL Travels & Tours</a>, All Rights Reserved by
+                        <a href="https://sslsolution.net/" class="logo-nav" target="_blank">
+                            <img src="{{asset('website/footer/img/new logo png.png')}}" style="height: 30px;" alt="SSL Solutions" href="https://sslsolution.net/">
+                        </a>
+                        <a href="https://sslsolution.net/" target="_blank">SSL Solutions</a>.
                     </div>
-                   
+
+
                 </div>
             </div>
         </div>
@@ -115,7 +116,7 @@
 
 
     <!-- Back to Top -->
-    
+
 
 
     <!-- JavaScript Libraries -->
